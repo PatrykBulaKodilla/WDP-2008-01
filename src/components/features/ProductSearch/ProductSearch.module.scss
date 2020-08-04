@@ -30,9 +30,18 @@
       border: 0;
       background-color: transparent;
       padding: 5px 30px 5px 35px;
+      font-size: 12px;
       position: relative;
       z-index: 1;
     }
+    
+    select:focus {
+      outline: none;
+    }
+  }
+  
+  .category:hover .icon:last-child {
+    color: $primary;
   }
 
   .searchField {
@@ -43,12 +52,13 @@
     input {
       border: 0;
       padding-left: 10px;
-      font-size: 14px;
+      font-size: 12px;
       outline: none;
 
       &::placeholder {
-        color: $text-color;
-      }
+        color: $placeholder-color;
+      }  
+      
     }
 
     button {
@@ -56,5 +66,9 @@
       background-color: transparent;
       outline: none;
     }
+  }
+  
+  .searchField:hover button {
+    color: $primary;
   }
 }
