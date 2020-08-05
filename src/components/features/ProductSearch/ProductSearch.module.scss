@@ -1,13 +1,13 @@
 @import "../../../styles/settings.scss";
 
 .root {
-  border: 1px solid $form-border-color;
+  border: 1px solid $productsearch-border;
   display: inline-flex;
   height: 45px;
   color: $text-color;
 
   .category {
-    border-right: 1px solid $form-border-color;
+    border-right: 1px solid $productsearch-border;
     display: flex;
     align-items: center;
     position: relative;
@@ -28,20 +28,20 @@
     select {
       -webkit-appearance: none;
       border: 0;
-      background-color: transparent;
+      background-color: $productsearch-select-bg;
       padding: 5px 30px 5px 35px;
       font-size: 12px;
       position: relative;
       z-index: 1;
     }
-    
+
     select:focus {
       outline: none;
     }
   }
-  
+
   .category:hover .icon:last-child {
-    color: $primary;
+    color: $productsearch-hover-icon;
   }
 
   .searchField {
@@ -56,19 +56,19 @@
       outline: none;
 
       &::placeholder {
-        color: $placeholder-color;
-      }  
-      
+        color: $productsearch-input-placeholder;
+      }
+
     }
 
     button {
       border: 0;
-      background-color: transparent;
+      background-color: $productsearch-button-bg;
       outline: none;
     }
   }
-  
+
   .searchField:hover button {
-    color: $primary;
+    color: $productsearch-hover-button;
   }
 }
