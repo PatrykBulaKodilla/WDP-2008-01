@@ -29,11 +29,13 @@
     }
 
     .buttons {
+      opacity: 0;
       display: flex;
       justify-content: space-between;
+      transition: .3s;
     }
   }
-
+  
   .content {
     text-align: center;
     padding: 20px;
@@ -74,5 +76,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .priceButton {
+    transition: .3s;
+  }
+  &:hover {
+    .buttons {
+      opacity: 1;
+    }
+
+    .priceButton {
+      background-color: $primary;
+    }
   }
 }
