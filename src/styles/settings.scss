@@ -1,14 +1,123 @@
 $base-padding: 24px;
 
-$header-topbar-bg: #434343;
-$header-bg: #363636;
+/* DO NOT USE THOSE VARIABLES IN THE OTHER SCSS FILES! */
+$lightGray: #b2b2b2;
+$gray: #434343;
+$darkGray: #363636;
+$lightBlack: #2a2a2a;
+$orange: #d58e32;
+$lightWhite: #f4f5f7;
+$white: #ffffff;
+$darkWhite: #e1e1e1;
+$lightWhiteBlue: #e0e3ed;
+$transparent: transparent;
 
-$footer-claim-bg: #2a2a2a;
-$footer-bg: #363636;
+$header-bg: $darkGray;
 
-$primary: #d58e32;
+$primary: $orange;
 
-$text-color: #2a2a2a;
-$placeholder-color: #b2b2b2;
+$text-color: $lightBlack;
+$placeholder-color: $lightGray;
 
-$form-border-color: #292929;
+$form-border-color: $lightBlack;
+
+/*Button*/
+$button-main-text: $white;
+$button-main-bg: $lightBlack;
+$button-main-bg-hover: $orange;
+
+$button-outline-border: $lightBlack;
+$button-outline-text: $lightBlack;
+$button-outline-bg-hover: $lightBlack;
+$button-outline-text-hover: $white;
+
+/*FeatureBox*/
+$featurebox-border: $lightGray;
+$featurebox-icon-text: $lightBlack;
+$featurebox-icon-border: $lightGray;
+$featurebox-icon-bg: $white;
+
+$featurebox-content-text: $lightBlack;
+$featurebox-content-active-text: $orange;
+$featurebox-content-active-icon-text: $white;
+$featurebox-content-active-icon-bg: $orange;
+$featurebox-content-active-icon-border: $orange;
+
+/*ProductBox*/
+$productbox-bg: $white;
+$productbox-border: $darkWhite;
+
+$productbox-photo-bg: $lightWhite;
+
+$productbox-sale-bg: $lightBlack;
+$productbox-sale-text: $white;
+
+$productbox-content-text: $orange;
+$productbox-content-stars-text: $lightBlack;
+
+$productbox-line-border: $lightBlack;
+$productbox-line-border-before: $orange;
+
+/*NewFerniture*/
+$newfurniture-panelbar-border: $darkWhite;
+
+$newfurniture-heading-text: $orange;
+$newfurniture-heading-border: $orange;
+
+$newfurniture-menu-text: $lightBlack;
+$newfurniture-menu-active-hover-border: $orange;
+
+$newfurniture-dots-list-bg: $white;
+$newfurniture-dots-link-bg: $darkWhite;
+$newfurniture-dots-link-active-hover-bg: $orange;
+
+/*ProductSearch*/
+$productsearch-border: $lightBlack;
+$productsearch-select-bg: $transparent;
+
+$productsearch-hover-icon: $orange;
+$productsearch-hover-button: $orange;
+
+$productsearch-button-bg: $transparent;
+
+$productsearch-input-placeholder: $lightGray;
+
+/*CompanyClaim*/
+$companyclaim-bg: $darkGray;
+
+$companyclaim-phonenumber-text: $darkWhite;
+$companyclaim-phonenumber-icon: $orange;
+
+$companyclaim-cart-text: $white;
+$companyclaim-cart-icon: $orange;
+
+$companyclaim-cartCounter-bg: $darkGray;
+$companyclaim-cartCounter-text: $lightWhiteBlue;
+$companyclaim-cartCounter-hover-bg: $orange;
+
+/*Footer*/
+$footer-claim-bg: $lightBlack;
+$footer-bg: $darkGray;
+$footer-title-text: $white;
+$footer-link-text: $lightGray;
+$footer-link-hover-text: $white;
+$footer-claim-text: $lightGray;
+$footer-claim-link: $lightGray;
+$footer-claim-link-hover: $orange;
+
+/*MenuBar*/
+$menubar-bg: $white;
+
+$menubar-link: $lightBlack;
+$menubar-link-border: $white;
+$menubar-link-active-hover: $white;
+$menubar-link-active-hover-bg: $orange;
+$menubar-link-active-hover-border: $orange;
+
+$menubar-link-active-border: $lightBlack;
+
+/*TopBar*/
+$topbar-bg: $gray;
+
+$topbar-link: $white;
+$topbar-link-hover: $orange;
