@@ -4,16 +4,16 @@
 // }
 
 .main {
-  background-color: #2a2a2a;
-  color: #ffffff;
+  background-color: $button-main-bg;
+  color: $button-main-text;
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
   padding: 10px 30px;
 
   &:not(.noHover):hover {
-    color: #ffffff !important;
-    background-color: $primary;
+    color: $button-main-text !important;
+    background-color: $button-main-bg-hover;
     text-decoration: none;
   }
 }
@@ -29,13 +29,13 @@
 .outline {
   display: inline-block;
   padding: 5px 10px;
-  border: 1px solid #2a2a2a;
-  color: #2a2a2a;
+  border: 1px solid $button-outline-border;
+  color: $button-outline-text;
   font-size: 13px;
   line-height: 22px;
 
   &:not(.noHover):hover {
-    background-color: #2a2a2a;
-    color: #ffffff;
+    background-color: $button-outline-bg-hover;
+    color: $button-outline-text-hover;
   }
 }
