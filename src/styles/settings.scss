@@ -12,15 +12,6 @@ $darkWhite: #e1e1e1;
 $lightWhiteBlue: #e0e3ed;
 $transparent: transparent;
 
-$header-bg: $darkGray;
-
-$primary: $orange;
-
-$text-color: $lightBlack;
-$placeholder-color: $lightGray;
-
-$form-border-color: $lightBlack;
-
 /*Button*/
 $button-main-text: $white;
 $button-main-bg: $lightBlack;
@@ -73,7 +64,10 @@ $newfurniture-dots-link-active-hover-bg: $orange;
 
 /*ProductSearch*/
 $productsearch-border: $lightBlack;
+$productsearch-text: $lightBlack;
 $productsearch-select-bg: $transparent;
+
+$productsearch-icon: $orange;
 
 $productsearch-hover-icon: $orange;
 $productsearch-hover-button: $orange;

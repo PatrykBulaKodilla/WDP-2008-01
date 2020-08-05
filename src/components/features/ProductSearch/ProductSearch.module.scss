@@ -4,7 +4,7 @@
   border: 1px solid $productsearch-border;
   display: inline-flex;
   height: 45px;
-  color: $text-color;
+  color: $productsearch-text;
 
   .category {
     border-right: 1px solid $productsearch-border;
@@ -13,7 +13,7 @@
     position: relative;
 
     .icon:first-child {
-      color: $primary;
+      color: $productsearch-icon;
       position: absolute;
       left: 10px;
       z-index: 0;
