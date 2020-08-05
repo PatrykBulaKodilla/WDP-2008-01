@@ -12,6 +12,7 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    transition: $transition-background;
 
     .icon {
       position: relative;
@@ -51,6 +52,7 @@
     margin-top: -0.5rem;
     letter-spacing: 1px;
     font-weight: 300;
+    transition: $transition-color;
 
     h5 {
       font-weight: 600;
@@ -62,6 +64,21 @@
   }
 
   &.active {
+    .iconWrapper {
+      color: $featurebox-content-active-icon-text;
+
+      &::after {
+        background-color: $featurebox-content-active-icon-bg;
+        border-color: $featurebox-content-active-icon-border;
+      }
+    }
+
+    .content {
+      color: $featurebox-content-active-text;
+    }
+  }
+
+  &:hover {
     .iconWrapper {
       color: $featurebox-content-active-icon-text;
 

@@ -21,6 +21,7 @@
             font-size: 14px;
             line-height: 30px;
             color: $footer-link-text;
+            transition: $transition-color;
 
             &:hover {
               color: $footer-link-hover-text;
@@ -70,6 +71,7 @@
           a {
             color: $footer-claim-link;
             text-decoration: none;
+            transition: $transition-color;
 
             &:hover {
               color: $footer-claim-link-hover;

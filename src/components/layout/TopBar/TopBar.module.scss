@@ -15,6 +15,7 @@
       a {
         color: $topbar-link;
         font-size: 13px;
+        transition: $transition-color;
 
         &:hover {
           color: $topbar-link-hover;

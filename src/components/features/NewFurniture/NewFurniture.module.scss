@@ -48,6 +48,10 @@
             text-decoration: none;
             font-size: 18px;
             display: block;
+            &::before {
+              content: "";
+              transition: $transition-background;
+            }
 
             &.active,
             &:hover {
@@ -88,6 +92,7 @@
             border-radius: 6px;
             background-color: $newfurniture-dots-link-bg;
             font-size: 0;
+            transition: $transition-background;
 
             &.active,
             &:hover {
