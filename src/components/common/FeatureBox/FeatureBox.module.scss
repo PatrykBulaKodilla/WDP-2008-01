@@ -1,4 +1,5 @@
 @import "../../../styles/settings.scss";
+@import "../../../styles/animations.scss";
 
 .root {
   border: 1px solid $featurebox-border;
@@ -12,7 +13,7 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    transition: $transition-background;
+    @extend .sw-animation;
 
     .icon {
       position: relative;
@@ -52,7 +53,7 @@
     margin-top: -0.5rem;
     letter-spacing: 1px;
     font-weight: 300;
-    transition: $transition-color;
+    @extend .sw-animation;
 
     h5 {
       font-weight: 600;

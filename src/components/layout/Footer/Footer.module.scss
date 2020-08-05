@@ -1,4 +1,5 @@
 @import "../../../styles/settings.scss";
+@import "../../../styles/animations.scss";
 
 .root {
   .footerMenu {
@@ -18,10 +19,10 @@
         list-style: none;
         li {
           a {
+            @extend .sw-animation;
             font-size: 14px;
             line-height: 30px;
             color: $footer-link-text;
-            transition: $transition-color;
 
             &:hover {
               color: $footer-link-hover-text;

@@ -1,4 +1,5 @@
 @import "../../../styles/settings.scss";
+@import "../../../styles/animations.scss";
 
 .root {
   .panelBar {
@@ -49,8 +50,8 @@
             font-size: 18px;
             display: block;
             &::before {
+              @extend .sw-animation;
               content: "";
-              transition: $transition-background;
             }
 
             &.active,
@@ -86,13 +87,13 @@
           margin-left: 0.5rem;
 
           a {
+            @extend .sw-animation;
             display: block;
             width: 13px;
             height: 13px;
             border-radius: 6px;
             background-color: $newfurniture-dots-link-bg;
             font-size: 0;
-            transition: $transition-background;
 
             &.active,
             &:hover {
