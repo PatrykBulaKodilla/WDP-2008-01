@@ -70,6 +70,7 @@ class NewFurniture extends React.Component {
             {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
               <div key={item.id} className='col-3'>
                 <ProductBox {...item} />
+                {console.log('co to 2', item)}
               </div>
             ))}
           </div>

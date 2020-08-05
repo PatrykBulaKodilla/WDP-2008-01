@@ -14,6 +14,8 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      image:
+        'https://www.outofchaos.ca/wp/wp-content/uploads/2016/08/0ec2b505ec51e8112a36ecbbfb291682.jpg',
       newFurniture: true,
     },
     {
@@ -23,6 +25,8 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      image:
+        'https://media.restorationhardware.com/is/image/rhis/prod18990444_E713327381_TQ?$PD$&illum=0',
       newFurniture: true,
     },
     {
@@ -32,6 +36,8 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      image:
+        'https://media.restorationhardware.com/is/image/rhis/prod17390034_E811867768_TQ_RS?$GAL_BNR$',
       newFurniture: true,
     },
     {
@@ -41,6 +47,8 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      image:
+        'https://www.ikea.com/images/dining-sets-03d1940e32032e44c82af0c827a2494a.jpg?f=s',
       newFurniture: true,
     },
     {
@@ -50,6 +58,8 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      image:
+        'https://scandinavianliving.pl/userdata/public/gfx/9ff052bf0a47985baa8e54ccbc6e832d.jpg',
       newFurniture: true,
     },
     {
@@ -59,6 +69,8 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      image:
+        'https://furniture123.co.uk/files/images/f123/shop-furniture-by-bedroom.jpg',
       newFurniture: true,
     },
     {
@@ -68,15 +80,19 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      image:
+        'https://cdn.habitat.fr/thumbnails/product/786/786947/box/600/600/40/rangement-en-chene-et-verre_786947.jpg',
       newFurniture: true,
     },
     {
       id: 'aenean-ru-bristique-8',
-      name: 'Aenean Ru Bristique 8',
+      name: 'Aenean Ru Bristique ',
       category: 'bed',
       price: 30,
       stars: 2,
       promo: 'sale',
+      image:
+        'https://cdn.habitat.fr/thumbnails/product/866/866233/box/1200/1200/80/eskyss-aparador-vitrina-alto-de-nogal_866233.jpg',
       newFurniture: true,
     },
     {
@@ -86,6 +102,8 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      image:
+        'https://www.outofchaos.ca/wp/wp-content/uploads/2016/08/0ec2b505ec51e8112a36ecbbfb291682.jpg',
       newFurniture: true,
     },
     {
@@ -95,6 +113,8 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      image:
+        'https://media.restorationhardware.com/is/image/rhis/prod18990444_E713327381_TQ?$PD$&illum=0',
       newFurniture: true,
     },
     {
@@ -104,6 +124,8 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      image:
+        'https://media.restorationhardware.com/is/image/rhis/prod17390034_E811867768_TQ_RS?$GAL_BNR$',
       newFurniture: true,
     },
     {
@@ -113,6 +135,8 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      image:
+        'https://www.ikea.com/images/dining-sets-03d1940e32032e44c82af0c827a2494a.jpg?f=s',
       newFurniture: true,
     },
     {
@@ -122,6 +146,8 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      image:
+        'https://scandinavianliving.pl/userdata/public/gfx/9ff052bf0a47985baa8e54ccbc6e832d.jpg',
       newFurniture: true,
     },
     {
@@ -131,6 +157,8 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      image:
+        'https://furniture123.co.uk/files/images/f123/shop-furniture-by-bedroom.jpg',
       newFurniture: true,
     },
     {
@@ -140,6 +168,8 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      image:
+        'https://cdn.habitat.fr/thumbnails/product/786/786947/box/600/600/40/rangement-en-chene-et-verre_786947.jpg',
       newFurniture: true,
     },
     {
@@ -149,6 +179,8 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      image:
+        'https://cdn.habitat.fr/thumbnails/product/866/866233/box/1200/1200/80/eskyss-aparador-vitrina-alto-de-nogal_866233.jpg',
       newFurniture: true,
     },
     {
@@ -158,6 +190,8 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      image:
+        'https://www.outofchaos.ca/wp/wp-content/uploads/2016/08/0ec2b505ec51e8112a36ecbbfb291682.jpg',
       newFurniture: true,
     },
     {
@@ -167,6 +201,8 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      image:
+        'https://media.restorationhardware.com/is/image/rhis/prod18990444_E713327381_TQ?$PD$&illum=0',
       newFurniture: true,
     },
     {
@@ -176,6 +212,8 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      image:
+        'https://media.restorationhardware.com/is/image/rhis/prod17390034_E811867768_TQ_RS?$GAL_BNR$',
       newFurniture: true,
     },
     {
@@ -185,6 +223,8 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      image:
+        'https://www.ikea.com/images/dining-sets-03d1940e32032e44c82af0c827a2494a.jpg?f=s',
       newFurniture: true,
     },
     {
@@ -194,6 +234,8 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      image:
+        'https://scandinavianliving.pl/userdata/public/gfx/9ff052bf0a47985baa8e54ccbc6e832d.jpg',
       newFurniture: true,
     },
     {
@@ -203,6 +245,8 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      image:
+        'https://furniture123.co.uk/files/images/f123/shop-furniture-by-bedroom.jpg',
       newFurniture: true,
     },
     {
@@ -212,6 +256,8 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      image:
+        'https://cdn.habitat.fr/thumbnails/product/786/786947/box/600/600/40/rangement-en-chene-et-verre_786947.jpg',
       newFurniture: true,
     },
     {
@@ -221,6 +267,8 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      image:
+        'https://cdn.habitat.fr/thumbnails/product/866/866233/box/1200/1200/80/eskyss-aparador-vitrina-alto-de-nogal_866233.jpg',
       newFurniture: true,
     },
   ],
