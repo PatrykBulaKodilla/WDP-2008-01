@@ -5,7 +5,21 @@
   border: 1px solid $featurebox-border;
   text-align: center;
   margin-top: 40px;
+  cursor: pointer;
+  &:hover {
+    .iconWrapper {
+      color: #ffffff;
 
+      &::after {
+        background-color: $primary;
+        border-color: $primary;
+      }
+    }
+
+    .content {
+      color: $primary;
+    }
+  }
   .iconWrapper {
     height: 60px;
     transform: translateY(-50%);
