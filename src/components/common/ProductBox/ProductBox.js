@@ -22,6 +22,7 @@ const ProductBox = ({
   price,
   promo,
   stars,
+  image,
   favoriteProducts,
   setFavoriteProduct,
   comparison,
@@ -29,6 +30,9 @@ const ProductBox = ({
   <div className={styles.root}>
     <div className={styles.photo}>
       {promo && <div className={styles.sale}>{promo}</div>}
+      <div className={styles.wrapper}>
+        <img className={styles.image} src={image} />
+      </div>
       <div className={styles.buttons}>
         <Button variant='small'>Quick View</Button>
         <Button variant='small'>
@@ -92,6 +96,8 @@ ProductBox.propTypes = {
   favoriteProducts: PropTypes.array,
   setFavoriteProduct: PropTypes.func,
   comparison: PropTypes.string,
+  image: PropTypes.string,
+
 };
 
 export default ProductBox;
