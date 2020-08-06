@@ -19,7 +19,7 @@ class NewFurniture extends React.Component {
   }
 
   render() {
-    const { categories, products } = this.props;
+    const { categories, products, favoriteProducts } = this.props;
     const { activeCategory, activePage } = this.state;
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
@@ -73,7 +73,7 @@ class NewFurniture extends React.Component {
           <div className='row'>
             {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
               <div key={item.id} className='col-3'>
-                <ProductBox {...item} />
+                <ProductBox {...item} favoriteProducts={favoriteProducts} />
               </div>
             ))}
           </div>
@@ -102,6 +102,7 @@ NewFurniture.propTypes = {
       newFurniture: PropTypes.bool,
     })
   ),
+  favoriteProducts: PropTypes.array,
 };
 
 NewFurniture.defaultProps = {
