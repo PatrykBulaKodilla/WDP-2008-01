@@ -9,6 +9,7 @@
   }
 
   .phoneNumber {
+
     p {
       margin: 0;
       font-size: 17px;
@@ -31,7 +32,7 @@
       display: inline-block;
       position: relative;
       color: $companyclaim-cart-text;
-      
+
       .cartIcon {
         background-color: $companyclaim-cart-icon;
         width: 55px;
@@ -71,5 +72,29 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: 599px) {
+  .mobileTel {
+    left: 64%;
+    top: 30%;
+
+    .icon {
+      font-size: 14px;
+    }
+
+    .mobileNumber {
+      font-size: 14px;
+    }
+  }
+
+  .mobileLogo {
+    left: -40%;
+  }
+
+  .mobileCart {
+    top: -13px;
+    max-width: fit-content;
   }
 }
