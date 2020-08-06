@@ -1,9 +1,11 @@
 @import "../../../styles/settings.scss";
+@import "../../../styles/animations.scss";
 
 // .root {
 // }
 
 .main {
+  @extend .sw-animation;
   background-color: $button-main-bg;
   color: $button-main-text;
   font-size: 16px;
@@ -15,6 +17,7 @@
     color: $button-main-text !important;
     background-color: $button-main-bg-hover;
     text-decoration: none;
+    
   }
 }
 
@@ -27,6 +30,7 @@
 }
 
 .outline {
+  @extend .sw-animation;
   display: inline-block;
   padding: 5px 10px;
   border: 1px solid $button-outline-border;

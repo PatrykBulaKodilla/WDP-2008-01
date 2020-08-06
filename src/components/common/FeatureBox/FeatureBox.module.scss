@@ -1,4 +1,5 @@
 @import "../../../styles/settings.scss";
+@import "../../../styles/animations.scss";
 
 .root {
   border: 1px solid $featurebox-border;
@@ -12,6 +13,7 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    @extend .sw-animation;
 
     .icon {
       position: relative;
@@ -51,6 +53,7 @@
     margin-top: -0.5rem;
     letter-spacing: 1px;
     font-weight: 300;
+    @extend .sw-animation;
 
     h5 {
       font-weight: 600;
@@ -62,6 +65,21 @@
   }
 
   &.active {
+    .iconWrapper {
+      color: $featurebox-content-active-icon-text;
+
+      &::after {
+        background-color: $featurebox-content-active-icon-bg;
+        border-color: $featurebox-content-active-icon-border;
+      }
+    }
+
+    .content {
+      color: $featurebox-content-active-text;
+    }
+  }
+
+  &:hover {
     .iconWrapper {
       color: $featurebox-content-active-icon-text;
 

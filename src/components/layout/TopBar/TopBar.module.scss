@@ -1,4 +1,5 @@
 @import "../../../styles/settings.scss";
+@import "../../../styles/animations.scss";
 
 .root {
   background-color: $topbar-bg;
@@ -13,6 +14,7 @@
       line-height: 55px;
 
       a {
+        @extend .sw-animation;
         color: $topbar-link;
         font-size: 13px;
 

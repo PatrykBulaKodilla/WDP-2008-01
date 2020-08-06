@@ -1,4 +1,5 @@
 @import "../../../styles/settings.scss";
+@import "../../../styles/animations.scss";
 
 .root {
   .panelBar {
@@ -48,6 +49,10 @@
             text-decoration: none;
             font-size: 18px;
             display: block;
+            &::before {
+              @extend .sw-animation;
+              content: "";
+            }
 
             &.active,
             &:hover {
@@ -82,6 +87,7 @@
           margin-left: 0.5rem;
 
           a {
+            @extend .sw-animation;
             display: block;
             width: 13px;
             height: 13px;
