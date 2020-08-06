@@ -1,5 +1,5 @@
 /* selectors */
-export const getAllFavorites = ({ favorite }) => favorite.prodects;
+export const getAllFavorites = ({ favorite }) => favorite.products;
 
 /* action name creator */
 const reducerName = 'cart';
