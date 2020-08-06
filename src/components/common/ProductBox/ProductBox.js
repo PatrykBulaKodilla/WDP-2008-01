@@ -23,7 +23,8 @@ const ProductBox = ({
   promo,
   stars,
   favoriteProducts,
-  setFavoriteProduct,
+  setFavoriteProduct, 
+  comparison,
 }) => (
   <div className={styles.root}>
     <div className={styles.photo}>
@@ -55,14 +56,20 @@ const ProductBox = ({
         <Button
           variant='outline'
           Comp='button'
+          className={styles.faHeart}
           className={`${styles.favoriteButton} ${
             productInFavorites(id, favoriteProducts) > 0 ? styles.active : undefined
           }`}
           onClick={() => setFavoriteProduct(id)}
         >
+        {/*<Button variant='outline' className={styles.faHeart} className={favorite}>*/}
           <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
         </Button>
-        <Button variant='outline'>
+        <Button
+          variant='outline'
+          className={styles.faExchangeAlt}
+          className={comparison}
+        >
           <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
         </Button>
       </div>
@@ -84,6 +91,7 @@ ProductBox.propTypes = {
   id: PropTypes.string,
   favoriteProducts: PropTypes.array,
   setFavoriteProduct: PropTypes.func,
+  comparison: PropTypes.string,
 };
 
 export default ProductBox;

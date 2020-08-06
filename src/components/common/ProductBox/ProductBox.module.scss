@@ -79,6 +79,11 @@
     align-items: center;
   }
 
+  .outlines a[class~="true"] {
+    background-color: $productbox-content-text;
+    color: $productbox-sale-text ;
+  }
+
   .priceButton {
     @extend .ft-animation;
   }
@@ -95,7 +100,7 @@
   .favoriteButton {
     &.active {
       color: $productbox-favoritebutton-active;
-      background-color: $productbox-favoritebutton-active-bg;
-    }
+      background-color: $productbox-content-text;
+    }    
   }
 }
