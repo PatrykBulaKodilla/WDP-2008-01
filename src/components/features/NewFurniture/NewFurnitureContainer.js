@@ -4,7 +4,7 @@ import NewFurniture from './NewFurniture';
 
 import { getAll } from '../../../redux/categoriesRedux.js';
 import { getNew } from '../../../redux/productsRedux.js';
-import { getAllFavorites } from '../../../redux/favoriteRedux.js';
+import { getAllFavorites, setFavoriteProduct } from '../../../redux/favoriteRedux.js';
 
 const mapStateToProps = state => ({
   categories: getAll(state),
@@ -12,4 +12,8 @@ const mapStateToProps = state => ({
   favoriteProducts: getAllFavorites(state),
 });
 
-export default connect(mapStateToProps)(NewFurniture);
+const mapDispatchToProps = dispatch => ({
+  setFavoriteProduct: product => dispatch(setFavoriteProduct(product)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(NewFurniture);
