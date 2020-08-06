@@ -35,7 +35,7 @@
       transition: .3s;
     }
   }
-  
+
   .content {
     text-align: center;
     padding: 20px;
@@ -87,7 +87,7 @@
     }
 
     .priceButton {
-      background-color: $primary;
+      background-color: $productbox-pricebutton-hover-bg;
     }
   }
 }
