@@ -90,4 +90,11 @@
       background-color: $productbox-pricebutton-hover-bg;
     }
   }
+
+  .favoriteButton {
+    &.active {
+      color: $productbox-favoritebutton-active;
+      background-color: $productbox-favoritebutton-active-bg;
+    }
+  }
 }
