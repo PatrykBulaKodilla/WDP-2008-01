@@ -15,8 +15,16 @@ export const setFavoriteProduct = payload => ({ payload, type: SET_FAVORITE_PROD
 export default function reducer(statePart = [], action = []) {
   switch (action.type) {
     case SET_FAVORITE_PRODUCT: {
-      console.log(statePart);
-      return statePart;
+      if (statePart.products.filter(elem => elem === action.payload).length > 0) {
+        return {
+          ...statePart,
+          products: [...statePart.products.filter(elem => elem !== action.payload)],
+        };
+      }
+      return {
+        ...statePart,
+        products: [...statePart.products, action.payload],
+      };
     }
     default:
       return statePart;
