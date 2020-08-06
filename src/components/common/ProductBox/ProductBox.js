@@ -13,10 +13,18 @@ import Button from '../Button/Button';
 
 const productInFavorites = (productId, favoriteArray) =>
   favoriteArray !== undefined
-    ? favoriteArray.filter(favorite => favorite.id === productId).length
+    ? favoriteArray.filter(favorite => favorite === productId).length
     : 0;
 
-const ProductBox = ({ id, name, price, promo, stars, favoriteProducts }) => (
+const ProductBox = ({
+  id,
+  name,
+  price,
+  promo,
+  stars,
+  favoriteProducts,
+  setFavoriteProduct,
+}) => (
   <div className={styles.root}>
     <div className={styles.photo}>
       {promo && <div className={styles.sale}>{promo}</div>}
@@ -49,6 +57,7 @@ const ProductBox = ({ id, name, price, promo, stars, favoriteProducts }) => (
           className={`${styles.favoriteButton} ${
             productInFavorites(id, favoriteProducts) > 0 ? styles.active : undefined
           }`}
+          onClick={() => setFavoriteProduct(id)}
         >
           <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
         </Button>
@@ -73,6 +82,7 @@ ProductBox.propTypes = {
   stars: PropTypes.number,
   id: PropTypes.string,
   favoriteProducts: PropTypes.array,
+  setFavoriteProduct: PropTypes.func,
 };
 
 export default ProductBox;
