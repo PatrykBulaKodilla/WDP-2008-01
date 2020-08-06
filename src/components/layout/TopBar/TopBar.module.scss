@@ -42,3 +42,35 @@
     }
   }
 }
+
+@media (min-width: 600px) and (max-width: 767px) {
+  .root {
+    background-color: red;
+
+    .topBarSpan {
+      display: none;
+    }
+
+    .topMenu ul li {
+      margin-left: 1rem;
+    }
+  }
+}
+
+@media (max-width: 599px) {
+  .root{
+    background-color: yellowgreen;
+
+    .topBarSpan {
+      display: none;
+    }
+
+    .topOptions ul li {
+      margin-right: .5rem;
+    }
+
+    .topMenu ul li {
+      margin-left: 1rem;
+    }
+  }
+}
