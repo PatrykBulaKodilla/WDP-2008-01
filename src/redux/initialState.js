@@ -228,7 +228,7 @@ const initialState = {
     products: [],
   },
   favorite: {
-    products: [{ id: 'aenean-ru-bristique-1' }],
+    products: ['aenean-ru-bristique-1'],
   },
 };
 
