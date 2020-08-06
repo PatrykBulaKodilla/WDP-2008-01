@@ -54,6 +54,7 @@ const ProductBox = ({
       <div className={styles.outlines}>
         <Button
           variant='outline'
+          Comp='button'
           className={`${styles.favoriteButton} ${
             productInFavorites(id, favoriteProducts) > 0 ? styles.active : undefined
           }`}
