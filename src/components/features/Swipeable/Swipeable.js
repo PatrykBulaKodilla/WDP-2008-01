@@ -1,40 +1,43 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Swipeable = props => {
-  let positionStart = 0;
-  let positionEnd = 0;
-  let swipeDirection;
-
-  const handleTouchStart = event => {
-    positionStart = event.touches[0].clientX;
+class Swipeable extends React.Component {
+  state = {
+    positionStart: 0,
+    positionEnd: 0,
+    swipeDirection: '',
   };
 
-  const handleTouchMove = event => {
-    positionEnd = event.touches[0].clientX;
+  handleTouchStart = event => {
+    this.setState({ positionStart: event.touches[0].clientX });
   };
 
-  const handleTouchEnd = () => {
-    if (positionEnd <= positionStart * 0.9) {
-      swipeDirection = 'right';
-      console.log(swipeDirection);
-    } else if (positionEnd >= positionStart * 1.1) {
-      swipeDirection = 'left';
-      console.log(swipeDirection);
+  handleTouchMove = event => {
+    this.setState({ positionEnd: event.touches[0].clientX });
+  };
+
+  handleTouchEnd = () => {
+    if (this.state.positionEnd <= this.state.positionStart * 0.9) {
+      this.setState({ swipeDirection: 'right' });
+      console.log(this.state.swipeDirection);
+    } else if (this.state.positionEnd >= this.state.positionStart * 1.1) {
+      this.setState({ swipeDirection: 'left' });
+      console.log(this.state.swipeDirection);
     }
   };
 
-  return (
-    <div
-      onTouchStart={event => handleTouchStart(event)}
-      onTouchMove={event => handleTouchMove(event)}
-      onTouchEnd={() => handleTouchEnd()}
-    >
-      {console.log(props)}
-      {props.children}
-    </div>
-  );
-};
+  render() {
+    return (
+      <div
+        onTouchStart={event => this.handleTouchStart(event)}
+        onTouchMove={event => this.handleTouchMove(event)}
+        onTouchEnd={() => this.handleTouchEnd()}
+      >
+        {this.props.children}
+      </div>
+    );
+  }
+}
 
 Swipeable.propTypes = {
   children: PropTypes.node,
