@@ -10,18 +10,18 @@ const CompanyClaim = () => (
   <div className={styles.root}>
     <div className='container'>
       <div className='row align-items-center'>
-        <div className={`col text-left ${styles.phoneNumber}`}>
+        <div className={`col text-left ${styles.mobileTel} ${styles.phoneNumber}`}>
           <p>
-            <FontAwesomeIcon className={styles.icon} icon={faMobileAlt} /> 2300 - 3560 -
-            222
+            <FontAwesomeIcon className={styles.icon} icon={faMobileAlt} />
+            <span className={styles.mobileNumber}>2300 - 3560 - 222</span>
           </p>
         </div>
-        <div className='col text-center'>
+        <div className={`col text-center ${styles.mobileLogo}`}>
           <a href='/#'>
             <img src='/images/logo.png' alt='Bazar' />
           </a>
         </div>
-        <div className={`col text-right ${styles.cart}`}>
+        <div className={`col text-right ${styles.mobileCart} ${styles.cart}`}>
           <a href='/#' className={styles.cartBox}>
             <div className={styles.cartIcon}>
               <FontAwesomeIcon className={styles.icon} icon={faShoppingBasket} />

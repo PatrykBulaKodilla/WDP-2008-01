@@ -42,3 +42,33 @@
     }
   }
 }
+
+@media (min-width: 600px) and (max-width: 767px) {
+  .root {
+
+    .topBarSpan {
+      display: none;
+    }
+
+    .topMenu ul li {
+      margin-left: 1rem;
+    }
+  }
+}
+
+@media (max-width: 599px) {
+  .root{
+
+    .topBarSpan {
+      display: none;
+    }
+
+    .topOptions ul li {
+      margin-right: .5rem;
+    }
+
+    .topMenu ul li {
+      margin-left: 1rem;
+    }
+  }
+}
