@@ -10,6 +10,7 @@ class Swipeable extends React.Component {
 
   handleTouchStart = event => {
     this.setState({ positionStart: event.touches[0].clientX });
+    this.setState({ positionEnd: event.touches[0].clientX });
   };
 
   handleTouchMove = event => {
@@ -23,6 +24,8 @@ class Swipeable extends React.Component {
     } else if (this.state.positionEnd >= this.state.positionStart * 1.1) {
       this.setState({ swipeDirection: 'left' });
       console.log(this.state.swipeDirection);
+    } else {
+      this.setState({ swipeDirection: '' });
     }
   };
 
