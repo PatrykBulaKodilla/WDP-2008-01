@@ -5,7 +5,6 @@ class Swipeable extends React.Component {
   state = {
     positionStart: 0,
     positionEnd: 0,
-    swipeDirection: '',
   };
 
   handleTouchStart = event => {
@@ -18,14 +17,10 @@ class Swipeable extends React.Component {
   };
 
   handleTouchEnd = () => {
-    if (this.state.positionEnd <= this.state.positionStart * 0.9) {
-      this.setState({ swipeDirection: 'right' });
-      console.log(this.state.swipeDirection);
-    } else if (this.state.positionEnd >= this.state.positionStart * 1.1) {
-      this.setState({ swipeDirection: 'left' });
-      console.log(this.state.swipeDirection);
-    } else {
-      this.setState({ swipeDirection: '' });
+    if (this.state.positionEnd <= this.state.positionStart * 0.8) {
+      this.props.leftAction();
+    } else if (this.state.positionEnd >= this.state.positionStart * 1.2) {
+      this.props.rightAction();
     }
   };
 
@@ -44,6 +39,8 @@ class Swipeable extends React.Component {
 
 Swipeable.propTypes = {
   children: PropTypes.node,
+  leftAction: PropTypes.func,
+  rightAction: PropTypes.func,
 };
 
 export default Swipeable;
