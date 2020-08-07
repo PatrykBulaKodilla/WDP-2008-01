@@ -3,12 +3,25 @@ import PropTypes from 'prop-types';
 
 import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBox';
+import Swipeable from '../Swipeable/Swipeable';
 
 class NewFurniture extends React.Component {
   state = {
     activePage: 0,
     activeCategory: 'bed',
   };
+
+  handleLeftAction(pagesCount) {
+    if (this.state.activePage < pagesCount - 1) {
+      this.setState({ activePage: this.state.activePage + 1 });
+    }
+  }
+
+  handleRightAction() {
+    if (this.state.activePage > 0) {
+      this.setState({ activePage: this.state.activePage - 1 });
+    }
+  }
 
   handlePageChange(newPage) {
     this.setState({ activePage: newPage });
@@ -41,32 +54,37 @@ class NewFurniture extends React.Component {
     }
 
     return (
-      <div className={styles.root}>
-        <div className='container'>
-          <div className={styles.panelBar}>
-            <div className='row no-gutters align-items-end'>
-              <div className={'col-auto ' + styles.heading}>
-                <h3>New furniture</h3>
-              </div>
-              <div className={'col ' + styles.menu}>
-                <ul>
-                  {categories.map(item => (
-                    <li key={item.id}>
-                      <a
-                        href='/#'
-                        className={
-                          item.id === activeCategory ? styles.active : undefined
-                        }
-                        onClick={() => this.handleCategoryChange(item.id)}
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className={'col-auto ' + styles.dots}>
-                <ul>{dots}</ul>
+      <Swipeable
+        leftAction={() => this.handleLeftAction(pagesCount)}
+        rightAction={() => this.handleRightAction()}
+      >
+        <div className={styles.root}>
+          <div className='container'>
+            <div className={styles.panelBar}>
+              <div className='row no-gutters align-items-end'>
+                <div className={'col-auto ' + styles.heading}>
+                  <h3>New furniture</h3>
+                </div>
+                <div className={'col ' + styles.menu}>
+                  <ul>
+                    {categories.map(item => (
+                      <li key={item.id}>
+                        <a
+                          href='/#'
+                          className={
+                            item.id === activeCategory ? styles.active : undefined
+                          }
+                          onClick={() => this.handleCategoryChange(item.id)}
+                        >
+                          {item.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className={'col-auto ' + styles.dots}>
+                  <ul>{dots}</ul>
+                </div>
               </div>
             </div>
           </div>
@@ -82,7 +100,7 @@ class NewFurniture extends React.Component {
             ))}
           </div>
         </div>
-      </div>
+      </Swipeable>
     );
   }
 }
