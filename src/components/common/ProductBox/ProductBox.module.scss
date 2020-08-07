@@ -1,4 +1,5 @@
 @import "../../../styles/settings.scss";
+@import "../../../styles/animations.scss";
 
 .root {
   background-color: $productbox-bg;
@@ -29,10 +30,10 @@
     }
 
     .buttons {
+      @extend .ft-animation;
       opacity: 0;
       display: flex;
       justify-content: space-between;
-      transition: .3s;
     }
   }
 
@@ -79,7 +80,7 @@
   }
 
   .priceButton {
-    transition: .3s;
+    @extend .ft-animation;
   }
   &:hover {
     .buttons {
