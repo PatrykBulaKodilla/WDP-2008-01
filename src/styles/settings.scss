@@ -21,6 +21,7 @@ $button-outline-border: $lightBlack;
 $button-outline-text: $lightBlack;
 $button-outline-bg-hover: $lightBlack;
 $button-outline-text-hover: $white;
+$button-outline-bg: $white;
 
 /*FeatureBox*/
 $featurebox-border: $lightGray;
@@ -50,6 +51,8 @@ $productbox-line-border: $lightBlack;
 $productbox-line-border-before: $orange;
 
 $productbox-pricebutton-hover-bg: $orange;
+$productbox-favoritebutton-active-bg: $lightBlack;
+$productbox-favoritebutton-active: $white;
 
 /*NewFerniture*/
 $newfurniture-panelbar-border: $darkWhite;

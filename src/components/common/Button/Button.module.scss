@@ -17,7 +17,7 @@
     color: $button-main-text !important;
     background-color: $button-main-bg-hover;
     text-decoration: none;
-    
+
   }
 }
 
@@ -35,11 +35,18 @@
   padding: 5px 10px;
   border: 1px solid $button-outline-border;
   color: $button-outline-text;
+  background-color: $button-outline-bg;
   font-size: 13px;
   line-height: 22px;
 
   &:not(.noHover):hover {
     background-color: $button-outline-bg-hover;
     color: $button-outline-text-hover;
+  }
+}
+
+button {
+  &:focus {
+    outline: 0;
   }
 }
