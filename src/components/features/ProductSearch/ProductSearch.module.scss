@@ -1,4 +1,5 @@
 @import "../../../styles/settings.scss";
+@import "../../../styles/animations.scss";
 
 .root {
   border: 1px solid $productsearch-border;
@@ -23,6 +24,78 @@
       position: absolute;
       right: 10px;
       z-index: 0;
+    }
+    ol {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      justify-items: center;
+      border: 0;
+      height: 100%;
+      background-color: $productsearch-select-bg;
+      position: relative;
+      z-index: 1;
+      list-style: none;
+      li {
+        padding: 5px 30px 5px 35px;
+        margin: 0;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        height: 100%;
+        width: 100%;
+        font-size: 12px;
+        line-height: 12px;
+        position: relative;
+        z-index: 1;
+        display: flex;
+
+        ul {
+          top: 100%;
+          left: 0;
+          padding: 0;
+          margin: 0;
+          background: transparent;
+          width: 100%;
+          position: absolute;
+          display: none;
+          opacity: 0;
+          transition: .3s;
+          background: #fff;
+
+          li {
+            text-align: center;
+            padding: 5px 30px 5px 35px;
+            margin: 0;
+            display: block;
+            width: 100%;
+            transition: .3s;
+            background: $productsearch-hover-icon;
+            
+            a {
+              text-decoration: none;
+              color: $productsearch-text;
+            }
+
+            &:hover {
+              background: $productsearch-select-bg;
+              
+              a {
+                color: $productsearch-hover-icon;
+              }
+            }
+          }
+        }
+      }
+
+      &:hover {
+        li > ul {
+          display: block;
+          opacity: 100%;
+        }
+      }
     }
 
     select {
