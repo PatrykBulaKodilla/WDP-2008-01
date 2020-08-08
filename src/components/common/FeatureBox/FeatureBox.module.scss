@@ -9,16 +9,16 @@
   height: 100%;
   &:hover {
     .iconWrapper {
-      color: #ffffff;
+      color: $featurebox-icon-text;
 
       &::after {
-        background-color: $primary;
-        border-color: $primary;
+        background-color: $featurebox-content-active-icon-bg;
+        border-color: $featurebox-content-active-icon-border;
       }
     }
 
     .content {
-      color: $primary;
+      color: $featurebox-content-active-text;
     }
   }
   .iconWrapper {

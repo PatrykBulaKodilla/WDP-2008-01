@@ -1,0 +1,60 @@
+@import "../../../styles/settings.scss";
+@import "../../../styles/animations.scss";
+
+.root {
+  .panelBar {
+    margin-bottom: 30px;
+    position: relative;
+    background-color: $suggestedproducts-bg;
+  }
+
+  h3 {
+    color: #e2e2e2;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 48px;
+    font-weight: bold;
+    margin: 0 0 0 20px;
+    letter-spacing: 1px;
+  }
+
+  .menu {
+    margin: 0 20px 0 0;
+    position: relative;
+  }
+
+  .dots {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateY(-50%);
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      transform: translateY(15px);
+
+      li {
+        display: inline-block;
+        margin-left: 0.5rem;
+
+        a {
+          @extend .sw-animation;
+          display: block;
+          width: 13px;
+          height: 13px;
+          border-radius: 6px;
+          background-color: $suggestedproducts-dots-link-bg;
+          font-size: 0;
+
+          &.active,
+          &:hover {
+            background-color: $suggestedproducts-dots-link-active-hover-bg;
+          }
+        }
+      }
+    }
+  }
+
+}
