@@ -13,7 +13,6 @@ const ProductSearch = () => (
       <select className={styles.categorySelect} name='' id=''>
         <option value=''>Select a category</option>
       </select>
-      */}
       <ol>
         <li>
           Select a category
