@@ -149,4 +149,9 @@
   .searchField:hover button {
     color: $productsearch-hover-button;
   }
+
+  .outlines a[class~="true"] {
+    background-color: $productbox-content-text;
+    color: $productbox-sale-text ;
+  }
 }
