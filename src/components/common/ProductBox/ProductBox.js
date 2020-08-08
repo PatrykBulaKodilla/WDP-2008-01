@@ -23,7 +23,7 @@ const ProductBox = ({
   promo,
   stars,
   favoriteProducts,
-  setFavoriteProduct, 
+  setFavoriteProduct,
   comparison,
 }) => (
   <div className={styles.root}>
@@ -62,7 +62,7 @@ const ProductBox = ({
           }`}
           onClick={() => setFavoriteProduct(id)}
         >
-        {/*<Button variant='outline' className={styles.faHeart} className={favorite}>*/}
+          {/*<Button variant='outline' className={styles.faHeart} className={favorite}>*/}
           <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
         </Button>
         <Button
