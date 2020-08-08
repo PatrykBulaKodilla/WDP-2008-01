@@ -1,0 +1,82 @@
+@import "../../../styles/settings.scss";
+@import "../../../styles/animations.scss";
+
+.root {
+  .photo {
+    position: relative;
+    padding: 70% 10px 0 10px;
+    background: {
+      color: $slider-photo-bg;
+    }
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+ .panel {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    transition: .3s;
+    top: 50%;
+    bottom: auto;
+    left: 50%;
+    right: auto;
+    height: 40%;
+    width: 100%;
+    background-color: $slider-panel-bg;
+    text-align: center;
+    opacity: .5;
+    text-transform: uppercase;
+
+  }
+
+  .descriptionTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    line-height: 16px;
+    color: $slider-description-text;
+      p {
+        padding: 16px 0 0 16px;
+        font-weight: 200;
+        font-size: 48px;
+        &:last-child{
+          font-weight: 600;
+      }
+    }
+  }
+
+  .descriptionSubitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $slider-description-text;
+  }
+
+  .buttonDescription {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $slider-descriptionbutton-bg;
+    width: 100px;
+    height: 40px;
+    bottom: -20px;
+    color: $slider-descriptionbutton-color;
+  }
+
+  .button {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 50%;
+  }
+}
