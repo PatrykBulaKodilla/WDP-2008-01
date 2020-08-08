@@ -83,3 +83,19 @@
     }
   }
 }
+
+
+@media (max-width: 575px) {
+  .menuWrapper {
+    text-align: center;
+  }
+
+  .footerMenu {
+
+    .menuCards {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
