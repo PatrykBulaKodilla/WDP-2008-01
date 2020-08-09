@@ -30,7 +30,6 @@ class MenuBar extends React.Component {
           <div className={'row align-items-center' + ' ' + styles.divContainer}>
             <div className={'col' + ' ' + styles.productSearch}>
               <ProductSearch />
-              {/*className={this.state.active ? 'active' : null}*/}
               <button
                 id={styles.hamburgerMenu}
                 className={this.state.active ? 'active' : null}
