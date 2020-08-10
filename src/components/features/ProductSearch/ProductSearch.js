@@ -20,16 +20,16 @@ const ProductSearch = () => (
           Select a category
           <ul>
             <li>
-              <a href='#'>Select a category</a>
+              <a href='/#'>Select a category</a>
             </li>
             <li>
-              <a href='#'>Bed</a>
+              <a href='/#'>Bed</a>
             </li>
             <li>
-              <a href='#'>Chair</a>
+              <a href='/#'>Chair</a>
             </li>
             <li>
-              <a href='#'>Table</a>
+              <a href='/#'>Table</a>
             </li>
           </ul>
         </li>

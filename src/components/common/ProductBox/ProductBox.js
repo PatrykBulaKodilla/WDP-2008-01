@@ -58,20 +58,20 @@ const ProductBox = ({
         <Button
           variant='outline'
           Comp='button'
-          className={styles.faHeart}
-          className={`${styles.favoriteButton} ${
-            productInFavorites(id, favoriteProducts) > 0 ? styles.active : undefined
-          }`}
+          className={
+            styles.faHeart +
+            ' ' +
+            styles.favoriteButton +
+            ' ' +
+            `${
+              productInFavorites(id, favoriteProducts) > 0 ? styles.active : undefined
+            }`
+          }
           onClick={() => setFavoriteProduct(id)}
         >
-          {/*<Button variant='outline' className={styles.faHeart} className={favorite}>*/}
           <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
         </Button>
-        <Button
-          variant='outline'
-          className={styles.faExchangeAlt}
-          className={comparison}
-        >
+        <Button variant='outline' className={comparison + ' ' + styles.faExchangeAlt}>
           <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
         </Button>
       </div>
@@ -93,8 +93,7 @@ ProductBox.propTypes = {
   id: PropTypes.string,
   favoriteProducts: PropTypes.array,
   setFavoriteProduct: PropTypes.func,
-  comparison: PropTypes.string,
-  image: PropTypes.string,
+  comparison: PropTypes.bool,
 };
 
 export default ProductBox;
