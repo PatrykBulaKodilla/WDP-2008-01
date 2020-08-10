@@ -22,13 +22,15 @@ const ProductBox = ({
   price,
   promo,
   stars,
+  image,
   favoriteProducts,
-  setFavoriteProduct, 
+  setFavoriteProduct,
   comparison,
 }) => (
   <div className={styles.root}>
     <div className={styles.photo}>
       {promo && <div className={styles.sale}>{promo}</div>}
+      <img className={styles.image} src={image} alt='productFurniture' />
       <div className={styles.buttons}>
         <Button variant='small'>Quick View</Button>
         <Button variant='small'>
@@ -62,7 +64,7 @@ const ProductBox = ({
           }`}
           onClick={() => setFavoriteProduct(id)}
         >
-        {/*<Button variant='outline' className={styles.faHeart} className={favorite}>*/}
+          {/*<Button variant='outline' className={styles.faHeart} className={favorite}>*/}
           <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
         </Button>
         <Button
@@ -92,6 +94,7 @@ ProductBox.propTypes = {
   favoriteProducts: PropTypes.array,
   setFavoriteProduct: PropTypes.func,
   comparison: PropTypes.string,
+  image: PropTypes.string,
 };
 
 export default ProductBox;

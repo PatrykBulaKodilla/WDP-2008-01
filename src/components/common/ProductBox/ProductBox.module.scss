@@ -8,7 +8,6 @@
 
   .photo {
     position: relative;
-    padding: 80% 10px 0 10px;
     background: {
       color: $productbox-photo-bg;
       size: contain;
@@ -34,6 +33,12 @@
       opacity: 0;
       display: flex;
       justify-content: space-between;
+    }
+
+    .image {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
     }
   }
 
@@ -101,6 +106,6 @@
     &.active {
       color: $productbox-favoritebutton-active;
       background-color: $productbox-content-text;
-    }    
+    }
   }
 }
