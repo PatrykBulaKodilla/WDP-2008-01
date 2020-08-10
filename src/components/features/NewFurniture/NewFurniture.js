@@ -28,7 +28,8 @@ class NewFurniture extends React.Component {
     this.setState({ activePage: newPage });
   }
 
-  handleCategoryChange(newCategory) {
+  handleCategoryChange(newCategory, event) {
+    event.preventDefault();
     this.setState({ activeCategory: newCategory });
   }
 
@@ -75,7 +76,7 @@ class NewFurniture extends React.Component {
                           className={
                             item.id === activeCategory ? styles.active : undefined
                           }
-                          onClick={() => this.handleCategoryChange(item.id)}
+                          onClick={event => this.handleCategoryChange(item.id, event)}
                         >
                           {item.name}
                         </a>
