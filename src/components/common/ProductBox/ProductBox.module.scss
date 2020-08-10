@@ -8,7 +8,6 @@
 
   .photo {
     position: relative;
-    padding: 80% 10px 0 10px;
     background: {
       color: $productbox-photo-bg;
       size: contain;
@@ -36,23 +35,10 @@
       justify-content: space-between;
     }
 
-    .wrapper {
-      position: relative;
+    .image {
+      object-fit: cover;
+      height: 100%;
       width: 100%;
-      height: 220px;
-      overflow: hidden;
-      z-index: 1;
-      .image {
-        object-fit: cover;
-        left: 50%;
-        position: absolute;
-        top: 50%;
-        -ms-transform: translate(-50%, -50%);
-        -webkit-transform: translate(-50%, -50%);
-        -moz-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        max-width: 100%;
-      }
     }
   }
 
