@@ -89,7 +89,7 @@ class NewFurniture extends React.Component {
                 </div>
               </div>
             </div>
-            <div className='row'>
+            <div className='row' ref={this.props.furnitureListRef}>
               {categoryProducts
                 .slice(activePage * 8, (activePage + 1) * 8)
                 .map(item => (
@@ -130,11 +130,13 @@ NewFurniture.propTypes = {
   ),
   favoriteProducts: PropTypes.array,
   setFavoriteProduct: PropTypes.func,
+  furnitureListRef: PropTypes.node,
 };
 
 NewFurniture.defaultProps = {
   categories: [],
   products: [],
+  furnitureListRef: React.createRef(),
 };
 
 export default NewFurniture;
