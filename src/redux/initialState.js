@@ -28,7 +28,7 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       image:
-        'https://media.restorationhardware.com/is/image/rhis/prod18990444_E713327381_TQ?$PD$&illum=0',
+        'https://cdn.habitat.fr/thumbnails/product/866/866233/box/1200/1200/80/eskyss-aparador-vitrina-alto-de-nogal_866233.jpg',
       newFurniture: true,
       favorite: true,
       comparison: false,
@@ -41,7 +41,7 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       image:
-        'https://media.restorationhardware.com/is/image/rhis/prod17390034_E811867768_TQ_RS?$GAL_BNR$',
+        'https://furniture123.co.uk/files/images/f123/shop-furniture-by-bedroom.jpg',
       newFurniture: true,
       favorite: false,
       comparison: true,
@@ -132,7 +132,7 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       image:
-        'https://media.restorationhardware.com/is/image/rhis/prod18990444_E713327381_TQ?$PD$&illum=0',
+        'https://cdn.habitat.fr/thumbnails/product/866/866233/box/1200/1200/80/eskyss-aparador-vitrina-alto-de-nogal_866233.jpg',
       newFurniture: true,
       favorite: false,
       comparison: false,
@@ -145,7 +145,7 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       image:
-        'https://media.restorationhardware.com/is/image/rhis/prod17390034_E811867768_TQ_RS?$GAL_BNR$',
+        'https://furniture123.co.uk/files/images/f123/shop-furniture-by-bedroom.jpg',
       newFurniture: true,
       favorite: false,
       comparison: false,
@@ -236,7 +236,7 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       image:
-        'https://media.restorationhardware.com/is/image/rhis/prod18990444_E713327381_TQ?$PD$&illum=0',
+        'https://cdn.habitat.fr/thumbnails/product/866/866233/box/1200/1200/80/eskyss-aparador-vitrina-alto-de-nogal_866233.jpg',
       newFurniture: true,
       favorite: false,
       comparison: false,
@@ -249,7 +249,7 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       image:
-        'https://media.restorationhardware.com/is/image/rhis/prod17390034_E811867768_TQ_RS?$GAL_BNR$',
+        'https://furniture123.co.uk/files/images/f123/shop-furniture-by-bedroom.jpg',
       newFurniture: true,
       favorite: false,
       comparison: false,
