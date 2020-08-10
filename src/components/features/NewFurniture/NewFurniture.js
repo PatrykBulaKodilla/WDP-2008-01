@@ -13,13 +13,13 @@ class NewFurniture extends React.Component {
 
   handleLeftAction(pagesCount) {
     if (this.state.activePage < pagesCount - 1) {
-      this.setState({ activePage: this.state.activePage + 1 });
+      this.handlePageChangeFade(this.state.activePage + 1);
     }
   }
 
   handleRightAction() {
     if (this.state.activePage > 0) {
-      this.setState({ activePage: this.state.activePage - 1 });
+      this.handlePageChangeFade(this.state.activePage - 1);
     }
   }
 
@@ -40,7 +40,7 @@ class NewFurniture extends React.Component {
   }
 
   handleCategoryChangeFade(newCategory, event) {
-    event.preventDefault();
+    if (event !== undefined) event.preventDefault();
     this.removeClass(this.props.furnitureListRef, styles.fadeIn);
     this.addClass(this.props.furnitureListRef, styles.fadeOut);
 
@@ -53,7 +53,7 @@ class NewFurniture extends React.Component {
   }
 
   handlePageChangeFade(newPage, event) {
-    event.preventDefault();
+    if (event !== undefined) event.preventDefault();
     this.removeClass(this.props.furnitureListRef, styles.fadeIn);
     this.addClass(this.props.furnitureListRef, styles.fadeOut);
 
