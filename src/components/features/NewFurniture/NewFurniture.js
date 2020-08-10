@@ -23,7 +23,8 @@ class NewFurniture extends React.Component {
     }
   }
 
-  handlePageChange(newPage) {
+  handlePageChange(newPage, event) {
+    event.preventDefault();
     this.setState({ activePage: newPage });
   }
 
@@ -44,7 +45,7 @@ class NewFurniture extends React.Component {
         <li key={i}>
           <a
             href='/#'
-            onClick={() => this.handlePageChange(i)}
+            onClick={event => this.handlePageChange(i, event)}
             className={i === activePage ? styles.active : undefined}
           >
             page {i}
@@ -88,15 +89,17 @@ class NewFurniture extends React.Component {
               </div>
             </div>
             <div className='row'>
-              {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
-                <div key={item.id} className='col-lg-3 col-md-4 col-6'>
-                  <ProductBox
-                    {...item}
-                    favoriteProducts={favoriteProducts}
-                    setFavoriteProduct={setFavoriteProduct}
-                  />
-                </div>
-              ))}
+              {categoryProducts
+                .slice(activePage * 8, (activePage + 1) * 8)
+                .map(item => (
+                  <div key={item.id} className='col-lg-3 col-md-4 col-6'>
+                    <ProductBox
+                      {...item}
+                      favoriteProducts={favoriteProducts}
+                      setFavoriteProduct={setFavoriteProduct}
+                    />
+                  </div>
+                ))}
             </div>
           </div>
         </div>
