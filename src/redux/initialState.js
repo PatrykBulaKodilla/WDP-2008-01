@@ -15,7 +15,7 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       image:
-        'https://www.outofchaos.ca/wp/wp-content/uploads/2016/08/0ec2b505ec51e8112a36ecbbfb291682.jpg',
+        'https://scandinavianliving.pl/userdata/public/gfx/9ff052bf0a47985baa8e54ccbc6e832d.jpg',
       newFurniture: true,
       favorite: true,
       comparison: true,
@@ -119,7 +119,7 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       image:
-        'https://www.outofchaos.ca/wp/wp-content/uploads/2016/08/0ec2b505ec51e8112a36ecbbfb291682.jpg',
+        'https://scandinavianliving.pl/userdata/public/gfx/9ff052bf0a47985baa8e54ccbc6e832d.jpg',
       newFurniture: true,
       favorite: false,
       comparison: false,
@@ -223,7 +223,7 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       image:
-        'https://www.outofchaos.ca/wp/wp-content/uploads/2016/08/0ec2b505ec51e8112a36ecbbfb291682.jpg',
+        'https://scandinavianliving.pl/userdata/public/gfx/9ff052bf0a47985baa8e54ccbc6e832d.jpg',
       newFurniture: true,
       favorite: false,
       comparison: false,
@@ -324,7 +324,7 @@ const initialState = {
     products: [],
   },
   favorite: {
-    products: ['aenean-ru-bristique-1','aenean-ru-bristique-2'],
+    products: ['aenean-ru-bristique-1', 'aenean-ru-bristique-2'],
   },
 };
 
