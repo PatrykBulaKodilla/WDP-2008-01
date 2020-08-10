@@ -23,14 +23,45 @@ class NewFurniture extends React.Component {
     }
   }
 
-  handlePageChange(newPage, event) {
-    event.preventDefault();
+  handlePageChange(newPage) {
     this.setState({ activePage: newPage });
   }
 
-  handleCategoryChange(newCategory, event) {
-    event.preventDefault();
+  handleCategoryChange(newCategory) {
     this.setState({ activeCategory: newCategory });
+  }
+
+  addClass(domElement, className) {
+    domElement.current.classList.add(className);
+  }
+
+  removeClass(domElement, className) {
+    domElement.current.classList.remove(className);
+  }
+
+  handleCategoryChangeFade(newCategory, event) {
+    event.preventDefault();
+    this.removeClass(this.props.furnitureListRef, styles.fadeIn);
+    this.addClass(this.props.furnitureListRef, styles.fadeOut);
+
+    setTimeout(() => {
+      this.handlePageChange(0);
+      this.handleCategoryChange(newCategory);
+      this.addClass(this.props.furnitureListRef, styles.fadeIn);
+      this.removeClass(this.props.furnitureListRef, styles.fadeOut);
+    }, 1000);
+  }
+
+  handlePageChangeFade(newPage, event) {
+    event.preventDefault();
+    this.removeClass(this.props.furnitureListRef, styles.fadeIn);
+    this.addClass(this.props.furnitureListRef, styles.fadeOut);
+
+    setTimeout(() => {
+      this.setState({ activePage: newPage });
+      this.addClass(this.props.furnitureListRef, styles.fadeIn);
+      this.removeClass(this.props.furnitureListRef, styles.fadeOut);
+    }, 1000);
   }
 
   render() {
@@ -46,7 +77,7 @@ class NewFurniture extends React.Component {
         <li key={i}>
           <a
             href='/#'
-            onClick={event => this.handlePageChange(i, event)}
+            onClick={event => this.handlePageChangeFade(i, event)}
             className={i === activePage ? styles.active : undefined}
           >
             page {i}
@@ -76,7 +107,9 @@ class NewFurniture extends React.Component {
                           className={
                             item.id === activeCategory ? styles.active : undefined
                           }
-                          onClick={event => this.handleCategoryChange(item.id, event)}
+                          onClick={event =>
+                            this.handleCategoryChangeFade(item.id, event)
+                          }
                         >
                           {item.name}
                         </a>
@@ -89,7 +122,7 @@ class NewFurniture extends React.Component {
                 </div>
               </div>
             </div>
-            <div className='row' ref={this.props.furnitureListRef}>
+            <div className={`row ${styles.fadeIn}`} ref={this.props.furnitureListRef}>
               {categoryProducts
                 .slice(activePage * 8, (activePage + 1) * 8)
                 .map(item => (
@@ -130,7 +163,7 @@ NewFurniture.propTypes = {
   ),
   favoriteProducts: PropTypes.array,
   setFavoriteProduct: PropTypes.func,
-  furnitureListRef: PropTypes.node,
+  furnitureListRef: PropTypes.object,
 };
 
 NewFurniture.defaultProps = {
