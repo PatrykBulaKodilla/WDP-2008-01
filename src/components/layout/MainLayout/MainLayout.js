@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 
-const MainLayout = ({ children }) => {
+const MainLayout = ({ children, ...props }) => {
   window.addEventListener('resize', e => {
     console.log(window.innerWidth);
   });
@@ -24,6 +24,8 @@ MainLayout.state = {
 
 MainLayout.propTypes = {
   children: PropTypes.node,
+  rwdMode: PropTypes.string,
+  setRwdMode: PropTypes.func,
 };
 
 export default MainLayout;
