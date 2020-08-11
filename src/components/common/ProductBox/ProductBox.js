@@ -20,10 +20,11 @@ const ProductBox = ({
   id,
   name,
   price,
+  oldPrice,
   promo,
   stars,
   favoriteProducts,
-  setFavoriteProduct, 
+  setFavoriteProduct,
   comparison,
 }) => (
   <div className={styles.root}>
@@ -62,7 +63,7 @@ const ProductBox = ({
           }`}
           onClick={() => setFavoriteProduct(id)}
         >
-        {/*<Button variant='outline' className={styles.faHeart} className={favorite}>*/}
+          {/*<Button variant='outline' className={styles.faHeart} className={favorite}>*/}
           <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
         </Button>
         <Button
@@ -74,6 +75,9 @@ const ProductBox = ({
         </Button>
       </div>
       <div className={styles.price}>
+        <Button noHover variant='small' className={styles.oldPriceButton}>
+          {oldPrice}
+        </Button>
         <Button noHover variant='small' className={styles.priceButton}>
           $ {price}
         </Button>
@@ -86,6 +90,7 @@ ProductBox.propTypes = {
   children: PropTypes.node,
   name: PropTypes.string,
   price: PropTypes.number,
+  oldPrice: PropTypes.number,
   promo: PropTypes.string,
   stars: PropTypes.number,
   id: PropTypes.string,
