@@ -5,7 +5,7 @@ import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 
 const MainLayout = ({ children, ...props }) => {
-  window.addEventListener('resize', e => {
+  window.addEventListener('resize', () => {
     console.log(window.innerWidth);
   });
 
@@ -16,10 +16,6 @@ const MainLayout = ({ children, ...props }) => {
       <Footer />
     </div>
   );
-};
-
-MainLayout.state = {
-  test: 0,
 };
 
 MainLayout.propTypes = {
