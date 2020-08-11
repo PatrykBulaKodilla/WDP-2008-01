@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './SuggestedProducts.module.scss';
+
 import HotDeals from '../../common/HotDeals/HotDeals';
 import Slider from '../Slider/Slider';
 
