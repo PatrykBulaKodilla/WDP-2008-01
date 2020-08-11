@@ -1,44 +1,61 @@
 import React from 'react';
 import styles from './Promotion.module.scss';
+import PropTypes from 'prop-types';
 
-const Promotions = () => (
-  <div className={styles.root}>
-    <div className='container'>
-      <div className='row'>
-        <div className='col-6'>
-          <div className={styles.cardBig}>
-            <img
-              className={styles.image}
-              alt='promo-1'
-              src='https://elmar.home.pl/files/ritmo_(2)-1.jpg'
-            />
-          </div>
-        </div>
-        <div className='col-6'>
+class Promotions extends React.Component {
+  render() {
+    const { promotions } = this.props;
+
+    return (
+      <div className={styles.root}>
+        <div className='container'>
           <div className='row'>
-            <div className='col-12'>
-              <div className={styles.cardSmall1}>
+            <div className='col-6'>
+              <div className={styles.cardBig}>
                 <img
                   className={styles.image}
-                  alt='promo-2'
-                  src='https://houseform.pl/!data/gallery/b_161449_22092014_largo_houseform.jpg'
+                  alt={promotions[0].alt}
+                  src={promotions[0].image}
                 />
+                <div className={styles.overlay}></div>
+                <div className={styles.opacityText}>
+                  <p>{promotions[0].text_p}</p>
+                  <span>{promotions[0].text_bold}</span>
+                  <p className={styles.percent}>{promotions[0].text_value}</p>
+                </div>
               </div>
             </div>
-            <div className='col-12'>
-              <div className={styles.cardSmall2}>
-                <img
-                  className={styles.image}
-                  alt='promo-3'
-                  src='https://klimapoint.pl/wp-content/uploads/2020/04/gree2020.jpg'
-                />
+            <div className='col-6'>
+              <div className='row'>
+                <div className='col-12'>
+                  <div className={styles.cardSmall1}>
+                    <img
+                      className={styles.image}
+                      alt={promotions[1].alt}
+                      src={promotions[1].image}
+                    />
+                  </div>
+                </div>
+                <div className='col-12'>
+                  <div className={styles.cardSmall2}>
+                    <img
+                      className={styles.image}
+                      alt={promotions[2].alt}
+                      src={promotions[2].image}
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-);
+    );
+  }
+}
+
+Promotions.propTypes = {
+  promotions: PropTypes.array,
+};
 
 export default Promotions;
