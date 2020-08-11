@@ -5,8 +5,20 @@ import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 
 const MainLayout = ({ children, ...props }) => {
+  const rwdModeSelect = windowWidth => {
+    if (windowWidth <= 768) {
+      props.setRwdMode('mobile');
+    } else if (windowWidth <= 1024) {
+      props.setRwdMode('tablet');
+    } else {
+      props.setRwdMode('desktop');
+    }
+  };
+
+  rwdModeSelect(window.innerWidth);
+
   window.addEventListener('resize', () => {
-    console.log(window.innerWidth);
+    rwdModeSelect(window.innerWidth);
   });
 
   return (
