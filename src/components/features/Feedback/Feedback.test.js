@@ -1,10 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Slider from './Slider';
+import Feedback from './Feedback';
 
-describe('Component Slider', () => {
+describe('Component Feedback', () => {
   it('should render without crashing', () => {
-    const component = shallow(<Slider />);
+    const component = shallow(<Feedback feedback={[]} />);
     expect(component).toBeTruthy();
   });
 });
