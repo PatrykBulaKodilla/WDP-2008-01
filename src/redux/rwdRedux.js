@@ -14,6 +14,12 @@ export const setRwdMode = payload => ({ payload, type: SET_RWD_MODE });
 /* reducer */
 export default function reducer(statePart = [], action = []) {
   switch (action.type) {
+    case SET_RWD_MODE: {
+      return {
+        ...statePart,
+        mode: action.payload,
+      };
+    }
     default:
       return statePart;
   }
