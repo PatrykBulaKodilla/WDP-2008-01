@@ -1,2 +1,6 @@
 /* selectors */
-export const getRwdOptions = ({ rwd }) => rwd;
+export const getRwdMode = ({ rwd }) => rwd.mode;
+
+/* action name creator */
+const reducerName = 'rwd';
+const createActionName = name => `app/${reducerName}/${name}`;
