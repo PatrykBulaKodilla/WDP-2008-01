@@ -326,6 +326,8 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      image:
+        'https://scandinavianliving.pl/userdata/public/gfx/9ff052bf0a47985baa8e54ccbc6e832d.jpg',
       newFurniture: true,
       favorite: false,
       comparison: false,
@@ -337,6 +339,8 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      image:
+        'https://cdn.habitat.fr/thumbnails/product/866/866233/box/1200/1200/80/eskyss-aparador-vitrina-alto-de-nogal_866233.jpg',
       newFurniture: true,
       favorite: false,
       comparison: false,
@@ -348,6 +352,8 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      image:
+        'https://www.ikea.com/images/dining-sets-03d1940e32032e44c82af0c827a2494a.jpg?f=s',
       newFurniture: true,
       favorite: false,
       comparison: false,
@@ -359,6 +365,8 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      image:
+        'https://furniture123.co.uk/files/images/f123/shop-furniture-by-bedroom.jpg',
       newFurniture: true,
       favorite: false,
       comparison: false,
@@ -370,6 +378,8 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      image:
+        'https://www.ikea.com/images/dining-sets-03d1940e32032e44c82af0c827a2494a.jpg?f=s',
       newFurniture: true,
       favorite: false,
       comparison: false,
@@ -381,6 +391,8 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      image:
+        'https://scandinavianliving.pl/userdata/public/gfx/9ff052bf0a47985baa8e54ccbc6e832d.jpg',
       newFurniture: true,
       favorite: false,
       comparison: false,
@@ -392,6 +404,8 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      image:
+        'https://cdn.habitat.fr/thumbnails/product/866/866233/box/1200/1200/80/eskyss-aparador-vitrina-alto-de-nogal_866233.jpg',
       newFurniture: true,
       favorite: false,
       comparison: false,
@@ -403,6 +417,8 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      image:
+        'https://scandinavianliving.pl/userdata/public/gfx/9ff052bf0a47985baa8e54ccbc6e832d.jpg',
       newFurniture: true,
       favorite: false,
       comparison: false,
@@ -414,6 +430,8 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      image:
+        'https://furniture123.co.uk/files/images/f123/shop-furniture-by-bedroom.jpg',
       newFurniture: true,
       favorite: false,
       comparison: false,
@@ -425,6 +443,8 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      image:
+        'https://cdn.habitat.fr/thumbnails/product/866/866233/box/1200/1200/80/eskyss-aparador-vitrina-alto-de-nogal_866233.jpg',
       newFurniture: true,
       favorite: false,
       comparison: false,
@@ -436,6 +456,8 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      image:
+        'https://furniture123.co.uk/files/images/f123/shop-furniture-by-bedroom.jpg',
       newFurniture: true,
       favorite: false,
       comparison: false,
@@ -447,6 +469,8 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      image:
+        'https://www.ikea.com/images/dining-sets-03d1940e32032e44c82af0c827a2494a.jpg?f=s',
       newFurniture: true,
       favorite: false,
       comparison: false,
@@ -458,6 +482,8 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      image:
+        'https://scandinavianliving.pl/userdata/public/gfx/9ff052bf0a47985baa8e54ccbc6e832d.jpg',
       newFurniture: true,
       favorite: false,
       comparison: false,
@@ -469,6 +495,8 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      image:
+        'https://cdn.habitat.fr/thumbnails/product/866/866233/box/1200/1200/80/eskyss-aparador-vitrina-alto-de-nogal_866233.jpg',
       newFurniture: true,
       favorite: false,
       comparison: false,
@@ -480,6 +508,8 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      image:
+        'https://furniture123.co.uk/files/images/f123/shop-furniture-by-bedroom.jpg',
       newFurniture: true,
       favorite: false,
       comparison: false,
@@ -491,6 +521,8 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      image:
+        'https://www.ikea.com/images/dining-sets-03d1940e32032e44c82af0c827a2494a.jpg?f=s',
       newFurniture: true,
       favorite: false,
       comparison: false,
@@ -502,6 +534,8 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      image:
+        'https://scandinavianliving.pl/userdata/public/gfx/9ff052bf0a47985baa8e54ccbc6e832d.jpg',
       newFurniture: true,
       favorite: false,
       comparison: false,
@@ -513,6 +547,8 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      image:
+        'https://www.ikea.com/images/dining-sets-03d1940e32032e44c82af0c827a2494a.jpg?f=s',
       newFurniture: true,
       favorite: false,
       comparison: false,
