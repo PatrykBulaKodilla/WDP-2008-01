@@ -1,0 +1,30 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  padding: 5rem 0;
+
+  .cardBig {
+    height: 500px;
+    background-color: rebeccapurple;
+  }
+
+  .cardSmall1 {
+    background-color: #d58e32;
+    height: 240px;
+    margin-bottom: 10px;
+  }
+
+  .cardSmall2 {
+    margin-top: 10px;
+    background-color: #d58e32;
+    height: 240px;
+  }
+
+  .image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+  }
+}
+
