@@ -1,10 +1,11 @@
 import { connect } from 'react-redux';
 
 import MainLayout from './MainLayout';
-import { getRwdMode, setRwdMode } from '../../../redux/rwdRedux.js';
+import { getRwdMode, setRwdMode, getModeMaxWidth } from '../../../redux/rwdRedux.js';
 
 const mapStateToProps = state => ({
   rwdMode: getRwdMode(state),
+  rwdModeMaxWidth: getModeMaxWidth(state),
 });
 
 const mapDispatchToProps = dispatch => ({

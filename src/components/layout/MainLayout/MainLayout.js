@@ -6,9 +6,9 @@ import Footer from '../Footer/Footer';
 
 const MainLayout = ({ children, ...props }) => {
   const rwdModeSelect = windowWidth => {
-    if (windowWidth <= 768) {
+    if (windowWidth <= props.rwdModeMaxWidth.mobile) {
       props.setRwdMode('mobile');
-    } else if (windowWidth <= 1024) {
+    } else if (windowWidth <= props.rwdModeMaxWidth.tablet) {
       props.setRwdMode('tablet');
     } else {
       props.setRwdMode('desktop');
@@ -34,6 +34,7 @@ MainLayout.propTypes = {
   children: PropTypes.node,
   rwdMode: PropTypes.string,
   setRwdMode: PropTypes.func,
+  rwdModeMaxWidth: PropTypes.object,
 };
 
 export default MainLayout;
