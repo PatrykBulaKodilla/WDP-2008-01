@@ -1,5 +1,7 @@
 /* selectors */
 export const getRwdMode = ({ rwd }) => rwd.mode;
+export const getProductOnPageSetting = ({ rwd }, rwdMode) =>
+  rwd.settings.productOnPage[rwdMode];
 
 /* action name creator */
 const reducerName = 'rwd';
