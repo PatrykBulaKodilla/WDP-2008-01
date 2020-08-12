@@ -65,7 +65,13 @@ class NewFurniture extends React.Component {
   }
 
   render() {
-    const { categories, products, favoriteProducts, setFavoriteProduct } = this.props;
+    const {
+      categories,
+      products,
+      favoriteProducts,
+      setFavoriteProduct,
+      ProductsOnPage,
+    } = this.props;
     const { activeCategory, activePage } = this.state;
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
@@ -164,6 +170,7 @@ NewFurniture.propTypes = {
   favoriteProducts: PropTypes.array,
   setFavoriteProduct: PropTypes.func,
   furnitureListRef: PropTypes.object,
+  ProductsOnPage: PropTypes.number,
 };
 
 NewFurniture.defaultProps = {
