@@ -92,6 +92,8 @@ class NewFurniture extends React.Component {
       );
     }
 
+    if (pagesCount < activePage) this.handlePageChange(pagesCount - 1);
+
     return (
       <Swipeable
         leftAction={() => this.handleLeftAction(pagesCount)}
