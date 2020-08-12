@@ -75,7 +75,7 @@ class NewFurniture extends React.Component {
     const { activeCategory, activePage } = this.state;
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
-    const pagesCount = Math.ceil(categoryProducts.length / 8);
+    const pagesCount = Math.ceil(categoryProducts.length / ProductsOnPage);
 
     const dots = [];
     for (let i = 0; i < pagesCount; i++) {
@@ -130,7 +130,7 @@ class NewFurniture extends React.Component {
             </div>
             <div className={`row ${styles.fadeIn}`} ref={this.props.furnitureListRef}>
               {categoryProducts
-                .slice(activePage * 8, (activePage + 1) * 8)
+                .slice(activePage * ProductsOnPage, (activePage + 1) * ProductsOnPage)
                 .map(item => (
                   <div key={item.id} className='col-lg-3 col-md-4 col-6'>
                     <ProductBox
