@@ -101,10 +101,10 @@ class NewFurniture extends React.Component {
           <div className='container'>
             <div className={styles.panelBar}>
               <div className='row justify-content-center no-gutters align-items-end'>
-                <div className={'col-auto ' + styles.heading}>
+                <div className={'col-12 col-md-3 ' + styles.heading}>
                   <h3>New furniture</h3>
                 </div>
-                <div className={'col ' + styles.menu}>
+                <div className={'col-12 col-md-7 ' + styles.menu}>
                   <ul>
                     {categories.map(item => (
                       <li key={item.id}>
