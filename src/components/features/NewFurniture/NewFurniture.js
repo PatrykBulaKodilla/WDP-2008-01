@@ -92,7 +92,11 @@ class NewFurniture extends React.Component {
       );
     }
 
-    if (pagesCount < activePage) this.handlePageChange(pagesCount - 1);
+    const thisNewFurniture = this;
+
+    window.addEventListener('resize', () => {
+      if (pagesCount < activePage) thisNewFurniture.handlePageChange(pagesCount - 1);
+    });
 
     return (
       <Swipeable
