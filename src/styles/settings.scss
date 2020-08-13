@@ -10,6 +10,7 @@ $lightWhite: #f4f5f7;
 $white: #ffffff;
 $darkWhite: #e1e1e1;
 $lightWhiteBlue: #e0e3ed;
+$lightGreen: #32cd32;
 $transparent: transparent;
 
 /*Button*/
@@ -100,6 +101,19 @@ $newfurniture-menu-active-hover-border: $orange;
 $newfurniture-dots-list-bg: $white;
 $newfurniture-dots-link-bg: $darkWhite;
 $newfurniture-dots-link-active-hover-bg: $orange;
+
+/*Gallery*/
+$gallery-panelbar-border: $darkWhite;
+
+$gallery-heading-text: $orange;
+$gallery-heading-border: $orange;
+
+
+$gallery-right-big-image-text: $orange;
+
+$gallery-right-button: $lightGreen;
+$gallery-right-price-text: $lightGreen;
+$galery-right-before-price-text: $lightBlack;
 
 /*ProductSearch*/
 $productsearch-border: $lightBlack;

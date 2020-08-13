@@ -2,19 +2,21 @@
 @import "../../../styles/animations.scss";
 
 .root {
+
+  margin-bottom: 30px;
   .panelBar {
     margin-bottom: 30px;
     position: relative;
 
     :global(.row) > * {
-      border-bottom: 4px solid $newfurniture-panelbar-border;
+      border-bottom: 4px solid $gallery-panelbar-border;
     }
 
     .heading {
       position: relative;
 
       h3 {
-        color: $newfurniture-heading-text;
+        color: $gallery-heading-text;
         text-transform: uppercase;
         font-size: 20px;
         line-height: 38px;
@@ -28,7 +30,7 @@
         bottom: -4px;
         left: 0;
         width: 45px;
-        border-bottom: 4px solid $newfurniture-heading-border;
+        border-bottom: 4px solid $gallery-heading-border;
       }
     }
   }
@@ -73,6 +75,77 @@
         border-color: $menubar-link-active-border;
       }
     }
+  }
+
+  .right {
+    height: 600px;
+    border: 1px solid $productbox-border;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column-reverse;
+    //background-color: yellow;
+
+    .image {
+      height: 60%;
+      width: 100%;
+      object-fit: cover;
+      overflow: hidden;
+      //padding-bottom: 25px;
+    }
+
+    .opacityText {
+      position: relative;
+      width: 90%;
+      height: 30%;
+      font-size: 45px;
+      font-weight: bold;
+      text-align: left;
+      color: $gallery-right-big-image-text;
+      padding: 25px;
+      margin-bottom: 25px;
+      // transform: translate(-50%, -50%);
+      // left: 53%;
+      // top: 77%;
+      p {
+        margin: 0;
+        color: $gallery-right-price-text;
+
+        small {
+          color: $galery-right-before-price-text;
+          font-weight: bold;
+        }
+      }
+      span {
+        margin: 0;
+        font-size: 45px;
+        font-weight: bold;
+
+      }
+
+    }
+  }
+
+  .buttonDescription {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $gallery-right-button;
+    border-color: $gallery-right-button;
+    width: 100px;
+    height: 40px;
+    margin-top: 15px;
+    color: white;
+  }
+
+  .button {
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 100%;
   }
 
   .fadeOut {

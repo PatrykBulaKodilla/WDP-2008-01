@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import styles from './Gallery.module.scss';
+import Button from '../../common/Button/Button';
 //import ProductBox from '../../common/ProductBox/ProductBox';
 
 class Gallery extends React.Component {
@@ -20,7 +21,6 @@ class Gallery extends React.Component {
 
   render() {
     const { categoriesGallery } = this.props;
-    console.log('In Render');
     const { activeCategory } = this.state;
 
     //const categoryProducts = products.filter(item => item.category === activeCategory);
@@ -45,7 +45,7 @@ class Gallery extends React.Component {
                             className={item.id === activeCategory && styles.active}
                             onClick={() => this.handleCategoryChange(item.id)}
                           >
-                            {item.name}tekst
+                            {item.name}
                           </a>
                         </li>
                       ))}
@@ -61,7 +61,27 @@ class Gallery extends React.Component {
             </div> */}
             </div>
             <div className='col-6'>
-              <p>PRZYKLADOWY TEKST</p>
+              <div className={styles.right}>
+                <img
+                  className={styles.image}
+                  alt='gallery-bed'
+                  src='https://pictureserver.net/images/cache/undef_src_sa_picid_694714_x_1800_type_whitesh_image.jpg?ver=27'
+                />
+                <div className={styles.opacityText}>
+                  <p>
+                    <small>
+                      <small>
+                        <small>FROM</small>
+                      </small>
+                    </small>{' '}
+                    $50.80
+                  </p>
+                  <span>Bedroom Bed</span>
+                  <Button variant='outline' className={styles.buttonDescription}>
+                    SHOP NOW
+                  </Button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
