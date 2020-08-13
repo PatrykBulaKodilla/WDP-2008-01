@@ -26,9 +26,9 @@ class MenuBar extends React.Component {
   render() {
     return (
       <div className={styles.root}>
-        <div className={'container' + ' ' + styles.container}>
-          <div className={'row align-items-center' + ' ' + styles.divContainer}>
-            <div className={'col' + ' ' + styles.productSearch}>
+        <div className={`container  ${styles.container}`}>
+          <div className={`row align-items-center ${styles.divContainer}`}>
+            <div className={`col ${styles.productSearch}`}>
               <ProductSearch />
               <button
                 id={styles.hamburgerMenu}
