@@ -32,14 +32,12 @@
     text-align: center;
     opacity: .5;
     text-transform: uppercase;
-
   }
 
   .descriptionTitle {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 48px;
     line-height: 16px;
     color: $slider-description-text;
       p {
@@ -78,5 +76,16 @@
     align-items: center;
     height: 40px;
     width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .root{
+    .descriptionTitle{
+      p{
+      font-size: 24px;
+
+      }
+    }
   }
 }

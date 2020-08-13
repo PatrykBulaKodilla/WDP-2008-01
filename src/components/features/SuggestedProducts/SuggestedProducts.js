@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './SuggestedProducts.module.scss';
+
 import HotDeals from '../../common/HotDeals/HotDeals';
 import Slider from '../Slider/Slider';
 
@@ -28,7 +29,7 @@ class SuggestedProducts extends React.Component {
       <div className={styles.root}>
         <div className='container'>
           <div className='row'>
-            <div className='col-4'>
+            <div className={`${styles.hotdeals} col col-4`}>
               <div className={styles.panelBar}>
                 <div className='row'>
                   <div className='col-8'>
@@ -45,7 +46,7 @@ class SuggestedProducts extends React.Component {
               </div>
               <HotDeals />
             </div>
-            <div className='col-8'>
+            <div className={`${styles.slider} col col-12 col-lg-8`}>
               <Slider />
             </div>
           </div>
