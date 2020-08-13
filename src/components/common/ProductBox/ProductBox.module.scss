@@ -89,6 +89,10 @@
     color: $productbox-sale-text ;
   }
 
+  .price {
+    display: flex;
+  }
+
   .priceButton {
     @extend .ft-animation;
   }
@@ -100,6 +104,13 @@
     .priceButton {
       background-color: $productbox-pricebutton-hover-bg;
     }
+  }
+
+  .oldPriceButton {
+    position: relative;
+    text-decoration: line-through;
+    background-color: $productbox-oldprice-bg;
+    color: $productbox-oldprice-text;
   }
 
   .favoriteButton {

@@ -38,6 +38,7 @@ const initialState = {
       name: 'Aenean Ru Bristique 3',
       category: 'bed',
       price: 30,
+      oldPrice: '$35',
       stars: 5,
       promo: 'sale',
       image:
@@ -51,6 +52,7 @@ const initialState = {
       name: 'Aenean Ru Bristique 4',
       category: 'bed',
       price: 30,
+      oldPrice: '$20',
       stars: 1,
       promo: 'sale',
       image:
@@ -90,6 +92,7 @@ const initialState = {
       name: 'Aenean Ru Bristique 7',
       category: 'bed',
       price: 30,
+      oldPrice: '$35',
       stars: 2,
       promo: 'sale',
       image:
@@ -103,6 +106,7 @@ const initialState = {
       name: 'Aenean Ru Bristique 8',
       category: 'bed',
       price: 30,
+      oldPrice: '$20',
       stars: 2,
       promo: 'sale',
       image:

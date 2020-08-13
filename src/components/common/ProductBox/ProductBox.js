@@ -17,6 +17,7 @@ const ProductBox = ({
   id,
   name,
   price,
+  oldPrice,
   promo,
   stars,
   image,
@@ -65,6 +66,9 @@ const ProductBox = ({
         </Button>
       </div>
       <div className={styles.price}>
+        <Button noHover variant='small' className={styles.oldPriceButton}>
+          {oldPrice}
+        </Button>
         <Button noHover variant='small' className={styles.priceButton}>
           $ {price}
         </Button>
@@ -77,6 +81,7 @@ ProductBox.propTypes = {
   children: PropTypes.node,
   name: PropTypes.string,
   price: PropTypes.number,
+  oldPrice: PropTypes.number,
   promo: PropTypes.string,
   stars: PropTypes.number,
   id: PropTypes.string,
