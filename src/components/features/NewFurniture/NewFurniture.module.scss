@@ -104,4 +104,12 @@
       }
     }
   }
+
+  .fadeOut {
+    animation: fadeout 1s;
+  }
+
+  .fadeIn {
+    animation: fadein 1s;
+  }
 }
