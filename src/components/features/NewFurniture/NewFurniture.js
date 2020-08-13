@@ -70,6 +70,7 @@ class NewFurniture extends React.Component {
       products,
       favoriteProducts,
       setFavoriteProduct,
+      addToCompare,
       ProductsOnPage,
     } = this.props;
     const { activeCategory, activePage } = this.state;
@@ -141,6 +142,7 @@ class NewFurniture extends React.Component {
                   <div key={item.id} className='col-lg-3 col-md-4 col-6'>
                     <ProductBox
                       {...item}
+                      addToCompare={addToCompare}
                       favoriteProducts={favoriteProducts}
                       setFavoriteProduct={setFavoriteProduct}
                     />
@@ -175,6 +177,7 @@ NewFurniture.propTypes = {
   ),
   favoriteProducts: PropTypes.array,
   setFavoriteProduct: PropTypes.func,
+  addToCompare: PropTypes.func,
   furnitureListRef: PropTypes.object,
   ProductsOnPage: PropTypes.number,
 };
