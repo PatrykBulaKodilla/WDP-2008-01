@@ -584,6 +584,20 @@ const initialState = {
       alt: 'promo-3',
     },
   ],
+  rwd: {
+    mode: '',
+    settings: {
+      productOnPage: {
+        mobile: 2,
+        tablet: 3,
+        desktop: 8,
+      },
+      modeMaxWidth: {
+        mobile: 768,
+        tablet: 1023,
+      },
+    },
+  },
 };
 
 export default initialState;
