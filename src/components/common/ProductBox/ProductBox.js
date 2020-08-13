@@ -78,6 +78,7 @@ ProductBox.propTypes = {
   name: PropTypes.string,
   price: PropTypes.number,
   promo: PropTypes.string,
+  image: PropTypes.node,
   stars: PropTypes.number,
   id: PropTypes.string,
   favoriteProducts: PropTypes.array,

@@ -6,12 +6,14 @@ import styles from './Homepage.module.scss';
 import FeatureBoxes from '../../features/FeatureBoxes/FeatureBoxes';
 import NewFurniture from '../../features/NewFurniture/NewFurnitureContainer';
 import SuggestedProducts from '../../features/SuggestedProducts/SuggestedProducts';
+import Gallery from '../../features/Gallery/Gallery';
 
 const Homepage = () => (
   <div className={styles.root}>
     <SuggestedProducts />
     <FeatureBoxes />
     <NewFurniture />
+    <Gallery />
   </div>
 );
 

@@ -6,6 +6,12 @@ const initialState = {
     { id: 'table', name: 'Table' },
     { id: 'dining', name: 'Dining' },
   ],
+  categoriesGallery: [
+    { id: 'featured', name: 'FEATURED' },
+    { id: 'top seller', name: 'TOP SELLER' },
+    { id: 'sale off', name: 'SALE OFF' },
+    { id: 'top rated', name: 'TOP RATED' },
+  ],
   products: [
     {
       id: 'aenean-ru-bristique-1',

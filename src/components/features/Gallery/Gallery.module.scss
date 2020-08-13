@@ -1,0 +1,85 @@
+@import "../../../styles/settings.scss";
+@import "../../../styles/animations.scss";
+
+.root {
+  .panelBar {
+    margin-bottom: 30px;
+    position: relative;
+
+    :global(.row) > * {
+      border-bottom: 4px solid $newfurniture-panelbar-border;
+    }
+
+    .heading {
+      position: relative;
+
+      h3 {
+        color: $newfurniture-heading-text;
+        text-transform: uppercase;
+        font-size: 20px;
+        line-height: 38px;
+        margin: 0;
+        letter-spacing: 1px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 45px;
+        border-bottom: 4px solid $newfurniture-heading-border;
+      }
+    }
+  }
+
+  .menu {
+    display: flex;
+    align-self: stretch;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+
+      li {
+        list-style: none;
+        display: flex;
+        align-items: stretch;
+      }
+    }
+
+    a {
+      @extend .sw-animation;
+      color: $menubar-link;
+      text-transform: uppercase;
+      font-size: 12px;
+      padding: 1rem;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      border-top: 4px solid $menubar-link-border;
+      font-weight: 500;
+      letter-spacing: 1px;
+
+      &:hover,
+      &.active {
+        background-color: $menubar-link-active-hover-bg;
+        color: $menubar-link-active-hover;
+        border-color: $menubar-link-active-hover-border;
+      }
+
+      &.active {
+        border-color: $menubar-link-active-border;
+      }
+    }
+  }
+
+  .fadeOut {
+    animation: fadeout 1s;
+  }
+
+  .fadeIn {
+    animation: fadein 1s;
+  }
+}

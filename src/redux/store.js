@@ -3,6 +3,7 @@ import initialState from './initialState';
 
 import cartReducer from './cartRedux';
 import categoriesReducer from './categoriesRedux';
+import categoriesGalleryReducer from './categoriesGalleryRedux';
 import productsReducer from './productsRedux';
 import favoriteReducer from './favoriteRedux';
 
@@ -10,6 +11,7 @@ import favoriteReducer from './favoriteRedux';
 const reducers = {
   cart: cartReducer,
   categories: categoriesReducer,
+  categoriesGallery: categoriesGalleryReducer,
   products: productsReducer,
   favorite: favoriteReducer,
 };
