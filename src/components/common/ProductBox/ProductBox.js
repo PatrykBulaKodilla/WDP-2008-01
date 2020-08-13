@@ -30,7 +30,9 @@ const ProductBox = ({
       {promo && <div className={styles.sale}>{promo}</div>}
       <img className={styles.image} src={image} alt='productFurniture' />
       <div className={styles.buttons}>
-        <Button variant='small'>Quick View</Button>
+        <Button href={'/product/' + id} variant='small'>
+          Quick View
+        </Button>
         <Button variant='small'>
           <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
         </Button>
@@ -80,6 +82,7 @@ const ProductBox = ({
 ProductBox.propTypes = {
   children: PropTypes.node,
   name: PropTypes.string,
+  image: PropTypes.string,
   price: PropTypes.number,
   oldPrice: PropTypes.number,
   promo: PropTypes.string,
