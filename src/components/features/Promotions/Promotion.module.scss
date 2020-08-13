@@ -39,7 +39,8 @@
       }
       .percent {
         border: 3px solid $promotions-overlay-text-color;
-        max-width: 20%;
+        max-width: 25%;
+        text-align: center;
       }
     }
   }
@@ -62,3 +63,8 @@
   }
 }
 
+@media (max-width: 991px) {
+  .cardBig {
+    margin-bottom: 20px;
+  }
+}

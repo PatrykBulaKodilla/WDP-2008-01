@@ -10,7 +10,7 @@ class Promotions extends React.Component {
       <div className={styles.root}>
         <div className='container'>
           <div className='row'>
-            <div className='col-6'>
+            <div className='col-12 col-lg-6'>
               <div className={styles.cardBig}>
                 <img
                   className={styles.image}
@@ -25,7 +25,7 @@ class Promotions extends React.Component {
                 </div>
               </div>
             </div>
-            <div className='col-6'>
+            <div className='col-12 col-lg-6'>
               <div className='row'>
                 <div className='col-12'>
                   <div className={styles.cardSmall1}>
