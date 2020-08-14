@@ -31,25 +31,27 @@ class Gallery extends React.Component {
         <div className='container'>
           <div className='row'>
             <div className='col-6'>
-              <div className={styles.panelBar}>
-                <div className='row no-gutters align-items-end'>
-                  <div className={'col-auto ' + styles.heading}>
-                    <h3>FURNITURE GALLERY</h3>
-                  </div>
-                  <div className={'col ' + styles.menu}>
-                    <ul>
-                      {categoriesGallery.map(item => (
-                        <li key={item.id}>
-                          <a
-                            href='/#'
-                            className={item.id === activeCategory && styles.active}
-                            onClick={() => this.handleCategoryChange(item.id)}
-                          >
-                            {item.name}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
+              <div className={styles.left}>
+                <div className={styles.panelBar}>
+                  <div className='row no-gutters align-items-end'>
+                    <div className={'col-auto ' + styles.heading}>
+                      <h3>FURNITURE GALLERY</h3>
+                    </div>
+                    <div className={styles.menu}>
+                      <ul>
+                        {categoriesGallery.map(item => (
+                          <li key={item.id}>
+                            <a
+                              href='/#'
+                              className={item.id === activeCategory && styles.active}
+                              onClick={() => this.handleCategoryChange(item.id)}
+                            >
+                              {item.name}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
