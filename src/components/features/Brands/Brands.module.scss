@@ -1,3 +1,47 @@
+@import "../../../styles/settings.scss";
+
 .root {
   padding: 5rem 0;
+
+}
+
+.border {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  border-bottom: 1px solid $lightBlack;
+  border-top: 1px solid $lightBlack;
+}
+
+.brands {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0 10px 0 10px;
+  padding-inline-start: 0;
+
+  li {
+    display: inline-block;
+    margin: 0 13px 0 13px;
+
+    img {
+      object-fit: cover;
+      overflow: hidden;
+      width: 150px;
+      height: 150px;
+      border: 1px solid $lightBlack;
+    }
+  }
+}
+
+.button {
+  height: 150px;
+  width: 50px;
+  background-color: $lightBlack;
+  color: white;
+}
+
+.button2 {
+  float: right;
 }

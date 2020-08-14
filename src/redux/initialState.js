@@ -624,6 +624,36 @@ const initialState = {
         'https://images.pexels.com/photos/736716/pexels-photo-736716.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260',
     },
   ],
+  brands: [
+    {
+      id: 'brand-1',
+      image:
+        'https://mackeyadvisors.com/wp-content/uploads/2016/06/images-14-150x150.jpg',
+      alt: 'brand-1',
+    },
+    {
+      id: 'brand-3',
+      image: 'https://forum.obud.pl/download/file.php?avatar=5977_1452167610.jpg',
+      alt: 'pbrand-3',
+    },
+    {
+      id: 'brand-4',
+      image:
+        'https://lh5.googleusercontent.com/proxy/yd2OdpJNPAnOoiTPmEJxW-uDRkfHatuWDiB3AEqVXZ3P12hUz1-VKqVoTYbMe9deZ9RcsjxKDraM4PLNB2fqrcOS7SzXOJHepMyCCcKWg0T73vbftkZEA_GZgB4nCVY9YFtsw-hvFg',
+      alt: 'brand-4',
+    },
+    {
+      id: 'brand-5',
+      image: 'https://www.e-mlodzi.com/images/avatars/1213447593532cba98c7b7d.gif',
+      alt: 'pbrand-5',
+    },
+    {
+      id: 'brand-6',
+      image:
+        'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5f4bd7a6-f763-4518-9b81-bdfd40ce3fc9/d26yf2h-e858f532-4b44-4584-a255-fdedf789cb0b.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvNWY0YmQ3YTYtZjc2My00NTE4LTliODEtYmRmZDQwY2UzZmM5XC9kMjZ5ZjJoLWU4NThmNTMyLTRiNDQtNDU4NC1hMjU1LWZkZWRmNzg5Y2IwYi5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.CsOOvjJtgLluYwqJqLku5E3YDlRvk34r3FOLT6ay6JQ',
+      alt: 'pbrand-6',
+    },
+  ],
 };
 
 export default initialState;
