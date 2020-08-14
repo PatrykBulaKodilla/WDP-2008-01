@@ -46,27 +46,27 @@ class MenuBar extends React.Component {
             >
               <ul>
                 <li>
-                  <a href='/#' className={styles.active}>
+                  <a href='/' className={styles.active}>
                     Home
                   </a>
                 </li>
                 <li>
-                  <a href='/#'>Furniture</a>
+                  <a href='/shop/furniture'>Furniture</a>
                 </li>
                 <li>
-                  <a href='/#'>Chair</a>
+                  <a href='/shop/chair'>Chair</a>
                 </li>
                 <li>
-                  <a href='/#'>Table</a>
+                  <a href='/shop/table'>Table</a>
                 </li>
                 <li>
-                  <a href='/#'>Sofa</a>
+                  <a href='/shop/sofa'>Sofa</a>
                 </li>
                 <li>
-                  <a href='/#'>Bedroom</a>
+                  <a href='/shop/bedroom'>Bedroom</a>
                 </li>
                 <li>
-                  <a href='/#'>Blog</a>
+                  <a href='/shop/blog'>Blog</a>
                 </li>
               </ul>
             </div>
