@@ -1,5 +1,5 @@
 export const getAll = ({ categoriesGallery }) => categoriesGallery;
-//export const getCount = ({ categoriesGallery }) => categoriesGallery.length;
+export const getProduct = ({ products }) => products;
 
 /* reducer */
 export default function reducer(statePart = [], action = {}) {

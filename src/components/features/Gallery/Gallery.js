@@ -3,6 +3,16 @@ import PropTypes from 'prop-types';
 
 import styles from './Gallery.module.scss';
 import Button from '../../common/Button/Button';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faStar,
+  faExchangeAlt,
+  faShoppingBasket,
+  faEye,
+} from '@fortawesome/free-solid-svg-icons';
+import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
+//import StarRating from '../StarRating/StarRating';
 //import ProductBox from '../../common/ProductBox/ProductBox';
 
 class Gallery extends React.Component {
@@ -37,20 +47,53 @@ class Gallery extends React.Component {
                     <div className={'col-auto ' + styles.heading}>
                       <h3>FURNITURE GALLERY</h3>
                     </div>
-                    <div className={styles.menu}>
-                      <ul>
-                        {categoriesGallery.map(item => (
-                          <li key={item.id}>
-                            <a
-                              href='/#'
-                              className={item.id === activeCategory && styles.active}
-                              onClick={() => this.handleCategoryChange(item.id)}
-                            >
-                              {item.name}
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
+                  </div>
+                </div>
+                <div className={styles.galleryPhotos}>
+                  <div className={styles.menu}>
+                    <ul>
+                      {categoriesGallery.map(item => (
+                        <li key={item.id}>
+                          <a
+                            href='/#'
+                            className={item.id === activeCategory && styles.active}
+                            onClick={() => this.handleCategoryChange(item.id)}
+                          >
+                            {item.name}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className={styles.photoContent}>
+                    <div className={styles.imageLeft}>
+                      <img
+                        alt='gallery-bed'
+                        src='https://damnet.pl/1141/emilia-vic-krzeslo-pudrowy-roznogi-dab.jpg'
+                      />
+                      <div
+                        className={`${styles.imageLeftColLeft} col-6 align-self-start`}
+                      >
+                        <div className={styles.outlines}>
+                          <Button variant='outline'>
+                            <FontAwesomeIcon icon={faEye}>View</FontAwesomeIcon>
+                          </Button>
+                          <Button variant='outline'>
+                            <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
+                          </Button>
+                          <Button variant='outline'>
+                            <FontAwesomeIcon icon={faExchangeAlt}>
+                              Add to compare
+                            </FontAwesomeIcon>
+                          </Button>
+                          <Button variant='outline'>
+                            <FontAwesomeIcon icon={faShoppingBasket}>
+                              Add to cart
+                            </FontAwesomeIcon>
+                          </Button>
+                        </div>
+                      </div>
+                      <div className='col-6 align-self-end'></div>
                     </div>
                   </div>
                 </div>
@@ -100,22 +143,22 @@ Gallery.propTypes = {
       name: PropTypes.string,
     })
   ),
-  // products: PropTypes.arrayOf(
-  //   PropTypes.shape({
-  //     id: PropTypes.string,
-  //     name: PropTypes.string,
-  //     // category: PropTypes.string,
-  //     // price: PropTypes.number,
-  //     // stars: PropTypes.number,
-  //     // promo: PropTypes.string,
-  //     Gallery: PropTypes.bool,
-  //   })
-  // ),
+  products: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      name: PropTypes.string,
+      category: PropTypes.string,
+      price: PropTypes.number,
+      stars: PropTypes.number,
+      promo: PropTypes.string,
+      Gallery: PropTypes.bool,
+    })
+  ),
 };
 
 Gallery.defaultProps = {
   categoriesGallery: [],
-  //products: [],
+  products: [],
 };
 
 export default Gallery;
