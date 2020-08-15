@@ -15,6 +15,11 @@
     font-size: 20px;
   }
 
+  .icon {
+    color: $newsletter-icon;
+    margin-right: 10px;
+  }
+
   .newsInput {
     display: inline-block;
     border-radius: 4px;
@@ -22,19 +27,31 @@
     width: 35%;
     background-color: $newsletter-newsInput-bg;
 
-    .icon {
-      color: $newsletter-icon;
-      margin-right: 10px;
-    }
-
     input {
       border: none;
       border-left: 1px solid $newsletter-input-border;
       padding-left: 10px;
-      width: 90%;
+      width: 85%;
 
       &:focus {
         outline: none;
+      }
+    }
+  }
+
+  .button {
+    margin-left: 15px;
+    padding: 8.5px 13px;
+    border-radius: 4px;
+    background-color: $newsletter-button-bg;
+
+    .icon {
+      margin: 0;
+    }
+
+    &:hover {
+      .icon {
+        color: $newsletter-button-text-hover;
       }
     }
   }
@@ -43,9 +60,20 @@
 @media (max-width: 1140px) {
   .root {
     .title, .newsInput {
-      display: block;
       margin: 0 auto 15px;
       width: 50%;
+    }
+
+    .title {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .root {
+    .newsInput {
+      width: 90%;
     }
   }
 }
