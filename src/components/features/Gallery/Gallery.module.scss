@@ -2,11 +2,10 @@
 @import "../../../styles/animations.scss";
 
 .root {
-
   margin-bottom: 30px;
 
   .left {
-    max-width: 100%;
+    max-width: 560px;
     height: 600px;
     display: flex;
     flex-direction: column;
@@ -49,8 +48,14 @@
 
     .galleryPhotos {
 
-      border: 1px solid $productbox-border;
+      border: 1px solid $gallery-left-border-color;
       height: 600px;
+      // display: flex;
+      // top: -50%;
+      flex-direction: column;
+      justify-content: space-between;
+
+      // background-color: blue;
 
       .menu {
         display: flex;
@@ -67,7 +72,6 @@
           align-items: center;
           width: 100%;
 
-
           li {
             list-style: none;
             display: flex;
@@ -80,8 +84,8 @@
 
         a {
           @extend .sw-animation;
-          color: black;
-          background-color: white;
+          color: $gallery-left-text;
+          background-color: $gallery-left-background-color;
           text-transform: uppercase;
           font-size: 12px;
           padding: 1rem;
@@ -89,18 +93,17 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          border-top: 4px solid white;
+          border-top: 4px solid $gallery-left-menu-border-top-color;
           font-weight: 650;
           letter-spacing: 1px;
           font-weight: bold;
           width: 100%;
-          border-bottom: 1px solid black;
+          border-bottom: 1px solid $gallery-left-menu-border-bottom-color;
 
           &:hover,
           &.active {
-            //background-color: #e1e1e1;
-            color: #d58e32;
-            border-top-color: #d58e32;
+            color: $gallery-left-menu-active-text;
+            border-top-color: $gallery-left-menu-active-border-bottom;
             border-bottom: none;
           }
 
@@ -113,13 +116,16 @@
       .photoContent {
 
         width: 100%;
-        height: 60%;
+        height: 75%;
         //position: relative;
+        // border: solid 1px green;
 
         .imageLeft {
 
             width: 100%;
             height: 100%;
+            margin-right: 0;
+            margin-left:  0;
             //object-fit: cover;
             overflow: hidden;
             position: relative;
@@ -127,15 +133,104 @@
             //display: flex;
             //padding-bottom: 25px;
             //object-fit: cover;
+            // border: solid 1px red;
 
             .imageLeftColLeft {
-              top: -50%;
+              top: -60%;
+              // border: solid 1px red;
+            }
+
+            .imageLeftColRight {
+              top: -35%;
+              background-color: $gallery-left-background-color;
+              position: relative;
+              display: flex;
+              border: 1px solid $gallery-left-border-color;
+              box-shadow: 0px 7px 5px -2px rgba(0,0,0,0.3);
+              // flex-direction: column;
+              // justify-content: center;
+              // align-items: center;
+              &:after {
+                content: '';
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 0 30px 30px;
+                border-color: transparent transparent #000 transparent;
+                right: 0;
+                bottom: 0;
+                position: absolute;
+                // z-index: 10;
+              }
+              &:before {
+                content: '';
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 30px 30px 0 0;
+                border-color: #000 transparent transparent transparent;
+                left: 0;
+                top: 0;
+                position: absolute;
+                // z-index: 10;
+              }
+
+              .prices {
+                position: relative;
+
+                ul {
+                  list-style: none;
+                }
+
+                .priceBox {
+                  position: absolute;
+                  line-height: 25px;
+                  text-align: center;
+                  background-color: rgba(189, 195, 199, 0.9);
+                  left: 55%;
+                  top: -25%;
+                  width: 75px;
+                  height: 75px;
+                  border-radius: 50%;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
+                  padding-top: 15px;
+                  transform: translate(-50%, -50%);
+
+                  p {
+                    font-weight: 600;
+                  }
+                }
+
+                .nameBox {
+                  background-color: $gallery-left-background-color;
+                  text-align: center;
+                  align-self: center;
+                  padding-top: 10px;
+
+                  p{
+                    margin-top: 10px;
+                  }
+                }
+
+                .stars {
+                  display: flex;
+                  justify-content: center;
+                  a {
+                    text-decoration: none;
+                    color: $gallery-left-stars-color;
+                  }
+                }
+              }
             }
 
             img {
               width: 100%;
               height: 100%;
               object-fit: scale-down;
+              // border: solid 1px blue
 
             }
           }
@@ -146,56 +241,61 @@
             display: flex;
             flex-direction: column;
             //top: -1px;
-
-
           }
       }
-    }
 
-    .galleryList {
-      // display: flex;
-      // justify-content: center;
-      // align-items: center;
-      // height: 200px;
-      // border-bottom: 1px solid $lightBlack;
-      // border-top: 1px solid $lightBlack;
+      .galleryList {
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // height: 200px;
+        // border-bottom: 1px solid $lightBlack;
+        // border-top: 1px solid $lightBlack;
+        margin-top: 10px;
+        margin-right: 5px;
+        margin-left: 5px;
+        // border-top: 1px solid $gallery-left-background-button-color;
+        // margin-right: 0;
 
-      .galleryPhotos {
-        list-style: none;
-        display: flex;
-        justify-content: center;
-        margin: 0 10px 0 10px;
-        padding-inline-start: 0;
+        .galleryListSlider {
 
-        li {
-          display: inline-block;
-          margin: 0 13px 0 13px;
+          margin-right: 0;
 
-          img {
-            object-fit: cover;
-            overflow: hidden;
-            width: 50px;
+          .galleryListPhotos {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0 5px 0 5px;
+            padding-inline-start: 0;
+
+            li {
+              display: inline-block;
+              margin: 0 13px 0 13px;
+              // border: 1px solid $gallery-left-background-button-color;
+
+              img {
+                object-fit: cover;
+                overflow: hidden;
+                width: 50px;
+                height: 65px;
+                //border: 1px solid $lightBlack;
+              }
+            }
+          }
+          .button {
             height: 65px;
-            //border: 1px solid $lightBlack;
+            width: 30px;
+            background-color: $gallery-left-background-button-color;
+            color: $gallery-left-button-color;
           }
         }
-      }
-      .button {
-        height: 65px;
-        width: 30px;
-        background-color: $lightBlack;
-        color: white;
-      }
-
-      .button2 {
-        float: right;
       }
     }
   }
 
-
   .right {
     height: 600px;
+    max-width: 560px;
     border: 1px solid $productbox-border;
     display: flex;
     justify-content: space-between;
@@ -226,7 +326,7 @@
       // top: 77%;
       p {
         margin: 0;
-        color: $gallery-right-price-text;
+        color: $gallery-right-price-color;
 
         small {
           color: $galery-right-before-price-text;
@@ -252,7 +352,7 @@
       width: 100px;
       height: 40px;
       margin-top: 15px;
-      color: white;
+      color: $gallery-right-button-text;
     }
 
     .button {

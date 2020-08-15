@@ -108,12 +108,26 @@ $gallery-panelbar-border: $darkWhite;
 $gallery-heading-text: $orange;
 $gallery-heading-border: $orange;
 
-
 $gallery-right-big-image-text: $orange;
 
 $gallery-right-button: $lightGreen;
-$gallery-right-price-text: $lightGreen;
+$gallery-right-price-color: $lightGreen;
+$gallery-right-button-text: $white;
 $galery-right-before-price-text: $lightBlack;
+
+$gallery-left-border-color: $darkWhite;
+$gallery-left-text: $lightBlack;
+$gallery-left-background-color: $white;
+$gallery-left-background-button-color: $lightBlack;
+$gallery-left-button-color: $white;
+
+$gallery-left-menu-border-top-color: $white;
+$gallery-left-menu-border-bottom-color: $darkWhite;
+
+$gallery-left-menu-active-text: $orange;
+$gallery-left-menu-active-border-bottom: $orange;
+
+$gallery-left-stars-color: $lightBlack;
 
 /*ProductSearch*/
 $productsearch-border: $lightBlack;

@@ -570,7 +570,8 @@ const initialState = {
     {
       id: 'photo-1',
       alt: 'photo-1',
-      image: 'https://damnet.pl/1141/emilia-vic-krzeslo-pudrowy-roznogi-dab.jpg',
+      image:
+        'https://www.ikea.com/pl/pl/images/products/strandmon-wing-chair__0531313_PE647261_S5.JPG?f=xxxl',
     },
     {
       id: 'photo-2',
@@ -581,25 +582,26 @@ const initialState = {
     {
       id: 'photo-3',
       alt: 'photo-3',
-      image: 'https://www.edinos.pl/images/items/6313/fotel-alden-sklep_big.jpg.jpg',
+      image:
+        'https://www.ikea.com/pl/pl/images/products/pello-armchair-holmby-natural__38296_PE130209_S5.JPG?f=xxxl',
     },
     {
       id: 'photo-4',
       alt: 'photo-4',
       image:
-        'https://ehokery.pl/zdjecia/2020/03/10/103/00/2196fotel_retro_vintage_memo_plus_velvet_aksamitny_granatowy__5_.jpg',
+        'https://www.ikea.com/pl/pl/images/products/benarp-armchair-nordvalla-dark-grey__0400885_PE564988_S5.JPG?f=xxxl',
     },
     {
       id: 'photo-5',
       alt: 'photo-5',
       image:
-        'https://www.ikea.com/pl/pl/images/products/friheten-three-seat-sofa-bed-bomstad-black__0525511_PE644872_S5.JPG?f=xxxl',
+        'https://www.ikea.com/pl/pl/images/products/vedbo-high-back-armchair__0635321_PE697114_S5.JPG?f=xxxl',
     },
     {
       id: 'photo-6',
       alt: 'photo-6',
       image:
-        'https://www.happybarok.pl/images/happybarok/2000-3000/Sofa-Plum_%5B2152%5D_1200.jpg',
+        'https://www.ikea.com/pl/pl/images/products/ivar-chair-pine__0728155_PE736115_S5.JPG?f=xxxl',
     },
   ],
 };

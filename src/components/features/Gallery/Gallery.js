@@ -6,6 +6,7 @@ import Button from '../../common/Button/Button';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
+  faStar,
   faArrowLeft,
   faArrowRight,
   faExchangeAlt,
@@ -13,14 +14,17 @@ import {
   faEye,
 } from '@fortawesome/free-solid-svg-icons';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
+import { faStar as farStar } from '@fortawesome/free-regular-svg-icons';
 //import { getGalleryPhotos } from '../../../redux/photosGalleryRedux';
 //import StarRating from '../StarRating/StarRating';
-//import ProductBox from '../../common/ProductBox/ProductBox';
+// import ProductBox from '../../common/ProductBox/ProductBox';
+//import {stars} from '../../common/ProductBox/ProductBox';
 
 class Gallery extends React.Component {
   state = {
     activePage: 1,
     activeCategory: 'FEATURED',
+    activeProduct: 1,
   };
 
   // handlePageChange(newPage) {
@@ -32,11 +36,11 @@ class Gallery extends React.Component {
   }
 
   render() {
-    const { categoriesGallery, galleryPhotos, products } = this.props;
-    const { activeCategory } = this.state;
+    const { categoriesGallery, galleryPhotos, products, stars } = this.props;
+    const { activeCategory, activeProduct } = this.state;
 
     //const categoryProducts = products.filter(item => item.category === activeCategory);
-    //const pagesCount = gallery.length;
+    //const pagesCount = products.length;
 
     return (
       <div className={styles.root}>
@@ -68,14 +72,12 @@ class Gallery extends React.Component {
                     </ul>
                   </div>
                   <div className={styles.photoContent}>
-                    <div className={styles.imageLeft}>
+                    <div className={`${styles.imageLeft} row justify-content-between`}>
                       <img
                         alt='gallery-bed'
-                        src='https://damnet.pl/1141/emilia-vic-krzeslo-pudrowy-roznogi-dab.jpg'
+                        src='https://www.ikea.com/pl/pl/images/products/strandmon-wing-chair__0531313_PE647261_S5.JPG?f=xxxl'
                       />
-                      <div
-                        className={`${styles.imageLeftColLeft} col-6 align-self-start`}
-                      >
+                      <div className={`${styles.imageLeftColLeft} col-6`}>
                         <div className={styles.outlines}>
                           <Button variant='outline'>
                             <FontAwesomeIcon icon={faEye}>View</FontAwesomeIcon>
@@ -95,31 +97,50 @@ class Gallery extends React.Component {
                           </Button>
                         </div>
                       </div>
-                      <div className='col-6 align-self-end'>
+                      <div className={`${styles.imageLeftColRight} col-6`}>
                         <div className={styles.prices}>
                           <ul>
-                            {products.map(products => (
-                              <li key={products.id}>
-                                <a>
-                                  {products.price}
-                                  {products.name}
-                                  {products.stars}
-                                </a>
-                              </li>
-                            ))}
+                            {products
+                              .slice(activeProduct, activeProduct + 1)
+                              .map(products => (
+                                <li key={products.id}>
+                                  <div className={styles.priceBox}>
+                                    <p>${products.price}</p>
+                                  </div>
+                                  <div className={styles.nameBox}>
+                                    <p>{products.name}</p>
+                                    <div className={styles.stars}>
+                                      {[1, 2, 3, 4, 5].map(i => (
+                                        <a key={i} href='/#'>
+                                          {i <= stars ? (
+                                            <FontAwesomeIcon icon={faStar}>
+                                              {i} stars
+                                            </FontAwesomeIcon>
+                                          ) : (
+                                            <FontAwesomeIcon icon={farStar}>
+                                              {i} stars
+                                            </FontAwesomeIcon>
+                                          )}
+                                        </a>
+                                      ))}
+                                    </div>
+                                  </div>
+                                  {/*<p>{products.stars}</p>*/}
+                                </li>
+                              ))}
                           </ul>
                         </div>
                       </div>
                     </div>
                     <div className={styles.galleryList}>
-                      <div className='row'>
+                      <div className={`${styles.galleryListSlider} row`}>
                         <div className='col-1'>
                           <button className={styles.button}>
                             <FontAwesomeIcon icon={faArrowLeft}></FontAwesomeIcon>
                           </button>
                         </div>
                         <div className='col-10'>
-                          <ul className={styles.galleryPhotos}>
+                          <ul className={styles.galleryListPhotos}>
                             {galleryPhotos.map(galleryPhotos => (
                               <li key={galleryPhotos.id}>
                                 <img
@@ -173,6 +194,7 @@ class Gallery extends React.Component {
 
 Gallery.propTypes = {
   children: PropTypes.node,
+  stars: PropTypes.number,
   categoriesGallery: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
@@ -191,10 +213,15 @@ Gallery.propTypes = {
       //category: PropTypes.string,
       price: PropTypes.number,
       stars: PropTypes.number,
-      // promo: PropTypes.string,
-      // Gallery: PropTypes.bool,
+      //promo: PropTypes.string,
+      gallery: PropTypes.bool,
     })
   ),
+  // ProductBox: PropTypes.arrayOf(
+  //   PropTypes.shape({
+  //     stars: PropTypes.number,
+  //   })
+  // ),
 };
 
 Gallery.defaultProps = {
