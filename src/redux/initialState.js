@@ -566,6 +566,42 @@ const initialState = {
   favorite: {
     products: ['aenean-ru-bristique-1', 'aenean-ru-bristique-2'],
   },
+  galleryPhotos: [
+    {
+      id: 'photo-1',
+      alt: 'photo-1',
+      image: 'https://damnet.pl/1141/emilia-vic-krzeslo-pudrowy-roznogi-dab.jpg',
+    },
+    {
+      id: 'photo-2',
+      alt: 'photo-2',
+      image:
+        'https://mediaserver.komfort.pl/download?image=sapcontsrv.komfort.local%3A1090%2FContentServer%2FContentServer.dll%3Fget%26pVersion%3D0047%26contRep%3DZ_ZDJ_PROD%26docId%3D005056B605791EDA9AABA5B04EDC9E59%26compId%3D100141456_fotel-moss-szary_img.jpg&width=1180',
+    },
+    {
+      id: 'photo-3',
+      alt: 'photo-3',
+      image: 'https://www.edinos.pl/images/items/6313/fotel-alden-sklep_big.jpg.jpg',
+    },
+    {
+      id: 'photo-4',
+      alt: 'photo-4',
+      image:
+        'https://ehokery.pl/zdjecia/2020/03/10/103/00/2196fotel_retro_vintage_memo_plus_velvet_aksamitny_granatowy__5_.jpg',
+    },
+    {
+      id: 'photo-5',
+      alt: 'photo-5',
+      image:
+        'https://www.ikea.com/pl/pl/images/products/friheten-three-seat-sofa-bed-bomstad-black__0525511_PE644872_S5.JPG?f=xxxl',
+    },
+    {
+      id: 'photo-6',
+      alt: 'photo-6',
+      image:
+        'https://www.happybarok.pl/images/happybarok/2000-3000/Sofa-Plum_%5B2152%5D_1200.jpg',
+    },
+  ],
 };
 
 export default initialState;

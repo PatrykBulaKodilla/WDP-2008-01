@@ -6,18 +6,20 @@ import Button from '../../common/Button/Button';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faStar,
+  faArrowLeft,
+  faArrowRight,
   faExchangeAlt,
   faShoppingBasket,
   faEye,
 } from '@fortawesome/free-solid-svg-icons';
-import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
+import { faHeart } from '@fortawesome/free-regular-svg-icons';
+//import { getGalleryPhotos } from '../../../redux/photosGalleryRedux';
 //import StarRating from '../StarRating/StarRating';
 //import ProductBox from '../../common/ProductBox/ProductBox';
 
 class Gallery extends React.Component {
   state = {
-    activePage: 0,
+    activePage: 1,
     activeCategory: 'FEATURED',
   };
 
@@ -30,7 +32,7 @@ class Gallery extends React.Component {
   }
 
   render() {
-    const { categoriesGallery } = this.props;
+    const { categoriesGallery, galleryPhotos, products } = this.props;
     const { activeCategory } = this.state;
 
     //const categoryProducts = products.filter(item => item.category === activeCategory);
@@ -93,39 +95,73 @@ class Gallery extends React.Component {
                           </Button>
                         </div>
                       </div>
-                      <div className='col-6 align-self-end'></div>
+                      <div className='col-6 align-self-end'>
+                        <div className={styles.prices}>
+                          <ul>
+                            {products.map(products => (
+                              <li key={products.id}>
+                                <a>
+                                  {products.price}
+                                  {products.name}
+                                  {products.stars}
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div className={styles.galleryList}>
+                      <div className='row'>
+                        <div className='col-1'>
+                          <button className={styles.button}>
+                            <FontAwesomeIcon icon={faArrowLeft}></FontAwesomeIcon>
+                          </button>
+                        </div>
+                        <div className='col-10'>
+                          <ul className={styles.galleryPhotos}>
+                            {galleryPhotos.map(galleryPhotos => (
+                              <li key={galleryPhotos.id}>
+                                <img
+                                  src={galleryPhotos.image}
+                                  alt={galleryPhotos.alt}
+                                />
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                        <div className='col-1'>
+                          <button className={styles.button + ' ' + styles.button2}>
+                            <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon>
+                          </button>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              {/* <div className='row'>
-              {gallery.slice(activePage, activePage + 1).map(item => (
-                <div key={item.id}>
-                </div>
-              ))}
-            </div> */}
             </div>
-            <div className='col-6'>
-              <div className={styles.right}>
-                <img
-                  className={styles.image}
-                  alt='gallery-bed'
-                  src='https://pictureserver.net/images/cache/undef_src_sa_picid_694714_x_1800_type_whitesh_image.jpg?ver=27'
-                />
-                <div className={styles.opacityText}>
-                  <p>
+          </div>
+          <div className='col-6'>
+            <div className={styles.right}>
+              <img
+                className={styles.image}
+                alt='gallery-bed'
+                src='https://pictureserver.net/images/cache/undef_src_sa_picid_694714_x_1800_type_whitesh_image.jpg?ver=27'
+              />
+              <div className={styles.opacityText}>
+                <p>
+                  <small>
                     <small>
-                      <small>
-                        <small>FROM</small>
-                      </small>
-                    </small>{' '}
-                    $50.80
-                  </p>
-                  <span>Bedroom Bed</span>
-                  <Button variant='outline' className={styles.buttonDescription}>
-                    SHOP NOW
-                  </Button>
-                </div>
+                      <small>FROM</small>
+                    </small>
+                  </small>{' '}
+                  $50.80
+                </p>
+                <span>Bedroom Bed</span>
+                <Button variant='outline' className={styles.buttonDescription}>
+                  SHOP NOW
+                </Button>
               </div>
             </div>
           </div>
@@ -143,21 +179,27 @@ Gallery.propTypes = {
       name: PropTypes.string,
     })
   ),
+  galleryPhotos: PropTypes.arrayOf(
+    PropTypes.shape({
+      galleryPhotos: PropTypes.array,
+    })
+  ),
   products: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
       name: PropTypes.string,
-      category: PropTypes.string,
+      //category: PropTypes.string,
       price: PropTypes.number,
       stars: PropTypes.number,
-      promo: PropTypes.string,
-      Gallery: PropTypes.bool,
+      // promo: PropTypes.string,
+      // Gallery: PropTypes.bool,
     })
   ),
 };
 
 Gallery.defaultProps = {
   categoriesGallery: [],
+  galleryPhotos: [],
   products: [],
 };
 

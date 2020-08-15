@@ -1,5 +1,4 @@
-export const getCategory = ({ categoriesGallery }) => categoriesGallery;
-//export const getGalleryPhotos = ({ galleryPhotos}) => galleryPhotos;
+export const getGalleryPhotos = ({ galleryPhotos }) => galleryPhotos;
 
 /* reducer */
 export default function reducer(statePart = [], action = {}) {
