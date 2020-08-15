@@ -15,10 +15,6 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import { faStar as farStar } from '@fortawesome/free-regular-svg-icons';
-//import { getGalleryPhotos } from '../../../redux/photosGalleryRedux';
-//import StarRating from '../StarRating/StarRating';
-// import ProductBox from '../../common/ProductBox/ProductBox';
-//import {stars} from '../../common/ProductBox/ProductBox';
 
 class Gallery extends React.Component {
   state = {
@@ -27,10 +23,6 @@ class Gallery extends React.Component {
     activeProduct: 1,
   };
 
-  // handlePageChange(newPage) {
-  //   this.setState({ activePage: newPage });
-  // }
-
   handleCategoryChange(newCategory) {
     this.setState({ activeCategory: newCategory });
   }
@@ -38,9 +30,6 @@ class Gallery extends React.Component {
   render() {
     const { categoriesGallery, galleryPhotos, products, stars } = this.props;
     const { activeCategory, activeProduct } = this.state;
-
-    //const categoryProducts = products.filter(item => item.category === activeCategory);
-    //const pagesCount = products.length;
 
     return (
       <div className={styles.root}>
@@ -222,11 +211,6 @@ Gallery.propTypes = {
       gallery: PropTypes.bool,
     })
   ),
-  // ProductBox: PropTypes.arrayOf(
-  //   PropTypes.shape({
-  //     stars: PropTypes.number,
-  //   })
-  // ),
 };
 
 Gallery.defaultProps = {
