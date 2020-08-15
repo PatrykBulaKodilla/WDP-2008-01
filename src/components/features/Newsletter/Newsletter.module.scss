@@ -2,5 +2,50 @@
 
 .root {
   display: inline-flex;
+  width: 100%;
+  padding: 25px 0 25px 0;
   background-color: $newsletter-bg;
+  text-align: center;
+
+  .title {
+    display: inline-block;
+    margin: 0 55px 0 0;
+    text-transform: uppercase;
+    color: $newsletter-title;
+    font-size: 20px;
+  }
+
+  .newsInput {
+    display: inline-block;
+    border-radius: 4px;
+    padding: 7px;
+    width: 35%;
+    background-color: $newsletter-newsInput-bg;
+
+    .icon {
+      color: $newsletter-icon;
+      margin-right: 10px;
+    }
+
+    input {
+      border: none;
+      border-left: 1px solid $newsletter-input-border;
+      padding-left: 10px;
+      width: 90%;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 1140px) {
+  .root {
+    .title, .newsInput {
+      display: block;
+      margin: 0 auto 15px;
+      width: 50%;
+    }
+  }
 }
