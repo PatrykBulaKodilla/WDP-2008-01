@@ -62,7 +62,9 @@ class Gallery extends React.Component {
                         <li key={item.id}>
                           <a
                             href='/#'
-                            className={item.id === activeCategory && styles.active}
+                            className={
+                              item.id === activeCategory ? styles.active : undefined
+                            }
                             onClick={() => this.handleCategoryChange(item.id)}
                           >
                             {item.name}
@@ -97,7 +99,9 @@ class Gallery extends React.Component {
                           </Button>
                         </div>
                       </div>
-                      <div className={`${styles.imageLeftColRight} col-6`}>
+                      <div
+                        className={`${styles.imageLeftColRight} col-6 align-self-end`}
+                      >
                         <div className={styles.prices}>
                           <ul>
                             {products
@@ -109,6 +113,7 @@ class Gallery extends React.Component {
                                   </div>
                                   <div className={styles.nameBox}>
                                     <p>{products.name}</p>
+
                                     <div className={styles.stars}>
                                       {[1, 2, 3, 4, 5].map(i => (
                                         <a key={i} href='/#'>
@@ -210,10 +215,10 @@ Gallery.propTypes = {
     PropTypes.shape({
       id: PropTypes.string,
       name: PropTypes.string,
-      //category: PropTypes.string,
+      category: PropTypes.string,
       price: PropTypes.number,
       stars: PropTypes.number,
-      //promo: PropTypes.string,
+      promo: PropTypes.string,
       gallery: PropTypes.bool,
     })
   ),
