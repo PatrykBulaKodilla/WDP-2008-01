@@ -1,8 +1,9 @@
 import React from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
+import Button from '../../common/Button/Button';
 import styles from './Newsletter.module.scss';
 
 const Newsletter = () => (
@@ -13,6 +14,9 @@ const Newsletter = () => (
         <FontAwesomeIcon className={styles.icon} icon={faEnvelope} />
         <input type='email' placeholder='Enter your email address' required />
       </div>
+      <Button href='/#' variant='main' className={styles.button}>
+        <FontAwesomeIcon className={styles.icon} icon={faArrowRight} />
+      </Button>
     </div>
   </div>
 );
