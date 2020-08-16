@@ -102,7 +102,6 @@ class Gallery extends React.Component {
                                   </div>
                                   <div className={styles.nameBox}>
                                     <p>{products.name}</p>
-
                                     <div className={styles.stars}>
                                       {[1, 2, 3, 4, 5].map(i => (
                                         <a key={i} href='/#'>
@@ -119,7 +118,6 @@ class Gallery extends React.Component {
                                       ))}
                                     </div>
                                   </div>
-                                  {/*<p>{products.stars}</p>*/}
                                 </li>
                               ))}
                           </ul>
@@ -156,27 +154,27 @@ class Gallery extends React.Component {
                 </div>
               </div>
             </div>
-          </div>
-          <div className='col-6'>
-            <div className={styles.right}>
-              <img
-                className={styles.image}
-                alt='gallery-bed'
-                src='https://pictureserver.net/images/cache/undef_src_sa_picid_694714_x_1800_type_whitesh_image.jpg?ver=27'
-              />
-              <div className={styles.opacityText}>
-                <p>
-                  <small>
+            <div className='col-6'>
+              <div className={styles.right}>
+                <img
+                  className={styles.image}
+                  alt='gallery-bed'
+                  src='https://pictureserver.net/images/cache/undef_src_sa_picid_694714_x_1800_type_whitesh_image.jpg?ver=27'
+                />
+                <div className={styles.opacityText}>
+                  <p>
                     <small>
-                      <small>FROM</small>
-                    </small>
-                  </small>{' '}
-                  $50.80
-                </p>
-                <span>Bedroom Bed</span>
-                <Button variant='outline' className={styles.buttonDescription}>
-                  SHOP NOW
-                </Button>
+                      <small>
+                        <small>FROM</small>
+                      </small>
+                    </small>{' '}
+                    $50.80
+                  </p>
+                  <span>Bedroom Bed</span>
+                  <Button variant='outline' className={styles.buttonDescription}>
+                    SHOP NOW
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
