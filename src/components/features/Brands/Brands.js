@@ -28,6 +28,12 @@ class Brands extends React.Component {
     const { brands, brandsOnPage } = this.props;
     const { activePage } = this.state;
 
+    const thisBrands = this;
+
+    window.addEventListener('resize', () => {
+      thisBrands.setState({ activePage: 0 });
+    });
+
     return (
       <div className={styles.root}>
         <div className='container'>
@@ -35,19 +41,15 @@ class Brands extends React.Component {
             <button className={styles.button} onClick={() => this.previousPage()}>
               <FontAwesomeIcon icon={faArrowLeft}></FontAwesomeIcon>
             </button>
-            <div className='row'>
-              <div className={`col-auto`}>
-                <ul className={styles.brands}>
-                  {brands
-                    .slice(activePage * brandsOnPage, (activePage + 1) * brandsOnPage)
-                    .map(brand => (
-                      <li key={brand.id}>
-                        <img src={brand.image} alt={brand.alt} />
-                      </li>
-                    ))}
-                </ul>
-              </div>
-            </div>
+            <ul className={styles.brands}>
+              {brands
+                .slice(activePage * brandsOnPage, (activePage + 1) * brandsOnPage)
+                .map(brand => (
+                  <li key={brand.id}>
+                    <img src={brand.image} alt={brand.alt} />
+                  </li>
+                ))}
+            </ul>
             <button
               className={`${styles.button} ${styles.button2}`}
               onClick={() => this.nextPage()}
