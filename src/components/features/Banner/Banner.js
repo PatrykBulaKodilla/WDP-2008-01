@@ -25,13 +25,13 @@ class Banner extends React.Component {
             <div className={styles.path}>
               <ul>
                 <li>
-                  <a href='#'>Home</a>
+                  <a href='# '>Home</a>
                 </li>
                 <li>
-                  <a href='#'>{'>'}</a>
+                  <a href='# '>{'>'}</a>
                 </li>
                 <li>
-                  <a href='#' className={styles.furnitureActive}>
+                  <a href='# ' className={styles.furnitureActive}>
                     Furniture{' '}
                   </a>
                 </li>
