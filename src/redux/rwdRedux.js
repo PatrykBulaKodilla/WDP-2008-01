@@ -3,6 +3,9 @@ export const getRwdMode = ({ rwd }) => rwd.mode;
 export const getProductOnPageSetting = ({ rwd }, rwdMode) =>
   rwd.settings.productOnPage[rwdMode];
 export const getModeMaxWidth = ({ rwd }) => rwd.settings.modeMaxWidth;
+export const getBrandOnPageSetting = ({ rwd }, rwdMode) =>
+  rwd.settings.brandsOnPage[rwdMode];
+
 /* action name creator */
 const reducerName = 'rwd';
 const createActionName = name => `app/${reducerName}/${name}`;

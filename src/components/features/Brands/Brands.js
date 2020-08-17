@@ -10,7 +10,7 @@ class Brands extends React.Component {
   };
 
   render() {
-    const { brands } = this.props;
+    const { brands, brandsOnPage } = this.props;
     const { activePage } = this.state;
 
     return (
@@ -25,11 +25,13 @@ class Brands extends React.Component {
               </div>
               <div className='col-10'>
                 <ul className={styles.brands}>
-                  {brands.slice(activePage * 5, (activePage + 1) * 5).map(brand => (
-                    <li key={brand.id}>
-                      <img src={brand.image} alt={brand.alt} />
-                    </li>
-                  ))}
+                  {brands
+                    .slice(activePage * brandsOnPage, (activePage + 1) * brandsOnPage)
+                    .map(brand => (
+                      <li key={brand.id}>
+                        <img src={brand.image} alt={brand.alt} />
+                      </li>
+                    ))}
                 </ul>
               </div>
               <div className='col-1'>
@@ -48,6 +50,7 @@ class Brands extends React.Component {
 Brands.propTypes = {
   brands: PropTypes.array,
   activePage: PropTypes.number,
+  brandsOnPage: PropTypes.number,
 };
 
 export default Brands;
