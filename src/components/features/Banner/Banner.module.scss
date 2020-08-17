@@ -1,0 +1,112 @@
+.root {
+  margin-top: 0;
+  padding-top: 0;
+
+  .banner {
+    margin-top: 0;
+    padding-top: 0;
+
+    .photo {
+      height: 225px;
+      position: relative;
+      background: {
+        color: black;
+      }
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .panel {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translate(-50%, -50%);
+        transition: .3s;
+        top: 50%;
+        bottom: auto;
+        left: 50%;
+        right: auto;
+        height: 50%;
+        width: 100%;
+        background-color: black;
+        text-align: center;
+        opacity: .5;
+        text-transform: uppercase;
+
+        .descriptionTitle {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          line-height: 16px;
+          color: white;
+            p {
+              padding: 16px 0 0 16px;
+              font-weight: 200;
+              font-size: 48px;
+              &:last-child{
+                font-weight: 600;
+            }
+          }
+        }
+
+        .descriptionSubitle {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+
+          p {
+            margin-left: 10px;
+          }
+
+          .percent{
+            color: orange;
+          }
+        }
+      }
+    }
+
+    .path {
+      background-color: lightgrey;
+      display: flex;
+      align-self: stretch;
+
+      ul{
+        margin: 10px 0 10px 0;
+        padding: 0;
+        display: flex;
+
+        li{
+          list-style: none;
+          display: flex;
+          align-items: stretch;
+          margin-left: 11px;
+
+          a {
+            color: black;
+            text-decoration: none;
+          }
+
+          .furnitureActive{
+            color: orange;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .root{
+    .descriptionTitle{
+      p{
+      font-size: 24px;
+
+      }
+    }
+  }
+}
