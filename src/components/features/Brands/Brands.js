@@ -9,6 +9,21 @@ class Brands extends React.Component {
     activePage: 0,
   };
 
+  nextPage() {
+    if (
+      this.state.activePage <
+      this.props.brands.length / this.props.brandsOnPage - 1
+    ) {
+      this.setState({ activePage: this.state.activePage + 1 });
+    }
+  }
+
+  previousPage() {
+    if (this.state.activePage > 0) {
+      this.setState({ activePage: this.state.activePage - 1 });
+    }
+  }
+
   render() {
     const { brands, brandsOnPage } = this.props;
     const { activePage } = this.state;
@@ -19,7 +34,7 @@ class Brands extends React.Component {
           <div className={styles.border}>
             <div className='row'>
               <div className='col-1'>
-                <button className={styles.button}>
+                <button className={styles.button} onClick={() => this.previousPage()}>
                   <FontAwesomeIcon icon={faArrowLeft}></FontAwesomeIcon>
                 </button>
               </div>
@@ -35,7 +50,10 @@ class Brands extends React.Component {
                 </ul>
               </div>
               <div className='col-1'>
-                <button className={styles.button + ' ' + styles.button2}>
+                <button
+                  className={styles.button + ' ' + styles.button2}
+                  onClick={() => this.nextPage()}
+                >
                   <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon>
                 </button>
               </div>
