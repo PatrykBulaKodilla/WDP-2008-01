@@ -5,8 +5,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import PropTypes from 'prop-types';
 
 class Brands extends React.Component {
+  state = {
+    activePage: 0,
+  };
+
   render() {
     const { brands } = this.props;
+    const { activePage } = this.state;
 
     return (
       <div className={styles.root}>
@@ -20,7 +25,7 @@ class Brands extends React.Component {
               </div>
               <div className='col-10'>
                 <ul className={styles.brands}>
-                  {brands.map(brand => (
+                  {brands.slice(activePage * 5, (activePage + 1) * 5).map(brand => (
                     <li key={brand.id}>
                       <img src={brand.image} alt={brand.alt} />
                     </li>
@@ -42,6 +47,7 @@ class Brands extends React.Component {
 
 Brands.propTypes = {
   brands: PropTypes.array,
+  activePage: PropTypes.number,
 };
 
 export default Brands;
