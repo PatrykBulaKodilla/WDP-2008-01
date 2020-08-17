@@ -32,13 +32,11 @@ class Brands extends React.Component {
       <div className={styles.root}>
         <div className='container'>
           <div className={styles.border}>
+            <button className={styles.button} onClick={() => this.previousPage()}>
+              <FontAwesomeIcon icon={faArrowLeft}></FontAwesomeIcon>
+            </button>
             <div className='row'>
-              <div className='col-1'>
-                <button className={styles.button} onClick={() => this.previousPage()}>
-                  <FontAwesomeIcon icon={faArrowLeft}></FontAwesomeIcon>
-                </button>
-              </div>
-              <div className='col-10'>
+              <div className={`col-auto`}>
                 <ul className={styles.brands}>
                   {brands
                     .slice(activePage * brandsOnPage, (activePage + 1) * brandsOnPage)
@@ -49,15 +47,13 @@ class Brands extends React.Component {
                     ))}
                 </ul>
               </div>
-              <div className='col-1'>
-                <button
-                  className={styles.button + ' ' + styles.button2}
-                  onClick={() => this.nextPage()}
-                >
-                  <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon>
-                </button>
-              </div>
             </div>
+            <button
+              className={`${styles.button} ${styles.button2}`}
+              onClick={() => this.nextPage()}
+            >
+              <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon>
+            </button>
           </div>
         </div>
       </div>
