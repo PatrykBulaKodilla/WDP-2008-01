@@ -1,4 +1,5 @@
 @import "../../../styles/settings.scss";
+@import "../../../styles/animations.scss";
 
 .root {
   padding: 5rem 0;
@@ -12,6 +13,14 @@
   height: 200px;
   border-bottom: 1px solid $lightBlack;
   border-top: 1px solid $lightBlack;
+
+  .fadeOut {
+    animation: fadeout 1s;
+  }
+
+  .fadeIn {
+    animation: fadein 1s;
+  }
 }
 
 .brands {
