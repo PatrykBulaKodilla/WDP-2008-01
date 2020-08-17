@@ -10,6 +10,7 @@ import favoriteReducer from './favoriteRedux';
 import compareReducer from './comprasionRedux';
 import rwdReducer from './rwdRedux';
 import feedbackReducer from './feedbackRedux';
+import hotDealsReducer from './hotDealsRedux';
 
 // define reducers
 const reducers = {
@@ -21,7 +22,11 @@ const reducers = {
   favorite: favoriteReducer,
   rwd: rwdReducer,
   feedback: feedbackReducer,
+<<<<<<< HEAD
   compare: compareReducer,
+=======
+  hotDeals: hotDealsReducer,
+>>>>>>> Add SuggestedProductContainer.js, hotDealsRedux.js, suggestedSliderRedux.js - getting props from state & Add ChangePage function in Slider.js
 };
 
 // add blank reducers for initial state properties without reducers

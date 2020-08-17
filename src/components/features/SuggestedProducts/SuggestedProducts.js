@@ -82,15 +82,11 @@ class SuggestedProducts extends React.Component {
     for (let i = 0; i < pagesCount; i++) {
       dots.push(
         <li key={i}>
-<<<<<<< HEAD
-          <a href='/' onClick={() => this.handlePageChange(i)}>
-=======
           <a
             href='/#'
             onClick={event => this.handlePageChange(i, event)}
             className={i === activeDeal ? styles.active : undefined}
           >
->>>>>>> Add handlers & .preventDefault - Hot Deals dot navigation
             page {i}
           </a>
         </li>
