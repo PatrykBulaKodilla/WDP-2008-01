@@ -11,8 +11,8 @@
   justify-content: center;
   align-items: center;
   height: 200px;
-  border-bottom: 1px solid $lightBlack;
-  border-top: 1px solid $lightBlack;
+  border-bottom: 1px solid $brands-border;
+  border-top: 1px solid $brands-border;
 }
 
 .brands {
@@ -31,7 +31,7 @@
       overflow: hidden;
       width: 150px;
       height: 150px;
-      border: 1px solid $lightBlack;
+      border: 1px solid $brands-img-border;
     }
   }
 }
@@ -39,8 +39,8 @@
 .button {
   height: 150px;
   width: 50px;
-  background-color: $lightBlack;
-  color: white;
+  background-color: $brands-button-bg;
+  color: $brands-button-text;
 }
 
 .button2 {
