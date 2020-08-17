@@ -24,10 +24,20 @@
 
 @keyframes slideRight {
   from {margin-left: 0;}
-  to {margin-left: 20%;}
+  to {margin-left: 100%;}
 }
 
 @keyframes slideLeft {
   from {margin-right: 0;}
-  to {margin-right: 20%;}
+  to {margin-right: 100%;}
+}
+
+@keyframes fadeinRight {
+  from {margin-left: 100%;}
+  to {margin-left: 0%;}
+}
+
+@keyframes fadeinLeft {
+  from {margin-right: 100%;}
+  to {margin-right: 0%;}
 }

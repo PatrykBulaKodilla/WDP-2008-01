@@ -21,14 +21,15 @@ class Brands extends React.Component {
   nextPage() {
     if (
       this.state.activePage <
-      this.props.brands.length / this.props.brandsOnPage - 1
+      Math.ceil(this.props.brands.length / this.props.brandsOnPage) - 1
     ) {
-      this.removeClass(this.state.brandsListRef, styles.fadeIn);
+      this.removeClass(this.state.brandsListRef, styles.fadeInRight);
+      this.removeClass(this.state.brandsListRef, styles.fadeInLeft);
       this.addClass(this.state.brandsListRef, styles.slideRight);
 
       setTimeout(() => {
         this.setState({ activePage: this.state.activePage + 1 });
-        this.addClass(this.state.brandsListRef, styles.fadeIn);
+        this.addClass(this.state.brandsListRef, styles.fadeInRight);
         this.removeClass(this.state.brandsListRef, styles.slideRight);
       }, 1000);
     }
@@ -36,12 +37,13 @@ class Brands extends React.Component {
 
   previousPage() {
     if (this.state.activePage > 0) {
-      this.removeClass(this.state.brandsListRef, styles.fadeIn);
+      this.removeClass(this.state.brandsListRef, styles.fadeInRight);
+      this.removeClass(this.state.brandsListRef, styles.fadeInLeft);
       this.addClass(this.state.brandsListRef, styles.slideLeft);
 
       setTimeout(() => {
         this.setState({ activePage: this.state.activePage - 1 });
-        this.addClass(this.state.brandsListRef, styles.fadeIn);
+        this.addClass(this.state.brandsListRef, styles.fadeInLeft);
         this.removeClass(this.state.brandsListRef, styles.slideLeft);
       }, 1000);
     }
@@ -65,7 +67,7 @@ class Brands extends React.Component {
               <FontAwesomeIcon icon={faArrowLeft}></FontAwesomeIcon>
             </button>
             <div className={styles.sliderContainer}>
-              <div className={styles.fadeIn} ref={this.state.brandsListRef}>
+              <div ref={this.state.brandsListRef}>
                 <ul className={styles.brands}>
                   {brands
                     .slice(activePage * brandsOnPage, (activePage + 1) * brandsOnPage)

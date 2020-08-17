@@ -49,16 +49,25 @@
 
 .sliderContainer {
   z-index: -100;
+  overflow: hidden;
 
   .fadeIn {
     animation: fadein 1s;
   }
 
+  .fadeInRight {
+    animation: fadein 1s, fadeinRight 1s;
+  }
+
+  .fadeInLeft {
+    animation: fadein 1s, fadeinLeft 1s;
+  }
+
   .slideRight {
-    animation: fadeout 1s, slideRight 1s;
+    animation: fadeout 1s, slideLeft 1s;
   }
 
   .slideLeft {
-    animation: fadeout 1s, slideLeft 1s;
+    animation: fadeout 1s, slideRight 1s;
   }
 }
