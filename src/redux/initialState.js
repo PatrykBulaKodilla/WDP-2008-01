@@ -592,6 +592,11 @@ const initialState = {
         tablet: 3,
         desktop: 8,
       },
+      brandsOnPage: {
+        mobile: 2,
+        tablet: 3,
+        desktop: 4,
+      },
       modeMaxWidth: {
         mobile: 768,
         tablet: 1023,
@@ -652,6 +657,28 @@ const initialState = {
       image:
         'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5f4bd7a6-f763-4518-9b81-bdfd40ce3fc9/d26yf2h-e858f532-4b44-4584-a255-fdedf789cb0b.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvNWY0YmQ3YTYtZjc2My00NTE4LTliODEtYmRmZDQwY2UzZmM5XC9kMjZ5ZjJoLWU4NThmNTMyLTRiNDQtNDU4NC1hMjU1LWZkZWRmNzg5Y2IwYi5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.CsOOvjJtgLluYwqJqLku5E3YDlRvk34r3FOLT6ay6JQ',
       alt: 'pbrand-6',
+    },
+    {
+      id: 'brand-7',
+      image:
+        'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5f4bd7a6-f763-4518-9b81-bdfd40ce3fc9/d26yf2h-e858f532-4b44-4584-a255-fdedf789cb0b.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvNWY0YmQ3YTYtZjc2My00NTE4LTliODEtYmRmZDQwY2UzZmM5XC9kMjZ5ZjJoLWU4NThmNTMyLTRiNDQtNDU4NC1hMjU1LWZkZWRmNzg5Y2IwYi5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.CsOOvjJtgLluYwqJqLku5E3YDlRvk34r3FOLT6ay6JQ',
+      alt: 'pbrand-7',
+    },
+    {
+      id: 'brand-8',
+      image: 'https://www.e-mlodzi.com/images/avatars/1213447593532cba98c7b7d.gif',
+      alt: 'pbrand-8',
+    },
+    {
+      id: 'brand-9',
+      image:
+        'https://lh5.googleusercontent.com/proxy/yd2OdpJNPAnOoiTPmEJxW-uDRkfHatuWDiB3AEqVXZ3P12hUz1-VKqVoTYbMe9deZ9RcsjxKDraM4PLNB2fqrcOS7SzXOJHepMyCCcKWg0T73vbftkZEA_GZgB4nCVY9YFtsw-hvFg',
+      alt: 'brand-9',
+    },
+    {
+      id: 'brand-10',
+      image: 'https://forum.obud.pl/download/file.php?avatar=5977_1452167610.jpg',
+      alt: 'pbrand-10',
     },
   ],
 };
