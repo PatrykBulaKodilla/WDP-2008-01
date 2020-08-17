@@ -13,21 +13,13 @@
   height: 200px;
   border-bottom: 1px solid $lightBlack;
   border-top: 1px solid $lightBlack;
-
-  .fadeOut {
-    animation: fadeout 1s;
-  }
-
-  .fadeIn {
-    animation: fadein 1s;
-  }
 }
 
 .brands {
   list-style: none;
   display: flex;
   justify-content: center;
-  margin: 0 10px 0 10px;
+  margin: 0 auto;
   padding-inline-start: 0;
 
   li {
@@ -53,4 +45,20 @@
 
 .button2 {
   float: right;
+}
+
+.sliderContainer {
+  z-index: -100;
+
+  .fadeIn {
+    animation: fadein 1s;
+  }
+
+  .slideRight {
+    animation: fadeout 1s, slideRight 1s;
+  }
+
+  .slideLeft {
+    animation: fadeout 1s, slideLeft 1s;
+  }
 }

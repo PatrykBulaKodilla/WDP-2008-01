@@ -21,3 +21,13 @@
   from { opacity: 0; }
   to   { opacity: 1; }
 }
+
+@keyframes slideRight {
+  from {margin-left: 0;}
+  to {margin-left: 20%;}
+}
+
+@keyframes slideLeft {
+  from {margin-right: 0;}
+  to {margin-right: 20%;}
+}

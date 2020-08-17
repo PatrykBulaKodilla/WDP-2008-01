@@ -24,12 +24,12 @@ class Brands extends React.Component {
       this.props.brands.length / this.props.brandsOnPage - 1
     ) {
       this.removeClass(this.state.brandsListRef, styles.fadeIn);
-      this.addClass(this.state.brandsListRef, styles.fadeOut);
+      this.addClass(this.state.brandsListRef, styles.slideRight);
 
       setTimeout(() => {
         this.setState({ activePage: this.state.activePage + 1 });
         this.addClass(this.state.brandsListRef, styles.fadeIn);
-        this.removeClass(this.state.brandsListRef, styles.fadeOut);
+        this.removeClass(this.state.brandsListRef, styles.slideRight);
       }, 1000);
     }
   }
@@ -37,12 +37,12 @@ class Brands extends React.Component {
   previousPage() {
     if (this.state.activePage > 0) {
       this.removeClass(this.state.brandsListRef, styles.fadeIn);
-      this.addClass(this.state.brandsListRef, styles.fadeOut);
+      this.addClass(this.state.brandsListRef, styles.slideLeft);
 
       setTimeout(() => {
         this.setState({ activePage: this.state.activePage - 1 });
         this.addClass(this.state.brandsListRef, styles.fadeIn);
-        this.removeClass(this.state.brandsListRef, styles.fadeOut);
+        this.removeClass(this.state.brandsListRef, styles.slideLeft);
       }, 1000);
     }
   }
@@ -64,16 +64,18 @@ class Brands extends React.Component {
             <button className={styles.button} onClick={() => this.previousPage()}>
               <FontAwesomeIcon icon={faArrowLeft}></FontAwesomeIcon>
             </button>
-            <div className={styles.fadeIn} ref={this.state.brandsListRef}>
-              <ul className={styles.brands}>
-                {brands
-                  .slice(activePage * brandsOnPage, (activePage + 1) * brandsOnPage)
-                  .map(brand => (
-                    <li key={brand.id}>
-                      <img src={brand.image} alt={brand.alt} />
-                    </li>
-                  ))}
-              </ul>
+            <div className={styles.sliderContainer}>
+              <div className={styles.fadeIn} ref={this.state.brandsListRef}>
+                <ul className={styles.brands}>
+                  {brands
+                    .slice(activePage * brandsOnPage, (activePage + 1) * brandsOnPage)
+                    .map(brand => (
+                      <li key={brand.id}>
+                        <img src={brand.image} alt={brand.alt} />
+                      </li>
+                    ))}
+                </ul>
+              </div>
             </div>
             <button
               className={`${styles.button} ${styles.button2}`}
