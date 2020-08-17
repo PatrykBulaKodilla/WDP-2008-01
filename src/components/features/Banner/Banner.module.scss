@@ -1,16 +1,14 @@
+@import "../../../styles/settings.scss";
+
 .root {
-  margin-top: 0;
-  padding-top: 0;
 
   .banner {
-    margin-top: 0;
-    padding-top: 0;
 
     .photo {
       height: 225px;
       position: relative;
       background: {
-        color: black;
+        color: $banner-panel-color;
       }
       overflow: hidden;
       display: flex;
@@ -24,16 +22,13 @@
         justify-content: center;
         align-items: center;
         transform: translate(-50%, -50%);
-        transition: .3s;
         top: 50%;
         bottom: auto;
         left: 50%;
         right: auto;
         height: 50%;
         width: 100%;
-        background-color: black;
         text-align: center;
-        opacity: .5;
         text-transform: uppercase;
 
         .descriptionTitle {
@@ -41,13 +36,14 @@
           justify-content: center;
           align-items: center;
           line-height: 16px;
-          color: white;
-            p {
-              padding: 16px 0 0 16px;
-              font-weight: 200;
-              font-size: 48px;
-              &:last-child{
-                font-weight: 600;
+          color: $banner-panel-description-title-color;
+
+          p {
+            padding: 16px 0 0 16px;
+            font-weight: 200;
+            font-size: 48px;
+            &:last-child{
+              font-weight: 600;
             }
           }
         }
@@ -56,21 +52,25 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          color: white;
+          color: $banner-panel-description-subtitle-color;
+          font-size: 25px;
+          letter-spacing: 0.4em;
+          margin-left: 17px;
 
           p {
             margin-left: 10px;
+
           }
 
           .percent{
-            color: orange;
+            color: $banner-panel-percent-color;
           }
         }
       }
     }
 
     .path {
-      background-color: lightgrey;
+      background-color: $banner-panel-path-color;
       display: flex;
       align-self: stretch;
 
@@ -101,11 +101,13 @@
 }
 
 @media (max-width: 768px) {
+
   .root{
-    .descriptionTitle{
+
+    .descriptionTitle .descriptionSubitle{
+
       p{
       font-size: 24px;
-
       }
     }
   }

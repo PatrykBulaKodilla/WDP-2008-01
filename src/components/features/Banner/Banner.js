@@ -1,8 +1,6 @@
 import React from 'react';
 import styles from './Banner.module.scss';
 
-//import ProductBanner from '../../common/ProductBanner/ProductBanner';
-
 class Banner extends React.Component {
   render() {
     return (
