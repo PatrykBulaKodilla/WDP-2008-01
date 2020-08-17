@@ -29,6 +29,33 @@ const ProductList = ({ shopList }) => {
           <div className={`col col-sm-12 col-lg-3 order-1 order-md-3`}>
             <Filter />
             <SmallFurniture />
+            <div className="filterColor">
+              <div className={styles.filterColorTitle}>
+                <p>filter</p>
+                <p>by</p>
+                <p>color</p>
+              </div>
+              <div className={styles.filterColor}>
+                <div className={styles.foored} onClick={this.addActiveClass}>
+                  <a href='#'>Red</a>
+                </div>
+                <div className={styles.fooblack}>
+                  <p>Black</p>
+                </div>
+                <div className={styles.fooyellow}>
+                  <p>Yellow</p>
+                </div>
+                <div className={styles.fooblue}>
+                  <p>Blue</p>
+                </div>
+                <div className={styles.foopink}>
+                  <p>Pink</p>
+                </div>
+                <div className={styles.foogreen}>
+                  <p>Green</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
