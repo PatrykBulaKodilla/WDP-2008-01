@@ -85,7 +85,6 @@ ProductBox.propTypes = {
   image: PropTypes.string,
   price: PropTypes.number,
   oldPrice: PropTypes.string,
-  image: PropTypes.string,
   promo: PropTypes.string,
   stars: PropTypes.number,
   id: PropTypes.string,

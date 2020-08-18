@@ -592,6 +592,11 @@ const initialState = {
         tablet: 3,
         desktop: 8,
       },
+      brandsOnPage: {
+        mobile: 1,
+        tablet: 3,
+        desktop: 4,
+      },
       modeMaxWidth: {
         mobile: 768,
         tablet: 1023,
@@ -628,30 +633,56 @@ const initialState = {
     {
       id: 'brand-1',
       image:
-        'https://mackeyadvisors.com/wp-content/uploads/2016/06/images-14-150x150.jpg',
+        'https://i.pinimg.com/originals/d2/f1/6b/d2f16bbb686d729b529735cd00f99375.png',
       alt: 'brand-1',
     },
     {
       id: 'brand-3',
-      image: 'https://forum.obud.pl/download/file.php?avatar=5977_1452167610.jpg',
+      image:
+        'https://i.pinimg.com/originals/d4/f8/a4/d4f8a4525b44a828480c8ece09a3190e.jpg',
       alt: 'pbrand-3',
     },
     {
       id: 'brand-4',
       image:
-        'https://lh5.googleusercontent.com/proxy/yd2OdpJNPAnOoiTPmEJxW-uDRkfHatuWDiB3AEqVXZ3P12hUz1-VKqVoTYbMe9deZ9RcsjxKDraM4PLNB2fqrcOS7SzXOJHepMyCCcKWg0T73vbftkZEA_GZgB4nCVY9YFtsw-hvFg',
+        'https://i.pinimg.com/originals/b9/4e/38/b94e38cafd47c4bde568f25e26479595.jpg',
       alt: 'brand-4',
     },
     {
       id: 'brand-5',
-      image: 'https://www.e-mlodzi.com/images/avatars/1213447593532cba98c7b7d.gif',
+      image:
+        'https://i.pinimg.com/originals/a9/4b/95/a94b95d8177dcbcec9188db0ab2ad322.jpg',
       alt: 'pbrand-5',
     },
     {
       id: 'brand-6',
       image:
-        'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5f4bd7a6-f763-4518-9b81-bdfd40ce3fc9/d26yf2h-e858f532-4b44-4584-a255-fdedf789cb0b.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvNWY0YmQ3YTYtZjc2My00NTE4LTliODEtYmRmZDQwY2UzZmM5XC9kMjZ5ZjJoLWU4NThmNTMyLTRiNDQtNDU4NC1hMjU1LWZkZWRmNzg5Y2IwYi5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.CsOOvjJtgLluYwqJqLku5E3YDlRvk34r3FOLT6ay6JQ',
+        'https://i.pinimg.com/originals/51/e1/9b/51e19bf1dda203f3497604e697216118.jpg',
       alt: 'pbrand-6',
+    },
+    {
+      id: 'brand-7',
+      image:
+        'https://i.pinimg.com/originals/c8/7b/17/c87b170d9bb6c9c38a156db34fda8bb0.png',
+      alt: 'pbrand-7',
+    },
+    {
+      id: 'brand-8',
+      image:
+        'https://previews.123rf.com/images/pascreative/pascreative1903/pascreative190300534/119515243-furniture-chair-company-logo.jpg',
+      alt: 'pbrand-8',
+    },
+    {
+      id: 'brand-9',
+      image:
+        'https://i.pinimg.com/originals/49/11/47/4911473425003c93dcd598faacbe22bb.jpg',
+      alt: 'brand-9',
+    },
+    {
+      id: 'brand-10',
+      image:
+        'https://cdn3.f-cdn.com/contestentries/1182286/26555330/5a0b21717c1e5_thumb900.jpg',
+      alt: 'pbrand-10',
     },
   ],
 };

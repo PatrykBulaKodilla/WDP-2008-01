@@ -1,4 +1,5 @@
 @import "../../../styles/settings.scss";
+@import "../../../styles/animations.scss";
 
 .root {
   padding: 5rem 0;
@@ -10,15 +11,15 @@
   justify-content: center;
   align-items: center;
   height: 200px;
-  border-bottom: 1px solid $lightBlack;
-  border-top: 1px solid $lightBlack;
+  border-bottom: 1px solid $brands-border;
+  border-top: 1px solid $brands-border;
 }
 
 .brands {
   list-style: none;
   display: flex;
   justify-content: center;
-  margin: 0 10px 0 10px;
+  margin: 0 auto;
   padding-inline-start: 0;
 
   li {
@@ -30,7 +31,7 @@
       overflow: hidden;
       width: 150px;
       height: 150px;
-      border: 1px solid $lightBlack;
+      border: 1px solid $brands-img-border;
     }
   }
 }
@@ -38,10 +39,35 @@
 .button {
   height: 150px;
   width: 50px;
-  background-color: $lightBlack;
-  color: white;
+  background-color: $brands-button-bg;
+  color: $brands-button-text;
 }
 
 .button2 {
   float: right;
+}
+
+.sliderContainer {
+  z-index: -100;
+  overflow: hidden;
+
+  .fadeIn {
+    animation: fadein 1s;
+  }
+
+  .fadeInRight {
+    animation: fadein 1s, fadeinRight 1s;
+  }
+
+  .fadeInLeft {
+    animation: fadein 1s, fadeinLeft 1s;
+  }
+
+  .slideRight {
+    animation: fadeout 1s, slideLeft 1s;
+  }
+
+  .slideLeft {
+    animation: fadeout 1s, slideRight 1s;
+  }
 }
