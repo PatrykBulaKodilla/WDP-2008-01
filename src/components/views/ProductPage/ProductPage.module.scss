@@ -2,4 +2,64 @@
 
 .root {
   padding: $base-padding 0;
+
+  .frame {
+    height: 600px;
+    background-color: grey;
+    width: 100%;
+
+    .bigPic {
+      background-color: #2a2a2a;
+      margin: 15px 0 15px 15px;
+      height: 450px;
+
+      img {
+        background-color: lightgray;
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .slide {
+      height: 100px;
+      margin: 5px 10px 5px 25px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      button {
+        background-color: transparent;
+        border: 1px solid black;
+        position: absolute;
+        transition: $transition-background;
+        &:hover {
+          background-color: #d58e32;
+          color: white;
+          transition: $transition-background;
+        }
+      }
+
+      .buttonLeft {
+        float: left;
+        left: -2%;
+
+      }
+
+      .buttonRight {
+        float: right;
+        right: -2%;
+      }
+
+      .slideGallery {
+
+        img{
+          height: 100px;
+          background-color: lightgray;
+          width: 70px;
+          margin: 0 6px 0 6px;
+        }
+      }
+    }
+  }
 }
