@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './ProductList.module.scss';
 import Filter from '../../common/Filter/Filter';
 
-// import FilterByCategories from '../../common/FilterByCategories/FilterByCategories';
+import FilterByColor from '../../common/FilterByColor/FilterByColor';
 import ProductBox from '../../common/ProductBox/ProductBoxContainer';
 import SmallFurniture from '../../features/SmallFurniture/SmallFurniture';
 
@@ -31,29 +31,7 @@ const ProductList = ({ shopList }) => {
             <SmallFurniture />
             <div className="filterColor">
               <div className={styles.filterColorTitle}>
-                <p>filter</p>
-                <p>by</p>
-                <p>color</p>
-              </div>
-              <div className={styles.filterColor}>
-                <div className={styles.foored} onClick={this.addActiveClass}>
-                  <a href='#'>Red</a>
-                </div>
-                <div className={styles.fooblack}>
-                  <p>Black</p>
-                </div>
-                <div className={styles.fooyellow}>
-                  <p>Yellow</p>
-                </div>
-                <div className={styles.fooblue}>
-                  <p>Blue</p>
-                </div>
-                <div className={styles.foopink}>
-                  <p>Pink</p>
-                </div>
-                <div className={styles.foogreen}>
-                  <p>Green</p>
-                </div>
+                <FilterByColor />
               </div>
             </div>
           </div>
