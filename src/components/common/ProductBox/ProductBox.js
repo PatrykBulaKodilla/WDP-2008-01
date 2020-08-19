@@ -67,7 +67,10 @@ const ProductBox = ({
         <Button
           variant='outline'
           className={comparison + ' ' + styles.faExchangeAlt}
-          onClick={() => addToCompare(name, id, image)}
+          onClick={event => {
+            addToCompare(name, id, image);
+            event.preventDefault();
+          }}
         >
           <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
         </Button>
@@ -93,7 +96,6 @@ ProductBox.propTypes = {
   promo: PropTypes.string,
   stars: PropTypes.number,
   id: PropTypes.string,
-  image: PropTypes.string,
   favoriteProducts: PropTypes.array,
   setFavoriteProduct: PropTypes.func,
   addToCompare: PropTypes.func,
