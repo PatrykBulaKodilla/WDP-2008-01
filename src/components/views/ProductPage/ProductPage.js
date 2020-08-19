@@ -9,6 +9,7 @@ import {
   faShoppingBasket,
   faMinus,
   faPlus,
+  faExpandAlt,
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faStar as farStar,
@@ -36,22 +37,25 @@ class ProductPage extends React.Component {
                   <div className='col-12'>
                     <div className={styles.bigPic}>
                       <img alt='' />
+                      <button className={styles.biggerImg}>
+                        <FontAwesomeIcon icon={faExpandAlt} />
+                      </button>
                     </div>
                   </div>
                   <div className='col-12'>
                     <div className={styles.slide}>
-                      <button className={styles.buttonLeft}>
-                        <FontAwesomeIcon icon={faArrowLeft}></FontAwesomeIcon>
-                      </button>
                       <div className={styles.slideGallery}>
+                        <button className={styles.buttonLeft}>
+                          <FontAwesomeIcon icon={faArrowLeft}></FontAwesomeIcon>
+                        </button>
                         <img alt='' />
                         <img alt='' />
                         <img alt='' />
                         <img alt='' />
+                        <button className={styles.buttonRight}>
+                          <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon>
+                        </button>
                       </div>
-                      <button className={styles.buttonRight}>
-                        <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon>
-                      </button>
                     </div>
                   </div>
                 </div>

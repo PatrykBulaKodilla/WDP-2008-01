@@ -9,6 +9,7 @@
     border: 1px solid black;
 
     .bigPic {
+      position: relative;
       background-color: #2a2a2a;
       margin: 15px 0 15px 15px;
       height: 450px;
@@ -18,12 +19,31 @@
         height: 100%;
         width: 100%;
       }
+
+      .biggerImg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        border: 1px solid black;
+        right: 2%;
+        bottom: 2%;
+        background-color: transparent;
+        transition: $transition-color;
+        &:hover{
+          background-color: #d58e32;
+          color: white;
+          transition: $transition-color;
+        }
+
+      }
     }
 
     .slide {
       height: 100px;
       margin: 5px 10px 5px 25px;
-      position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -42,17 +62,21 @@
 
       .buttonLeft {
         float: left;
-        left: -2%;
+        transform: translateY(-50%);
+        top: 50%;
+        left: -3%;
 
       }
 
       .buttonRight {
         float: right;
-        right: -2%;
+        transform: translateY(-50%);
+        top: 50%;
+        right: -3%;
       }
 
       .slideGallery {
-
+        position: relative;
         img{
           height: 100px;
           background-color: lightgray;
