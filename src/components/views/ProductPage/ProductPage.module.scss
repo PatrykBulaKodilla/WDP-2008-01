@@ -112,6 +112,138 @@
           }
         }
       }
+
+      .lvlTwo {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 90px;
+        font-size: 20px;
+        .oldPrice {
+          color: lightslategray;
+          text-decoration: line-through;
+          margin-right: 15px;
+        }
+        .newPrice {
+          background-color: black;
+          color: white;
+          font-weight: 600;
+          padding: 3px 6px 3px 6px;
+        }
+      }
+
+      .lvlThree {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 50px;
+        button {
+          font-size: 15px;
+          background-color: transparent;
+          margin-right: 10px;
+          border: 1px solid black;
+          transition: $transition-color;
+          &:hover {
+            background-color: #d58e32;
+            color: white;
+            transition: $transition-color;
+          }
+          strong {
+            margin-left: 5px;
+          }
+        }
+
+        .quant {
+          font-size: 15px;
+          font-weight: 600;
+          margin-right: 30px;
+        }
+
+        .number {
+          padding: 0 25px 0 25px;
+        }
+      }
+
+      .lvlFour {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 40px;
+        .overview {
+          font-size: 15px;
+          font-weight: 700;
+        }
+      }
+
+      .lvlFour2 {
+        display: flex;
+        font-size: 15px;
+        justify-content: flex-start;
+        align-items: center;
+        height: 60px;
+      }
+
+      .lvlFive {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 40px;
+        div {
+          margin: 20px 20px 0 0;
+          font-size: 15px;
+          font-weight: 600;
+        }
+        span {
+          font-size: 15px;
+          margin-top: 20px;
+        }
+      }
+
+      .lvlSix {
+        display: flex;
+        font-size: 15px;
+        justify-content: flex-start;
+        align-items: center;
+        height: 80px;
+        button {
+          background-color: transparent;
+          margin: 0 3px 0 3px;
+          padding: 5px 10px 5px 10px;
+          border: 1px solid black;
+          span {
+            margin-left: 10px;
+            font-weight: 300;
+            font-size: 12px;
+            color: black;
+          }
+        }
+        .facebook {
+          background-color: #3b5998;
+          color: white;
+          span {
+            color: white;
+          }
+        }
+        .google {
+          color: #DB4437;
+        }
+        .twitter {
+          color: 	#1DA1F2;
+        }
+        .pinterest {
+          color: #E60023;
+        }
+        .linkedin {
+          color: #0072b1;
+        }
+      }
+    }
+
+    .shorterLvl {
+      height: 90px;
+    }
+    .lastLvl {
+      border: none;
     }
   }
 }
