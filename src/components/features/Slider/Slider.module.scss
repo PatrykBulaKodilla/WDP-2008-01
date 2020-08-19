@@ -88,6 +88,14 @@
     width: 50%;
     z-index: 1;
   }
+
+  .fadeOut {
+    animation: fadeout 1s;
+  }
+  
+  .fadeIn {
+    animation: fadein 1s;
+  }
 }
 
 @media (max-width: 768px) {

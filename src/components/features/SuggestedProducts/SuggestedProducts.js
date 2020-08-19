@@ -8,11 +8,12 @@ import Swipeable from '../Swipeable/Swipeable';
 class SuggestedProducts extends React.Component {
   state = {
     activeDeal: 0,
+    autoPlayTime: 3000,
+    pauseAutoPlay: false,
   };
 
-  handlePageChange(newPage, event) {
-    if (event !== undefined) event.preventDefault();
-    this.setState({ activeDeal: newPage });
+  handlePageChange(newPage) {
+    this.setState({ activeDeal: newPage, autoPlayTime: 3000 });
   }
 
   handleCategoryChange(newCategory, event) {
@@ -32,59 +33,57 @@ class SuggestedProducts extends React.Component {
     }
   }
 
+  addClass(domElement, className) {
+    domElement.current.classList.add(className);
+  }
+
+  removeClass(domElement, className) {
+    domElement.current.classList.remove(className);
+  }
+
+  handlePageChangeFade(newPage, event) {
+    if (event !== undefined) event.preventDefault();
+    this.removeClass(this.props.hotDealsListRef, styles.fadeIn);
+    this.addClass(this.props.hotDealsListRef, styles.fadeOut);
+
+    setTimeout(() => {
+      this.handlePageChange(newPage);
+      this.addClass(this.props.hotDealsListRef, styles.fadeIn);
+      this.removeClass(this.props.hotDealsListRef, styles.fadeOut);
+    }, 1000);
+  }
+
+  autoPlay(pagesCount) {
+    if (this.state.activeDeal + 1 < pagesCount) {
+      this.handlePageChangeFade(this.state.activeDeal + 1);
+    } else {
+      this.handlePageChangeFade(0);
+    }
+  }
+
   render() {
     const dots = [];
     const { activeDeal } = this.state;
-    const hotDeals = [
-      {
-        id: 'aenean-ru-bristique-1',
-        name: 'Aenean Ru Bristique 1',
-        category: 'bed',
-        price: 30,
-        stars: 3,
-        promo: 'sale',
-        image:
-          'https://scandinavianliving.pl/userdata/public/gfx/9ff052bf0a47985baa8e54ccbc6e832d.jpg',
-        newFurniture: true,
-        favorite: true,
-        comparison: true,
-      },
-      {
-        id: 'aenean-ru-bristique-2',
-        name: 'Aenean Ru Bristique 2',
-        category: 'bed',
-        price: 30,
-        stars: 4,
-        promo: 'sale',
-        image:
-          'https://cdn.habitat.fr/thumbnails/product/866/866233/box/1200/1200/80/eskyss-aparador-vitrina-alto-de-nogal_866233.jpg',
-        newFurniture: true,
-        favorite: true,
-        comparison: false,
-      },
-      {
-        id: 'aenean-ru-bristique-3',
-        name: 'Aenean Ru Bristique 3',
-        category: 'bed',
-        price: 30,
-        oldPrice: '$35',
-        stars: 5,
-        promo: 'sale',
-        image:
-          'https://furniture123.co.uk/files/images/f123/shop-furniture-by-bedroom.jpg',
-        newFurniture: true,
-        favorite: false,
-        comparison: true,
-      },
-    ];
+    const { activeDeal, pauseAutoPlay } = this.state;
+    const { hotDeals, suggestedSlider } = this.props;
     const pagesCount = hotDeals.length;
+
+    setTimeout(() => {
+      if (!pauseAutoPlay) this.autoPlay(pagesCount);
+    }, this.state.autoPlayTime);
 
     for (let i = 0; i < pagesCount; i++) {
       dots.push(
         <li key={i}>
           <a
             href='/#'
-            onClick={event => this.handlePageChange(i, event)}
+            onClick={event => {
+              this.handlePageChangeFade(i, event);
+              this.setState({ pauseAutoPlay: true });
+              setTimeout(() => {
+                this.setState({ pauseAutoPlay: false });
+              }, 10000);
+            }}
             className={i === activeDeal ? styles.active : undefined}
           >
             page {i}
@@ -116,17 +115,14 @@ class SuggestedProducts extends React.Component {
                 rightAction={() => this.handleRightAction()}
               >
                 {hotDeals.slice(activeDeal, activeDeal + 1).map(elem => (
-                  <HotDeals
-                    key={elem.id}
-                    name={elem.name}
-                    price={elem.price}
-                    image={elem.image}
-                  />
+                  <div key={elem.id} ref={this.props.hotDealsListRef}>
+                    <HotDeals name={elem.name} price={elem.price} image={elem.image} />
+                  </div>
                 ))}
               </Swipeable>
             </div>
             <div className={`${styles.slider} col col-12 col-lg-8`}>
-              <Slider />
+              <Slider products={suggestedSlider} />
             </div>
           </div>
         </div>
@@ -134,5 +130,15 @@ class SuggestedProducts extends React.Component {
     );
   }
 }
+
+SuggestedProducts.propTypes = {
+  hotDeals: PropTypes.array,
+  suggestedSlider: PropTypes.array,
+  hotDealsListRef: PropTypes.object,
+};
+
+SuggestedProducts.defaultProps = {
+  hotDealsListRef: React.createRef(),
+};
 
 export default SuggestedProducts;

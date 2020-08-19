@@ -11,8 +11,7 @@ class Slider extends React.Component {
     activePage: 0,
   };
 
-  handlePageChange(newPage, productsCounter, event) {
-    if (event !== undefined) event.preventDefault();
+  handlePageChange(newPage, productsCounter) {
     if (newPage < productsCounter && newPage >= 0)
       this.setState({ activePage: newPage });
   }
@@ -34,6 +33,27 @@ class Slider extends React.Component {
     }
   }
 
+  addClass(domElement, className) {
+    domElement.current.classList.add(className);
+    console.log(domElement);
+  }
+
+  removeClass(domElement, className) {
+    domElement.current.classList.remove(className);
+  }
+
+  handlePageChangeFade(newCategory, productsCounter, event) {
+    if (event !== undefined) event.preventDefault();
+    this.removeClass(this.props.furnitureListRef, styles.fadeIn);
+    this.addClass(this.props.furnitureListRef, styles.fadeOut);
+
+    setTimeout(() => {
+      this.handlePageChange(newCategory, productsCounter);
+      this.addClass(this.props.furnitureListRef, styles.fadeIn);
+      this.removeClass(this.props.furnitureListRef, styles.fadeOut);
+    }, 1000);
+  }
+
   render() {
     const { products } = this.props;
     const { activePage } = this.state;
@@ -47,7 +67,11 @@ class Slider extends React.Component {
           <div className={styles.root} key={elem.id}>
             <div className='container'>
               <div className={styles.photo}>
-                <img src={elem.image} alt={elem.name} />
+                <img
+                  src={elem.image}
+                  alt={elem.name}
+                  ref={this.props.furnitureListRef}
+                />
                 <div className={styles.panel}>
                   <div className={styles.descriptionTitle}>
                     <p>indoor</p>
@@ -65,7 +89,7 @@ class Slider extends React.Component {
                     variant='small'
                     className={styles.button}
                     onClick={event =>
-                      this.handlePageChange(activePage - 1, productsCounter, event)
+                      this.handlePageChangeFade(activePage - 1, productsCounter, event)
                     }
                   >
                     <FontAwesomeIcon icon={faArrowLeft}></FontAwesomeIcon>
@@ -74,7 +98,7 @@ class Slider extends React.Component {
                     variant='small'
                     className={styles.button}
                     onClick={event =>
-                      this.handlePageChange(activePage + 1, productsCounter, event)
+                      this.handlePageChangeFade(activePage + 1, productsCounter, event)
                     }
                   >
                     <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon>
@@ -91,6 +115,11 @@ class Slider extends React.Component {
 
 Slider.propTypes = {
   products: PropTypes.array,
+  furnitureListRef: PropTypes.object,
+};
+
+Slider.defaultProps = {
+  furnitureListRef: React.createRef(),
 };
 
 export default Slider;
