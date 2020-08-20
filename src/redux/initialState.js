@@ -637,9 +637,9 @@ const initialState = {
         desktop: 8,
       },
       brandsOnPage: {
-        mobile: 1,
+        mobile: 2,
         tablet: 3,
-        desktop: 4,
+        desktop: 5,
       },
       modeMaxWidth: {
         mobile: 768,

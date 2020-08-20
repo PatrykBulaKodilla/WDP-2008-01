@@ -61,6 +61,7 @@ class Brands extends React.Component {
       if (brandsCount < activePage)
         thisBrands.setState({ activePage: brandsCount - 1 });
     });
+    console.log(window.innerWidth);
 
     return (
       <div className={styles.root}>
