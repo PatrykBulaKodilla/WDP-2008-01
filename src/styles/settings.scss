@@ -89,6 +89,9 @@ $productbox-pricebutton-hover-bg: $orange;
 $productbox-favoritebutton-active-bg: $lightBlack;
 $productbox-favoritebutton-active: $white;
 
+$productbox-oldprice-text: $lightGray;
+$productbox-oldprice-bg: $white;
+
 /*NewFerniture*/
 $newfurniture-panelbar-border: $darkWhite;
 
@@ -148,6 +151,10 @@ $productsearch-button-bg: $transparent;
 
 $productsearch-input-placeholder: $lightGray;
 
+/*Promotions*/
+$promotions-overlay-color: $lightBlack;
+$promotions-overlay-text-color: $white;
+
 /*CompanyClaim*/
 $companyclaim-bg: $darkGray;
 
@@ -160,6 +167,14 @@ $companyclaim-cart-icon: $orange;
 $companyclaim-cartCounter-bg: $darkGray;
 $companyclaim-cartCounter-text: $lightWhiteBlue;
 $companyclaim-cartCounter-hover-bg: $orange;
+
+/*Feedback*/
+$feedback-panelbar-border: $darkWhite;
+$feedback-heading-text: $orange;
+$feedback-heading-border: $orange;
+$feedback-dots-list-bg:  $white;
+$feedback-dots-link-bg: $darkWhite;
+$feedback-dots-link-active-hover-bg: $orange;
 
 /*Footer*/
 $footer-claim-bg: $lightBlack;
@@ -188,8 +203,53 @@ $topbar-bg: $gray;
 $topbar-link: $white;
 $topbar-link-hover: $orange;
 
+/*Brands*/
+$brands-border: $lightBlack;
+$brands-img-border: $lightBlack;
+$brands-button-bg: $lightBlack;
+$brands-button-text: $white;
+
+/*Newsletter*/
+$newsletter-bg: $darkWhite;
+$newsletter-title: $orange;
+$newsletter-newsInput-bg: $white;
+$newsletter-icon: $orange;
+$newsletter-input-border: $darkWhite;
+$newsletter-button-bg: $white;
+$newsletter-button-text-hover: $white;
+
+/*Filter*/
+$main-text: $lightBlack;
+$active-link: $orange;
+$active-background-circle: $orange;
+$inactive-background-circle: $lightBlack;
+$main-text-number: $white;
+/* ComprasionBox */
+
+$comprasion-bg: $white;
+$comprasion-border: $lightBlack;
+
+$comprasion-product-border: $orange;
+$comprasion-product-alternative-bg: $orange;
+
+$comprasion-compare-button: $orange;
+
+$comprasion-text-alternative: $white;
+
 /* Transition */
 
 $transition-background: .3s;
 $transition-color: .3s;
 $transition-translation: .3s;
+
+/* FilterByCategories */
+
+$filter-categories-title-text-color: $lightBlack;
+$filter-categories-title-bottom-color: $lightBlack;
+
+$filter-categories-text-color: $lightBlack;
+$filter-categories-text-color-active: $orange;
+$filter-categories-background-number-color-active: $orange;
+$filter-categories-text-circle-color: $white;
+$filter-categories-background-circle-color: $lightBlack;
+

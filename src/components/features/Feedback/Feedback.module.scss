@@ -1,0 +1,120 @@
+@import "../../../styles/settings.scss";
+@import "../../../styles/animations.scss";
+
+.root {
+  .panelBar {
+    margin-bottom: 30px;
+    position: relative;
+
+    :global(.row) > * {
+      border-bottom: 4px solid $feedback-panelbar-border;
+    }
+
+    .heading {
+      position: relative;
+      width: 100%;
+
+      h3 {
+        color: $feedback-heading-text;
+        text-transform: uppercase;
+        font-size: 20px;
+        line-height: 38px;
+        margin: 0;
+        letter-spacing: 1px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 45px;
+        border-bottom: 4px solid $feedback-heading-border;
+      }
+    }
+
+    .dots {
+      position: absolute;
+      right: 0;
+      top: 0;
+
+      ul {
+        margin: 0;
+        padding: 0 0 0 1rem;
+        list-style: none;
+        background-color: $feedback-dots-list-bg;
+        transform: translateY(15px);
+
+        li {
+          display: inline-block;
+          margin-left: 0.5rem;
+
+          a {
+            @extend .sw-animation;
+            display: block;
+            width: 13px;
+            height: 13px;
+            border-radius: 6px;
+            background-color: $feedback-dots-link-bg;
+            font-size: 0;
+
+            &.active,
+            &:hover {
+              background-color: $feedback-dots-link-active-hover-bg;
+            }
+          }
+        }
+      }
+    }
+
+    .feedback {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      margin: 2rem 0 2rem 0;
+      width: 100%;
+      height: 250px;
+      .icon {
+        font-size: 36px;
+        margin-bottom: 1rem;
+      }
+      .comment {
+        text-align: center;
+      }
+      .client {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        .image{
+          width: 50px;
+          height: 50px;
+          object-fit: cover;
+      }
+        .clientdata {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 18px 0 0 18px;
+          p {
+            font-weight: 200;
+            font-size: 16px;
+            &:first-child{
+              font-size: 24px;
+              margin: 0;
+              font-weight: 300;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .root .panelBar .feedback .icon {
+        font-size: 16px;
+  }
+}

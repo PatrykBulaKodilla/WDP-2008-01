@@ -44,6 +44,7 @@ const initialState = {
       name: 'Aenean Ru Bristique 3',
       category: 'bed',
       price: 30,
+      oldPrice: '$35',
       stars: 5,
       promo: 'sale',
       image:
@@ -57,6 +58,7 @@ const initialState = {
       name: 'Aenean Ru Bristique 4',
       category: 'bed',
       price: 30,
+      oldPrice: '$20',
       stars: 1,
       promo: 'sale',
       image:
@@ -96,6 +98,7 @@ const initialState = {
       name: 'Aenean Ru Bristique 7',
       category: 'bed',
       price: 30,
+      oldPrice: '$35',
       stars: 2,
       promo: 'sale',
       image:
@@ -109,6 +112,7 @@ const initialState = {
       name: 'Aenean Ru Bristique 8',
       category: 'bed',
       price: 30,
+      oldPrice: '$20',
       stars: 2,
       promo: 'sale',
       image:
@@ -604,6 +608,128 @@ const initialState = {
         'https://www.ikea.com/pl/pl/images/products/ivar-chair-pine__0728155_PE736115_S5.JPG?f=xxxl',
     },
   ],
+  promotions: [
+    {
+      id: 'promotion-1',
+      image: 'https://elmar.home.pl/files/ritmo_(2)-1.jpg',
+      alt: 'promo-1',
+      text_p: 'GUEST ROOM',
+      text_bold: 'SOFA',
+      text_value: ' -20% ',
+    },
+    {
+      id: 'promotion-2',
+      image: 'https://houseform.pl/!data/gallery/b_161449_22092014_largo_houseform.jpg',
+      alt: 'promo-2',
+    },
+    {
+      id: 'promotion-3',
+      image: 'https://klimapoint.pl/wp-content/uploads/2020/04/gree2020.jpg',
+      alt: 'promo-3',
+    },
+  ],
+  rwd: {
+    mode: '',
+    settings: {
+      productOnPage: {
+        mobile: 2,
+        tablet: 3,
+        desktop: 8,
+      },
+      brandsOnPage: {
+        mobile: 1,
+        tablet: 3,
+        desktop: 4,
+      },
+      modeMaxWidth: {
+        mobile: 768,
+        tablet: 1023,
+      },
+    },
+  },
+  feedback: [
+    {
+      name: 'John Smith',
+      role: 'Furniture client',
+      comment:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      image:
+        'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    },
+    {
+      name: 'Bruce Lee',
+      role: 'Manager of Ikea',
+      comment:
+        'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      image:
+        'https://images.pexels.com/photos/937481/pexels-photo-937481.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    },
+    {
+      name: 'Some Guy',
+      role: 'Regular customer',
+      comment:
+        'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+      image:
+        'https://images.pexels.com/photos/736716/pexels-photo-736716.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260',
+    },
+  ],
+  brands: [
+    {
+      id: 'brand-1',
+      image:
+        'https://i.pinimg.com/originals/d2/f1/6b/d2f16bbb686d729b529735cd00f99375.png',
+      alt: 'brand-1',
+    },
+    {
+      id: 'brand-3',
+      image:
+        'https://i.pinimg.com/originals/d4/f8/a4/d4f8a4525b44a828480c8ece09a3190e.jpg',
+      alt: 'pbrand-3',
+    },
+    {
+      id: 'brand-4',
+      image:
+        'https://i.pinimg.com/originals/b9/4e/38/b94e38cafd47c4bde568f25e26479595.jpg',
+      alt: 'brand-4',
+    },
+    {
+      id: 'brand-5',
+      image:
+        'https://i.pinimg.com/originals/a9/4b/95/a94b95d8177dcbcec9188db0ab2ad322.jpg',
+      alt: 'pbrand-5',
+    },
+    {
+      id: 'brand-6',
+      image:
+        'https://i.pinimg.com/originals/51/e1/9b/51e19bf1dda203f3497604e697216118.jpg',
+      alt: 'pbrand-6',
+    },
+    {
+      id: 'brand-7',
+      image:
+        'https://i.pinimg.com/originals/c8/7b/17/c87b170d9bb6c9c38a156db34fda8bb0.png',
+      alt: 'pbrand-7',
+    },
+    {
+      id: 'brand-8',
+      image:
+        'https://previews.123rf.com/images/pascreative/pascreative1903/pascreative190300534/119515243-furniture-chair-company-logo.jpg',
+      alt: 'pbrand-8',
+    },
+    {
+      id: 'brand-9',
+      image:
+        'https://i.pinimg.com/originals/49/11/47/4911473425003c93dcd598faacbe22bb.jpg',
+      alt: 'brand-9',
+    },
+    {
+      id: 'brand-10',
+      image:
+        'https://cdn3.f-cdn.com/contestentries/1182286/26555330/5a0b21717c1e5_thumb900.jpg',
+      alt: 'pbrand-10',
+    },
+  ],
+  compare: [],
 };
 
 export default initialState;

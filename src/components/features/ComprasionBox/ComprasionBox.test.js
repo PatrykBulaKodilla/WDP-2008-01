@@ -1,10 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Slider from './Slider';
+import ComprasionBox from './ComprasionBox';
 
-describe('Component Slider', () => {
+describe('Component ComprasionBox.js', () => {
   it('should render without crashing', () => {
-    const component = shallow(<Slider />);
+    const component = shallow(<ComprasionBox />);
     expect(component).toBeTruthy();
   });
 });

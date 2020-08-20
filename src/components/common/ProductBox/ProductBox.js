@@ -17,11 +17,13 @@ const ProductBox = ({
   id,
   name,
   price,
+  oldPrice,
   promo,
   stars,
   image,
   favoriteProducts,
   setFavoriteProduct,
+  addToCompare,
   comparison,
 }) => (
   <div className={styles.root}>
@@ -29,7 +31,9 @@ const ProductBox = ({
       {promo && <div className={styles.sale}>{promo}</div>}
       <img className={styles.image} src={image} alt='productFurniture' />
       <div className={styles.buttons}>
-        <Button variant='small'>Quick View</Button>
+        <Button href={'/product/' + id} variant='small'>
+          Quick View
+        </Button>
         <Button variant='small'>
           <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
         </Button>
@@ -60,11 +64,21 @@ const ProductBox = ({
         >
           <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
         </Button>
-        <Button variant='outline' className={comparison + ' ' + styles.faExchangeAlt}>
+        <Button
+          variant='outline'
+          className={comparison + ' ' + styles.faExchangeAlt}
+          onClick={event => {
+            addToCompare(name, id, image);
+            event.preventDefault();
+          }}
+        >
           <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
         </Button>
       </div>
       <div className={styles.price}>
+        <Button noHover variant='small' className={styles.oldPriceButton}>
+          {oldPrice}
+        </Button>
         <Button noHover variant='small' className={styles.priceButton}>
           $ {price}
         </Button>
@@ -76,13 +90,16 @@ const ProductBox = ({
 ProductBox.propTypes = {
   children: PropTypes.node,
   name: PropTypes.string,
+  image: PropTypes.string,
   price: PropTypes.number,
+  oldPrice: PropTypes.string,
   promo: PropTypes.string,
   image: PropTypes.node,
   stars: PropTypes.number,
   id: PropTypes.string,
   favoriteProducts: PropTypes.array,
   setFavoriteProduct: PropTypes.func,
+  addToCompare: PropTypes.func,
   comparison: PropTypes.bool,
 };
 

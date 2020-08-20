@@ -1,0 +1,70 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  padding: 5rem 0;
+
+  .cardBig {
+    position: relative;
+    height: 500px;
+
+    .overlay {
+      position: absolute;
+      color: red;
+      background-color: $promotions-overlay-color;
+      opacity: 50%;
+      height: 90%;
+      width: 90%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .opacityText {
+      position: absolute;
+      width: 90%;
+      height: 30%;
+      font-size: 30px;
+      font-weight: 500;
+      text-align: left;
+      color: $promotions-overlay-text-color;
+      transform: translate(-50%, -50%);
+      left: 53%;
+      top: 77%;
+      p {
+        margin-bottom: 0;
+      }
+      span {
+        font-size: 40px;
+        font-weight: bolder;
+      }
+      .percent {
+        border: 3px solid $promotions-overlay-text-color;
+        max-width: 25%;
+        text-align: center;
+      }
+    }
+  }
+
+  .cardSmall1 {
+    height: 240px;
+    margin-bottom: 10px;
+  }
+
+  .cardSmall2 {
+    margin-top: 10px;
+    height: 240px;
+  }
+
+  .image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 991px) {
+  .cardBig {
+    margin-bottom: 20px;
+  }
+}

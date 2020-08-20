@@ -17,7 +17,7 @@ const CompanyClaim = () => (
           </p>
         </div>
         <div className={`col text-center ${styles.mobileLogo}`}>
-          <a href='/#'>
+          <a href='/'>
             <img src='/images/logo.png' alt='Bazar' />
           </a>
         </div>
