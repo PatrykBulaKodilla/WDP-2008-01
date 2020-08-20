@@ -10,6 +10,7 @@ import Promotions from '../../features/Promotions/PromotionsContainer';
 import Feedback from '../../features/Feedback/FeedbackContainer';
 import Brands from '../../features/Brands/BrandsContainer';
 import Newsletter from '../../features/Newsletter/Newsletter';
+import ComprasionBox from '../../features/ComprasionBox/ComprasionBoxContainer';
 
 const Homepage = () => (
   <div className={styles.root}>
@@ -20,6 +21,7 @@ const Homepage = () => (
     <Brands />
     <Feedback />
     <Newsletter />
+    <ComprasionBox />
   </div>
 );
 

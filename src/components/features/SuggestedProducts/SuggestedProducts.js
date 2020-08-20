@@ -19,7 +19,7 @@ class SuggestedProducts extends React.Component {
     for (let i = 0; i < pagesCount; i++) {
       dots.push(
         <li key={i}>
-          <a href='/#' onClick={() => this.handlePageChange(i)}>
+          <a href='/' onClick={() => this.handlePageChange(i)}>
             page {i}
           </a>
         </li>
