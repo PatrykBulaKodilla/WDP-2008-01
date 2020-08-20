@@ -8,4 +8,16 @@
     color: $title-text;
     font-size: 26px;
   }
+
+  .image {
+    background-color: $image-bg;
+  }
+
+  .product {
+    margin-top: 25px;
+
+    .desc {
+      padding: 15px 10px;
+    }
+  }
 }

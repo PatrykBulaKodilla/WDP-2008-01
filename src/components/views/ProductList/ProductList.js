@@ -9,12 +9,11 @@ const ProductList = () => {
     <div className={styles.root}>
       <div className='container'>
         <div className='row'>
-          <div className={`col col-sm-12 col-lg-9 order-3 order-md-1`}>
-            <SmallFurniture />
-          </div>
+          <div className={`col col-sm-12 col-lg-9 order-3 order-md-1`}>LEFT</div>
           <div className='w-100 d-block d-md-none order-2'></div>
           <div className={`col col-sm-12 col-lg-3 order-1 order-md-3`}>
             <Filter />
+            <SmallFurniture />
           </div>
         </div>
       </div>
