@@ -10,6 +10,7 @@ $lightWhite: #f4f5f7;
 $white: #ffffff;
 $darkWhite: #e1e1e1;
 $lightWhiteBlue: #e0e3ed;
+$lightGreyBlue: #7AA3CC;
 $lightGreen: #32cd32;
 $transparent: transparent;
 
@@ -253,3 +254,9 @@ $filter-categories-background-number-color-active: $orange;
 $filter-categories-text-circle-color: $white;
 $filter-categories-background-circle-color: $lightBlack;
 
+/*Register*/
+
+$register-border-color: $lightBlack;
+$register-background-title: $lightWhite;
+$register-background-button: $lightGreyBlue;
+$register-button-text-color: $white;

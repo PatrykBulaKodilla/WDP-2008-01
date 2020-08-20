@@ -1,0 +1,128 @@
+@import "../../../styles/settings.scss";
+
+
+.root{
+  padding:30px;
+
+  .register {
+    border: 1px solid $register-border-color;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+
+    .registerButton {
+      background-color: $register-background-button;
+      color: $register-button-text-color;
+      padding: 5px 5px;
+      margin-bottom: 15px;
+      margin-left: 15px;
+      margin-right: 15px;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .registeredProfile {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      margin-top:15px;
+      border: solid 1px $register-border-color;
+      height: 33px;
+      border-radius: 2px;
+      cursor: pointer;
+
+      a {
+        color: black;
+        font-size: 13px;
+        align-self: center;
+        text-decoration: none;
+        margin-left: 10px;
+      }
+
+      .icon{
+        margin-right: 10px;
+        align-self: center;
+      }
+    }
+
+    h3{
+      margin: 0 10px 10px 10px;
+      border-bottom: 1px solid $register-border-color;
+    }
+
+    h4 {
+      background-color: $register-background-title;
+      border-bottom: 1px solid $register-border-color;
+      margin: 0;
+      padding:10px;
+      font-size: 18px;
+    }
+
+    p{
+      display: flex;
+      justify-content: flex-end;
+      font-weight: bold;
+      margin: 8px 0 8px 0;
+      padding: 5px 0 5px 0;
+      font-size: 13px;
+      height: 30px;
+    }
+
+    .account {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      margin-top:15px;
+      margin-bottom: 0;
+
+      .accountDataLeft {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .accountDataRight {
+        top: -20px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 0 0 5px 0;
+      }
+
+      input {
+        margin-top: 18px;
+        height: 30px;
+      }
+    }
+
+    .address {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+
+      .addressDataLeft {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .addressDataRight {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 0 0 5px 0;
+        top: -10px;
+      }
+
+      input {
+        margin-top: 16px;
+        height: 30px;
+      }
+    }
+  }
+}

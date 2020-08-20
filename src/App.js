@@ -11,6 +11,8 @@ import Homepage from './components/views/Homepage/Homepage';
 import ProductList from './components/views/ProductList/ProductList';
 import ProductPage from './components/views/ProductPage/ProductPage';
 
+import Register from './components/features/Register/Register';
+
 const App = () => (
   <Provider store={store}>
     <BrowserRouter>
@@ -19,6 +21,7 @@ const App = () => (
           <Route exact path={'/'} component={Homepage} />
           <Route exact path={'/shop/:categoryId'} component={ProductList} />
           <Route exact path={'/product/:productId'} component={ProductPage} />
+          <Route exact path={'/register'} component={Register} />
         </Switch>
       </MainLayout>
     </BrowserRouter>
