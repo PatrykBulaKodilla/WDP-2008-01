@@ -187,9 +187,32 @@ $active-link: $orange;
 $active-background-circle: $orange;
 $inactive-background-circle: $lightBlack;
 $main-text-number: $white;
+/* ComprasionBox */
+
+$comprasion-bg: $white;
+$comprasion-border: $lightBlack;
+
+$comprasion-product-border: $orange;
+$comprasion-product-alternative-bg: $orange;
+
+$comprasion-compare-button: $orange;
+
+$comprasion-text-alternative: $white;
 
 /* Transition */
 
 $transition-background: .3s;
 $transition-color: .3s;
 $transition-translation: .3s;
+
+/* FilterByCategories */
+
+$filter-categories-title-text-color: $lightBlack;
+$filter-categories-title-bottom-color: $lightBlack;
+
+$filter-categories-text-color: $lightBlack;
+$filter-categories-text-color-active: $orange;
+$filter-categories-background-number-color-active: $orange;
+$filter-categories-text-circle-color: $white;
+$filter-categories-background-circle-color: $lightBlack;
+

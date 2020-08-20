@@ -685,6 +685,7 @@ const initialState = {
       alt: 'pbrand-10',
     },
   ],
+  compare: [],
 };
 
 export default initialState;

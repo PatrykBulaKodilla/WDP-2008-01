@@ -3,6 +3,8 @@ import React from 'react';
 import styles from './ProductList.module.scss';
 import Filter from '../../common/Filter/Filter';
 
+import FilterByCategories from '../../common/FilterByCategories/FilterByCategories';
+
 const ProductList = () => {
   return (
     <div className={styles.root}>
@@ -12,6 +14,9 @@ const ProductList = () => {
           <div className='w-100 d-block d-md-none order-2'></div>
           <div className={`col col-sm-12 col-lg-3 order-1 order-md-3`}>
             <Filter />
+            <div className={styles.filterColorTitle}>
+              <FilterByCategories />
+            </div>
           </div>
         </div>
       </div>
