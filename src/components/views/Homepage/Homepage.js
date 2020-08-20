@@ -6,6 +6,8 @@ import styles from './Homepage.module.scss';
 import SuggestedProducts from '../../features/SuggestedProducts/SuggestedProducts';
 import FeatureBoxes from '../../features/FeatureBoxes/FeatureBoxes';
 import NewFurniture from '../../features/NewFurniture/NewFurnitureContainer';
+import SuggestedProducts from '../../features/SuggestedProducts/SuggestedProducts';
+import Gallery from '../../features/Gallery/GalleryContainer';
 import Promotions from '../../features/Promotions/PromotionsContainer';
 import Feedback from '../../features/Feedback/FeedbackContainer';
 import Brands from '../../features/Brands/BrandsContainer';
@@ -18,6 +20,7 @@ const Homepage = () => (
     <FeatureBoxes />
     <Promotions />
     <NewFurniture />
+    <Gallery />
     <Brands />
     <Feedback />
     <Newsletter />

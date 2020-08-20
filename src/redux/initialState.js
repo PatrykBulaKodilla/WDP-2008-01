@@ -6,6 +6,12 @@ const initialState = {
     { id: 'table', name: 'Table' },
     { id: 'dining', name: 'Dining' },
   ],
+  categoriesGallery: [
+    { id: 'featured', name: 'FEATURED' },
+    { id: 'top seller', name: 'TOP SELLER' },
+    { id: 'sale off', name: 'SALE OFF' },
+    { id: 'top rated', name: 'TOP RATED' },
+  ],
   products: [
     {
       id: 'aenean-ru-bristique-1',
@@ -564,6 +570,44 @@ const initialState = {
   favorite: {
     products: ['aenean-ru-bristique-1', 'aenean-ru-bristique-2'],
   },
+  galleryPhotos: [
+    {
+      id: 'photo-1',
+      alt: 'photo-1',
+      image:
+        'https://www.ikea.com/pl/pl/images/products/strandmon-wing-chair__0531313_PE647261_S5.JPG?f=xxxl',
+    },
+    {
+      id: 'photo-2',
+      alt: 'photo-2',
+      image:
+        'https://mediaserver.komfort.pl/download?image=sapcontsrv.komfort.local%3A1090%2FContentServer%2FContentServer.dll%3Fget%26pVersion%3D0047%26contRep%3DZ_ZDJ_PROD%26docId%3D005056B605791EDA9AABA5B04EDC9E59%26compId%3D100141456_fotel-moss-szary_img.jpg&width=1180',
+    },
+    {
+      id: 'photo-3',
+      alt: 'photo-3',
+      image:
+        'https://www.ikea.com/pl/pl/images/products/pello-armchair-holmby-natural__38296_PE130209_S5.JPG?f=xxxl',
+    },
+    {
+      id: 'photo-4',
+      alt: 'photo-4',
+      image:
+        'https://www.ikea.com/pl/pl/images/products/benarp-armchair-nordvalla-dark-grey__0400885_PE564988_S5.JPG?f=xxxl',
+    },
+    {
+      id: 'photo-5',
+      alt: 'photo-5',
+      image:
+        'https://www.ikea.com/pl/pl/images/products/vedbo-high-back-armchair__0635321_PE697114_S5.JPG?f=xxxl',
+    },
+    {
+      id: 'photo-6',
+      alt: 'photo-6',
+      image:
+        'https://www.ikea.com/pl/pl/images/products/ivar-chair-pine__0728155_PE736115_S5.JPG?f=xxxl',
+    },
+  ],
   promotions: [
     {
       id: 'promotion-1',
