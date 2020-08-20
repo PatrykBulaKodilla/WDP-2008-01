@@ -24,7 +24,8 @@ class Feedback extends React.Component {
     }
   }
 
-  handlePageChange(newPage) {
+  handlePageChange(newPage, event) {
+    event.preventDefault();
     this.setState({ activePage: newPage });
   }
 
@@ -39,7 +40,7 @@ class Feedback extends React.Component {
         <li key={i}>
           <a
             href='/#'
-            onClick={() => this.handlePageChange(i)}
+            onClick={event => this.handlePageChange(i, event)}
             className={i === activePage ? styles.active : undefined}
           >
             page {i}
