@@ -11,3 +11,5 @@ class SmallFurniture extends React.Component {
     );
   }
 }
+
+export default SmallFurniture;
