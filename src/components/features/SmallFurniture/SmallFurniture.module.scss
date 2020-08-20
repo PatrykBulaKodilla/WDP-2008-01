@@ -1,10 +1,9 @@
 @import "../../../styles/settings.scss";
 
 .root {
-
   .title {
     padding: 7px 0 7px 15px;
-    background: $title-bg;
+    background-color: $title-bg;
     text-transform: uppercase;
     color: $title-text;
     font-size: 26px;
