@@ -29,7 +29,7 @@ class Brands extends React.Component {
       this.addClass(this.state.brandsListRef, styles.slideRight);
 
       setTimeout(() => {
-        this.handlePageChange(this.state.activePage + 1);
+        this.setState({ activePage: this.state.activePage + 1 });
         this.addClass(this.state.brandsListRef, styles.fadeInRight);
         this.removeClass(this.state.brandsListRef, styles.slideRight);
       }, 1000);
@@ -43,7 +43,7 @@ class Brands extends React.Component {
       this.addClass(this.state.brandsListRef, styles.slideLeft);
 
       setTimeout(() => {
-        this.handlePageChange(this.state.activePage - 1);
+        this.setState({ activePage: this.state.activePage - 1 });
         this.addClass(this.state.brandsListRef, styles.fadeInLeft);
         this.removeClass(this.state.brandsListRef, styles.slideLeft);
       }, 1000);
