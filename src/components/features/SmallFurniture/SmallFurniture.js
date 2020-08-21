@@ -8,16 +8,18 @@ class SmallFurniture extends React.Component {
   render() {
     return (
       <div className={styles.root}>
-        <h2 className={styles.title}>Small Furniture</h2>
+        <h2 className={styles.title}>Featured products</h2>
         <div className='flex-column'>
           <div className='col'>
             <div className={`row ${styles.product}`}>
               <div className={`col-6 ${styles.image}`}></div>
               <div className={`col-6 ${styles.desc}`}>
-                <p>Office Chair</p>
-                <p>$350.00</p>
-                <StarRating />
-                <Button variant='small'>Add to cart</Button>
+                <p className={styles.productName}>Office Chair</p>
+                <p className={styles.price}>$350.00</p>
+                <StarRating stars={2} />
+                <Button className={styles.button} variant='small'>
+                  Add to cart
+                </Button>
               </div>
             </div>
           </div>
@@ -25,10 +27,12 @@ class SmallFurniture extends React.Component {
             <div className={`row ${styles.product}`}>
               <div className={`col-6 ${styles.image}`}></div>
               <div className={`col-6 ${styles.desc}`}>
-                <p>Office Chair</p>
-                <p>$350.00</p>
-                <StarRating />
-                <Button variant='small'>Add to cart</Button>
+                <p className={styles.productName}>Office Chair</p>
+                <p className={styles.price}>$350.00</p>
+                <StarRating stars={2} />
+                <Button className={styles.button} variant='small'>
+                  Add to cart
+                </Button>
               </div>
             </div>
           </div>
@@ -36,10 +40,12 @@ class SmallFurniture extends React.Component {
             <div className={`row ${styles.product}`}>
               <div className={`col-6 ${styles.image}`}></div>
               <div className={`col-6 ${styles.desc}`}>
-                <p>Office Chair</p>
-                <p>$350.00</p>
-                <StarRating />
-                <Button variant='small'>Add to cart</Button>
+                <p className={styles.productName}>Office Chair</p>
+                <p className={styles.price}>$350.00</p>
+                <StarRating stars={2} />
+                <Button className={styles.button} variant='small'>
+                  Add to cart
+                </Button>
               </div>
             </div>
           </div>
