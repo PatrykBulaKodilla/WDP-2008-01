@@ -1,6 +1,7 @@
 /* selectors */
 
 export const getCompare = ({ compare }) => compare;
+// export const getAll = ({ products }) => products;
 
 /* action name creator */
 
@@ -30,29 +31,34 @@ export const createActionRemoveAllFromCompare = payload => ({
 
 /* reducer */
 
-export default function reducer(statePart = [], action = {}) {
+export default function reducer(state = [], action = {}) {
   switch (action.type) {
     case REMOVE_COMPARE:
-      return [...statePart.filter(elem => elem !== action.payload.product)];
+      return [...state.filter(elem => elem !== action.payload.product)];
     case ADD_COMPARE:
       if (
-        statePart.length < 4 &&
-        statePart.filter(elem => elem.id === action.payload.id).length === 0
+        state.length < 4 &&
+        state.filter(elem => elem.id === action.payload.id).length === 0
       ) {
         return [
-          ...statePart,
+          ...state,
           {
             name: action.payload.name,
             id: action.payload.id,
             image: action.payload.image,
+            category: action.payload.category,
+            // price: action.payload.price,
+            // oldprice: action.payload.oldPrice,
+            // stars: action.payload.stars,
+            // promo: action.payload.promo,
           },
         ];
       } else {
-        return [...statePart];
+        return [...state];
       }
     case REMOVE_ALL:
       return [];
     default:
-      return statePart;
+      return state;
   }
 }

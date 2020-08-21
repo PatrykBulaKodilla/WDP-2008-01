@@ -2,6 +2,9 @@
 export const getAll = ({ products }) => products;
 export const getCount = ({ products }) => products.length;
 
+// export const  getProduct =({ products}) =>
+//   products.filter(item => item.ProductBox === true);
+
 export const getNew = ({ products }) =>
   products.filter(item => item.newFurniture === true);
 
