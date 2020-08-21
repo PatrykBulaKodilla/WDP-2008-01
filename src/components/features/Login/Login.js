@@ -5,12 +5,12 @@ import Button from '@material-ui/core/Button';
 
 const Login = () => {
   return (
-    <div className={styles.root}>
+    <div>
       <div className='container'>
         <div className={`col col-sm-12 col-lg-12 order-md-1 ${styles.containerFrame}`}>
           <div className={`col-lg-6 ${styles.frame}`}>
             <h1>Login</h1>
-            <h2>Adres e-mail lub indetyfikator istniejącej usługi</h2>
+            <h2>Adres e-mail lub identyfikator istniejącej usługi</h2>
             <form>
               <TextField
                 id='filled-required'
