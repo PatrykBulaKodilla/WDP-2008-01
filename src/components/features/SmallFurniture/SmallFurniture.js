@@ -16,7 +16,7 @@ class SmallFurniture extends React.Component {
               <div className={`col-6 ${styles.desc}`}>
                 <p className={styles.productName}>Office Chair</p>
                 <p className={styles.price}>$350.00</p>
-                <StarRating stars={2} />
+                <StarRating stars={2} variant='dark' />
                 <Button className={styles.button} variant='small'>
                   Add to cart
                 </Button>
@@ -29,7 +29,7 @@ class SmallFurniture extends React.Component {
               <div className={`col-6 ${styles.desc}`}>
                 <p className={styles.productName}>Office Chair</p>
                 <p className={styles.price}>$350.00</p>
-                <StarRating stars={2} />
+                <StarRating stars={2} variant='dark' />
                 <Button className={styles.button} variant='small'>
                   Add to cart
                 </Button>
@@ -42,7 +42,7 @@ class SmallFurniture extends React.Component {
               <div className={`col-6 ${styles.desc}`}>
                 <p className={styles.productName}>Office Chair</p>
                 <p className={styles.price}>$350.00</p>
-                <StarRating stars={2} />
+                <StarRating stars={2} variant='dark' />
                 <Button className={styles.button} variant='small'>
                   Add to cart
                 </Button>
