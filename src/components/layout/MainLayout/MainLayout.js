@@ -4,31 +4,35 @@ import PropTypes from 'prop-types';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 
-const MainLayout = ({ children, ...props }) => {
-  const rwdModeSelect = windowWidth => {
-    if (windowWidth <= props.rwdModeMaxWidth.mobile) {
-      props.setRwdMode('mobile');
-    } else if (windowWidth <= props.rwdModeMaxWidth.tablet) {
-      props.setRwdMode('tablet');
-    } else {
-      props.setRwdMode('desktop');
-    }
-  };
+class MainLayout extends React.Component {
+  render() {
+    const { children, rwdMode, rwdModeMaxWidth, setRwdMode } = this.props;
 
-  rwdModeSelect(window.innerWidth);
+    const rwdModeSelect = windowWidth => {
+      if (windowWidth <= rwdModeMaxWidth.mobile) {
+        setRwdMode('mobile');
+      } else if (windowWidth <= rwdModeMaxWidth.tablet && rwdMode !== 'tablet') {
+        setRwdMode('tablet');
+      } else if (windowWidth > rwdModeMaxWidth.tablet && rwdMode !== 'desktop') {
+        setRwdMode('desktop');
+      }
+    };
 
-  window.addEventListener('resize', () => {
     rwdModeSelect(window.innerWidth);
-  });
 
-  return (
-    <div>
-      <Header />
-      {children}
-      <Footer />
-    </div>
-  );
-};
+    window.addEventListener('resize', () => {
+      rwdModeSelect(window.innerWidth);
+    });
+
+    return (
+      <div>
+        <Header />
+        {children}
+        <Footer />
+      </div>
+    );
+  }
+}
 
 MainLayout.propTypes = {
   children: PropTypes.node,

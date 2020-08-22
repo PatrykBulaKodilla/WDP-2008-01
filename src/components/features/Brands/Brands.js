@@ -55,8 +55,11 @@ class Brands extends React.Component {
 
     const thisBrands = this;
 
+    const brandsCount = Math.ceil(brands.length / brandsOnPage);
+
     window.addEventListener('resize', () => {
-      thisBrands.setState({ activePage: 0 });
+      if (brandsCount < activePage)
+        thisBrands.setState({ activePage: brandsCount - 1 });
     });
 
     return (
