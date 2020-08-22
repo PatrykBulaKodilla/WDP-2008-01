@@ -11,7 +11,7 @@ html, body {
     z-index: 999;
     top: 0;
     left: 0;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     overflow: hidden;
@@ -21,9 +21,9 @@ html, body {
 
   }
 
-.overlay.show {
-  display: flex;
-}
+  .overlayShow {
+    display: flex;
+  }
 
   .overlay::webkit-scrollbar {
     display: none;
@@ -43,9 +43,7 @@ html, body {
     background-color: #ffffff;
   }
 
-  .modal.show {
-    display: flex;
-  }
+
 
     .panelBar {
       display: flex;
