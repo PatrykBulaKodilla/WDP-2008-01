@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './ProductList.module.scss';
 import Filter from '../../common/Filter/Filter';
 
-import FilterByCategories from '../../common/FilterByCategories/FilterByCategories';
+// import FilterByCategories from '../../common/FilterByCategories/FilterByCategories';
 import ProductBox from '../../common/ProductBox/ProductBoxContainer';
 import SmallFurniture from '../../features/SmallFurniture/SmallFurniture';
 
