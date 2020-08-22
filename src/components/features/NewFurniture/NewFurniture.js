@@ -103,6 +103,7 @@ class NewFurniture extends React.Component {
         leftAction={() => this.handleLeftAction(pagesCount)}
         rightAction={() => this.handleRightAction()}
       >
+        lol
         <div className={styles.root}>
           <div className='container'>
             <div className={styles.panelBar}>
