@@ -1,0 +1,72 @@
+@import "../../../styles/settings.scss";
+
+.containerFrame {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.frame {
+  background-color: $container-background;
+  min-height: 370px;
+  margin: 20px;
+
+  h1 {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+
+  h2 {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  button, div {
+    display: block;
+    width: 100%;
+  }
+
+  div {
+    background-color: $textfiled-background;
+  }
+
+  div label[class~="Mui-focused"] {
+    color: $textfiled-color-focused;
+  }
+
+  .login,
+  .password {
+    border: 1px solid $textfiled-boreder-color;
+  }
+
+  .login {
+    border-bottom: 0;
+  }
+
+  div:after,
+  div:before {
+    border-bottom: 0;
+  }
+
+  button {
+    font-size: 18px;
+    color: white;
+    margin: 10px 0 ;
+    min-height: 50px;
+    background-color: $button-background;
+  }
+
+  button:hover {
+    background-color: $button-hover-background;
+  }
+
+  a {
+    display: block;
+    text-align: center;
+    color: $link-color;
+  }
+
+  a:hover {
+    color: $link-hover-color;
+  }
+}
