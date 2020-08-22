@@ -36,6 +36,7 @@ const ProductSearch = () => (
         className={styles.searchInput}
         placeholder='Search products...'
         type='text'
+        href='/product/:productId'
       />
       <button className={styles.icon}>
         <FontAwesomeIcon icon={faSearch} />

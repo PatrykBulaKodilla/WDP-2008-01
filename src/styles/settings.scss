@@ -203,6 +203,16 @@ $topbar-bg: $gray;
 $topbar-link: $white;
 $topbar-link-hover: $orange;
 
+/*Login*/
+$container-background: $darkWhite;
+$button-background: $orange;
+$button-hover-background: $gray;
+$link-color: $orange;
+$link-hover-color: $gray;
+$textfiled-background: $white;
+$textfiled-boreder-color: $orange;
+$textfiled-color-focused: $orange;
+
 /*Brands*/
 $brands-border: $lightBlack;
 $brands-img-border: $lightBlack;
@@ -236,20 +246,16 @@ $comprasion-compare-button: $orange;
 
 $comprasion-text-alternative: $white;
 
+/* SmallFurniture */
+$title-bg: $darkGray;
+$title-text: $white;
+
+$image-bg: $darkWhite;
+
+$productName-hover: $orange;
+
 /* Transition */
 
 $transition-background: .3s;
 $transition-color: .3s;
 $transition-translation: .3s;
-
-/* FilterByCategories */
-
-$filter-categories-title-text-color: $lightBlack;
-$filter-categories-title-bottom-color: $lightBlack;
-
-$filter-categories-text-color: $lightBlack;
-$filter-categories-text-color-active: $orange;
-$filter-categories-background-number-color-active: $orange;
-$filter-categories-text-circle-color: $white;
-$filter-categories-background-circle-color: $lightBlack;
-

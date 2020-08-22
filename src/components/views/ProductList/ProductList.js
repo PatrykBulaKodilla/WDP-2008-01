@@ -5,6 +5,7 @@ import Filter from '../../common/Filter/Filter';
 
 import FilterByCategories from '../../common/FilterByCategories/FilterByCategories';
 import ProductBox from '../../common/ProductBox/ProductBoxContainer';
+import SmallFurniture from '../../features/SmallFurniture/SmallFurniture';
 
 const ProductList = ({ shopList }) => {
   let activePage = 0;
@@ -27,9 +28,7 @@ const ProductList = ({ shopList }) => {
           <div className='w-100 d-block d-md-none order-2'></div>
           <div className={`col col-sm-12 col-lg-3 order-1 order-md-3`}>
             <Filter />
-            <div className={styles.filterColorTitle}>
-              <FilterByCategories />
-            </div>
+            <SmallFurniture />
           </div>
         </div>
       </div>

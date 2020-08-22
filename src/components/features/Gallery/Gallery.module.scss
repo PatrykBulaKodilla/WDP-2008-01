@@ -5,8 +5,7 @@
   margin-bottom: 30px;
 
   .left {
-    max-width: 560px;
-    height: 600px;
+    max-height: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -261,8 +260,7 @@
   }
 
   .right {
-    height: 600px;
-    max-width: 560px;
+    max-height: 600px;
     border: 1px solid $productbox-border;
     display: flex;
     justify-content: space-between;
@@ -332,5 +330,14 @@
 
   .fadeIn {
     animation: fadein 1s;
+  }
+
+  /*MEDIA QUIERES*/
+
+  @media (min-width: 320px) and (max-width: 768px) {
+
+    .right{
+      display: none;
+    }
   }
 }
