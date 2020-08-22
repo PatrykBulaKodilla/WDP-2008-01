@@ -35,7 +35,7 @@ class Gallery extends React.Component {
       <div className={styles.root}>
         <div className='container'>
           <div className='row'>
-            <div className='col-6'>
+            <div className='col-lg-6 col-md-12'>
               <div className={styles.left}>
                 <div className={styles.panelBar}>
                   <div className='row no-gutters align-items-end'>
@@ -154,7 +154,7 @@ class Gallery extends React.Component {
                 </div>
               </div>
             </div>
-            <div className='col-6'>
+            <div className='col-lg-6 col-md-12'>
               <div className={styles.right}>
                 <img
                   className={styles.image}
