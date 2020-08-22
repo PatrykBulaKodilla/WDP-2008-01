@@ -9,16 +9,32 @@ import Button from '../../common/Button/Button';
 //import { faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 
 class CartPopup extends React.Component {
+  state = {
+    visibleOverlay: true,
+  };
+
+  handleClose = () => {
+    this.setState({
+      visibleOverlay: false,
+    });
+  };
   render() {
     return (
       <div className={styles.root}>
         <div className='container'>
-          <div className={styles.overlay} id='overlay'>
-            <div className={styles.modal} id='linkModal'>
+          <div
+            className={
+              styles.overlay +
+              (this.state.visibleOverlay ? ` ` + styles.overlayShow : ``)
+            }
+          >
+            <div className={styles.modal}>
               <Button variant='small' className={styles.close}>
-                <FontAwesomeIcon icon={faTimesCircle}></FontAwesomeIcon>
+                <FontAwesomeIcon
+                  icon={faTimesCircle}
+                  onClick={this.handleClose}
+                ></FontAwesomeIcon>
               </Button>
-
               <div className={styles.panelBar}>
                 <div className={styles.heading}>
                   <FontAwesomeIcon
@@ -90,7 +106,11 @@ class CartPopup extends React.Component {
                   <Button variant='small' className={styles.button}>
                     Checkout
                   </Button>
-                  <Button variant='small' className={styles.button}>
+                  <Button
+                    variant='small'
+                    className={styles.button}
+                    onClick={this.handleClose}
+                  >
                     Continue shopping
                   </Button>
                 </div>
