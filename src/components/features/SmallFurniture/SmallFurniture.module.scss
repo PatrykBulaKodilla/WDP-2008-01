@@ -1,0 +1,53 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  .title {
+    padding: 7px 0 7px 15px;
+    background-color: $title-bg;
+    text-transform: uppercase;
+    color: $title-text;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .product {
+    margin-top: 25px;
+
+    p {
+      margin-bottom: 8px;
+    }
+
+    .image {
+      background-color: $image-bg;
+    }
+
+    .desc {
+      padding: 15px 10px 10px;
+    }
+
+    .price {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .productName {
+      transition: $transition-color color;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 13px;
+      padding: 5px 7px 5px 7px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    &:hover {
+      .productName {
+        color: $productName-hover;
+      }
+    }
+  }
+}
