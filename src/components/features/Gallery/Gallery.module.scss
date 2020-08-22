@@ -332,12 +332,12 @@
     animation: fadein 1s;
   }
 
-/*Media Queries*/
+  /*MEDIA QUIERES*/
+
   @media (min-width: 320px) and (max-width: 768px) {
 
-  .right{
-    display: none;
+    .right{
+      display: none;
+    }
   }
-    
-}
 }
