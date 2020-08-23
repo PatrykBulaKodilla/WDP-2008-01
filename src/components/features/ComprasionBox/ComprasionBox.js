@@ -15,12 +15,12 @@ class ComprasionBox extends React.Component {
       return (
         <div className={styles.root}>
           <div className={styles.products}>
-            {compare.map(products => (
-              <div className={styles.productView} key={products.id}>
-                <ProductBox {...products} />
+            {compare.map(product => (
+              <div className={styles.productView} key={product.id}>
+                <ProductBox {...product} />
                 <div
                   className={styles.productAlternative}
-                  onClick={() => removeFromCompare(products)}
+                  onClick={() => removeFromCompare(product)}
                 >
                   <FontAwesomeIcon className={styles.icon} icon={faTimes} />
                 </div>

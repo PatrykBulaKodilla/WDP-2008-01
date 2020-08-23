@@ -1,7 +1,6 @@
 /* selectors */
 
 export const getCompare = ({ compare }) => compare;
-// export const getAll = ({ products }) => products;
 
 /* action name creator */
 
