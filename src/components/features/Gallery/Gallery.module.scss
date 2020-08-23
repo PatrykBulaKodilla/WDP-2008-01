@@ -168,19 +168,13 @@
             }
 
             .prices {
-              position: relative;
-
-              ul {
-                list-style: none;
-              }
 
               .priceBox {
-                position: absolute;
                 line-height: 25px;
                 text-align: center;
-                background-color: rgba(189, 195, 199, 0.9);
-                left: 55%;
-                top: -25%;
+                background-color: #606060;
+                left: 115%;
+                top: -28px;
                 width: 75px;
                 height: 75px;
                 border-radius: 50%;
@@ -193,6 +187,16 @@
 
                 p {
                   font-weight: 600;
+                  font-size: 20px;
+                  margin: 0;
+                  padding: 0;
+                  top: -15px;
+                }
+
+                .oldPrice {
+                  text-decoration: line-through;
+                  margin: 0;
+                  padding: 0;
                 }
               }
 
@@ -203,13 +207,24 @@
                 padding-top: 10px;
 
                 p{
-                  margin-top: 10px;
+                  position: absolute;
+                  width: 200px;
+                  color: $gallery-left-text;
+                  font-weight: bold;
+                  display: flex;
+                  justify-content: center;
+                  margin-left: 55px;
+                  display: flex;
                 }
               }
 
               .stars {
+                margin-top: 50px;
+                margin-left: 50px;
                 display: flex;
                 justify-content: center;
+                background-color: $gallery-left-background-color;
+
                 a {
                   text-decoration: none;
                   color: $gallery-left-stars-color;
