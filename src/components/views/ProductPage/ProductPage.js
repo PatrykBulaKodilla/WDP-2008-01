@@ -25,6 +25,8 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+import NewFurniture from '../../features/NewFurniture/NewFurnitureContainer';
+
 class ProductPage extends React.Component {
   render() {
     return (
@@ -207,6 +209,9 @@ class ProductPage extends React.Component {
               </div>
             </div>
           </div>
+        </div>
+        <div className="container">
+          <NewFurniture />
         </div>
       </div>
     );
