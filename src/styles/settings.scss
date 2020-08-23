@@ -13,6 +13,12 @@ $lightWhiteBlue: #e0e3ed;
 $lightGreyBlue: #7AA3CC;
 $lightGreen: #32cd32;
 $transparent: transparent;
+$red: #ff0000;
+$black: #000000;
+$yellow: #ffff00;
+$blue: #0000ff;
+$pink: #ffc0cb;
+$green: #008000;
 
 /*Button*/
 $button-main-text: $white;
@@ -285,3 +291,16 @@ $banner-panel-description-title-color: $lightWhite;
 $banner-panel-description-subtitle-color: $lightWhite;
 $banner-panel-path-color: $darkWhite;
 $banner-panel-percent-color: $orange;
+/* FilterByColor */
+
+$filter-color-red: $red;
+$filter-color-black: $black;
+$filter-color-yellow: $yellow;
+$filter-color-blue: $blue;
+$filter-color-pink: $pink;
+$filter-color-green: $green;
+
+$filter-color-title-border-bottom: $lightBlack;
+$filter-color-title-text-color: $lightBlack;
+$filter-color-text-active: $orange;
+
