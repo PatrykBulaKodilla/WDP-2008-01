@@ -15,12 +15,12 @@ class ComprasionBox extends React.Component {
       return (
         <div className={styles.root}>
           <div className={styles.products}>
-            {compare.map(item => (
-              <div className={styles.productView} key={item.id}>
-                <ProductBox {...item} />
+            {compare.map(products => (
+              <div className={styles.productView} key={products.id}>
+                <ProductBox {...products} />
                 <div
                   className={styles.productAlternative}
-                  onClick={() => removeFromCompare(item)}
+                  onClick={() => removeFromCompare(products)}
                 >
                   <FontAwesomeIcon className={styles.icon} icon={faTimes} />
                 </div>
@@ -47,9 +47,21 @@ ComprasionBox.propTypes = {
   compare: PropTypes.array,
   removeFromCompare: PropTypes.func,
   removeAllFromCompare: PropTypes.func,
+  products: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      name: PropTypes.string,
+      category: PropTypes.string,
+      price: PropTypes.number,
+      stars: PropTypes.number,
+      promo: PropTypes.string,
+      newFurniture: PropTypes.bool,
+    })
+  ),
 };
 
 ComprasionBox.defaultProps = {
   compare: [],
+  products: [],
 };
 export default ComprasionBox;

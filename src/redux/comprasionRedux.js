@@ -37,7 +37,7 @@ export default function reducer(state = [], action = {}) {
       return [...state.filter(elem => elem !== action.payload.product)];
     case ADD_COMPARE:
       if (
-        state.length < 4 &&
+        state.length < 8 &&
         state.filter(elem => elem.id === action.payload.id).length === 0
       ) {
         return [
@@ -47,10 +47,10 @@ export default function reducer(state = [], action = {}) {
             id: action.payload.id,
             image: action.payload.image,
             category: action.payload.category,
-            // price: action.payload.price,
-            // oldprice: action.payload.oldPrice,
-            // stars: action.payload.stars,
-            // promo: action.payload.promo,
+            price: action.payload.price,
+            oldprice: action.payload.oldPrice,
+            stars: action.payload.stars,
+            promo: action.payload.promo,
           },
         ];
       } else {
