@@ -5,34 +5,21 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { faTimesCircle } from '@fortawesome/free-regular-svg-icons';
 import Button from '../../common/Button/Button';
+import PropTypes from 'prop-types';
 //import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 //import { faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 
 class CartPopup extends React.Component {
-  state = {
-    visibleOverlay: true,
-  };
-
-  handleClose = () => {
-    this.setState({
-      visibleOverlay: false,
-    });
-  };
   render() {
     return (
       <div className={styles.root}>
         <div className='container'>
-          <div
-            className={
-              styles.overlay +
-              (this.state.visibleOverlay ? ` ` + styles.overlayShow : ``)
-            }
-          >
+          <div className={styles.overlay}>
             <div className={styles.modal}>
               <Button variant='small' className={styles.close}>
                 <FontAwesomeIcon
                   icon={faTimesCircle}
-                  onClick={this.handleClose}
+                  onClick={() => this.props.closePopup()}
                 ></FontAwesomeIcon>
               </Button>
               <div className={styles.panelBar}>
@@ -61,7 +48,7 @@ class CartPopup extends React.Component {
                       </Button>
                       <input
                         type='text'
-                        value='2'
+                        defaultValue='2'
                         className={styles.quantityNumber}
                       ></input>
                       <Button variant='outline'>
@@ -86,7 +73,7 @@ class CartPopup extends React.Component {
                       </Button>
                       <input
                         type='text'
-                        value='2'
+                        defaultValue='2'
                         className={styles.quantityNumber}
                       ></input>
                       <Button variant='outline'>
@@ -122,5 +109,8 @@ class CartPopup extends React.Component {
     );
   }
 }
+CartPopup.propTypes = {
+  closePopup: PropTypes.func,
+};
 
 export default CartPopup;

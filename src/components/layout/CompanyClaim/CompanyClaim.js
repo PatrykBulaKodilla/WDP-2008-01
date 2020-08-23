@@ -10,12 +10,12 @@ import { faMobileAlt, faShoppingBasket } from '@fortawesome/free-solid-svg-icons
 class CompanyClaim extends React.Component {
   constructor() {
     super();
-    this.state = { showMessage: false };
+    this.state = { showPopup: false };
   }
 
-  _showMessage = bool => {
+  togglePopup = status => {
     this.setState({
-      showMessage: bool,
+      showPopup: status,
     });
   };
 
@@ -37,10 +37,7 @@ class CompanyClaim extends React.Component {
             </div>
             <div className={`col text-right ${styles.mobileCart} ${styles.cart}`}>
               <a href='/#' className={styles.cartBox}>
-                <div
-                  className={styles.cartIcon}
-                  onClick={this._showMessage.bind(null, true)}
-                >
+                <div className={styles.cartIcon} onClick={() => this.togglePopup(true)}>
                   <FontAwesomeIcon className={styles.icon} icon={faShoppingBasket} />
                 </div>
                 <div className={styles.cartCounter}>123456</div>
@@ -48,7 +45,7 @@ class CompanyClaim extends React.Component {
             </div>
           </div>
         </div>
-        {this.state.showMessage && <CartPopup />}
+        {this.state.showPopup && <CartPopup closePopup={this.togglePopup.bind(this)} />}
       </div>
     );
   }
