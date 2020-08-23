@@ -24,6 +24,7 @@ import {
   faLinkedinIn,
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Banner from '../../features/Banner/Banner';
 
 import NewFurniture from '../../features/NewFurniture/NewFurnitureContainer';
 
@@ -31,6 +32,7 @@ class ProductPage extends React.Component {
   render() {
     return (
       <div className={styles.root}>
+        <Banner />
         <div className='container'>
           <div className={styles.frame}>
             <div className='row'>
