@@ -10,18 +10,14 @@ import styles from './ComprasionBox.module.scss';
 
 class ComprasionBox extends React.Component {
   render() {
-    const { compare, removeFromCompare, removeAllFromCompare, products } = this.props;
+    const { compare, removeFromCompare, removeAllFromCompare } = this.props;
     if (compare.length > 0) {
       return (
         <div className={styles.root}>
           <div className={styles.products}>
             {compare.map(item => (
               <div className={styles.productView} key={item.id}>
-                {products.map(item => (
-                  <div className={styles.productView} key={item.id}>
-                    <ProductBox {...item} />
-                  </div>
-                ))}
+                <ProductBox {...item} />
                 <div
                   className={styles.productAlternative}
                   onClick={() => removeFromCompare(item)}
@@ -51,21 +47,9 @@ ComprasionBox.propTypes = {
   compare: PropTypes.array,
   removeFromCompare: PropTypes.func,
   removeAllFromCompare: PropTypes.func,
-  products: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string,
-      name: PropTypes.string,
-      category: PropTypes.string,
-      price: PropTypes.number,
-      stars: PropTypes.number,
-      promo: PropTypes.string,
-      ComprasionBox: PropTypes.bool,
-    })
-  ),
 };
 
 ComprasionBox.defaultProps = {
   compare: [],
-  products: [],
 };
 export default ComprasionBox;
