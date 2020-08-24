@@ -6,6 +6,8 @@ import { faCaretDown, faUser, faLock, faBars } from '@fortawesome/free-solid-svg
 
 import styles from './TopBar.module.scss';
 
+import ChangeLanguage from '../../common/ChangeLanguage/ChangeLanguage';
+
 const TopBar = () => (
   <div className={styles.root}>
     <div className='container'>
@@ -18,9 +20,7 @@ const TopBar = () => (
               </a>
             </li>
             <li>
-              <a href='/#'>
-                English <FontAwesomeIcon className={styles.icon} icon={faCaretDown} />
-              </a>
+              <ChangeLanguage />
             </li>
             <li>
               <a href='/#'>

@@ -1,0 +1,184 @@
+@import "../../../styles/settings.scss";
+@import "../../../styles/animations.scss";
+
+.root {
+  // border: 1px solid $productsearch-border;
+  display: inline-flex;
+  height: 45px;
+  color: $productsearch-text;
+  width: 95px;
+  // border: solid 1px red;
+  background-color: $topbar-bg;
+
+  .category {
+    border-right: 1px solid $productsearch-border;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: $topbar-bg;
+    left: -10px;
+    // border: solid 1px red;
+
+    // .icon {
+    //   color: $productsearch-icon;
+    //   position: absolute;
+    //   left: 10px;
+    //   z-index: 0;
+    // }
+
+    .icon {
+      position: absolute;
+      left: 55px;
+      z-index: 0;
+    }
+
+    ol {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      justify-items: center;
+      border: 0;
+      height: 100%;
+      background-color: $productsearch-select-bg;
+      position: relative;
+      z-index: 1;
+      list-style: none;
+
+      li {
+        cursor: pointer;
+        padding: 5px 30px 5px 35px;
+        margin: 0;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        height: 100%;
+        width: 100%;
+        font-size: 12px;
+        line-height: 12px;
+        position: relative;
+        z-index: 1;
+        display: flex;
+
+        ul {
+          display: block;
+          transition: max-height .3s ease-out;
+          top: 100%;
+          left: 0;
+          padding: 0;
+          margin: 0;
+          width: 100%;
+          max-height: 0;
+          position: absolute;
+          background: $productsearch-select-dropdown-bg;
+          overflow: hidden;
+
+          li {
+            @extend .ft-animation;
+            cursor: pointer;
+            text-align: center;
+            padding: 5px 30px 5px 35px;
+            margin: 0;
+            display: block;
+            width: 100%;
+            background: $productsearch-select-option-bg;
+
+            a {
+              text-decoration: none;
+              color: $productsearch-text;
+            }
+
+            &:hover {
+              background: $productsearch-select-option-bg-hover;
+
+              a {
+                color: $productsearch-select-text-hover;
+              }
+            }
+          }
+        }
+      }
+
+      &:hover {
+
+        li {
+
+          ul {
+            transition: max-height 3s ease-out;
+            max-height: 1000px;
+          }
+
+        }
+      }
+    }
+  }
+
+  // .category:hover .icon:last-child {
+  //   color: $productsearch-hover-icon;
+  // }
+
+  // .searchField {
+  //   display: flex;
+  //   align-items: center;
+  //   position: relative;
+
+  //   input {
+  //     border: 0;
+  //     margin-left: 10px;
+  //     margin-right: 25px;
+  //     font-size: 12px;
+  //     outline: none;
+
+  //     &::placeholder {
+  //       color: $productsearch-input-placeholder;
+  //     }
+
+  //   // }
+
+  //   button {
+  //     border: 0;
+  //     background-color: $productsearch-button-bg;
+  //     outline: none;
+  //   }
+  // }
+
+  // .searchField:hover button {
+  //   color: $productsearch-hover-button;
+  // }
+
+  // .outlines a[class~="true"] {
+  //   background-color: $productbox-content-text;
+  //   color: $productbox-sale-text ;
+  // }
+}
+
+/*MEDIA QUERIES*/
+
+@media (min-width: 320px) and (max-width: 490px){
+
+  .root {
+
+    .category{
+      max-width: 70px;
+      //overflow-wrap: break-word;
+    }
+
+    .categorySelect {
+      max-width: 30px;
+    }
+
+    .searchField {
+      max-width: 70px;
+      position: relative;
+    }
+
+    .icon {
+      position: absolute;
+    }
+
+    .searchInput {
+      visibility: hidden;
+    }
+  }
+}
