@@ -4,7 +4,7 @@ import ChangeLanguage from './ChangeLanguage';
 
 import {
   getLanguage,
-  createActionHandleLanguageChange,
+  createActionToggleLanguage,
 } from '../../../redux/changeLanguageRedux';
 
 const mapStateToProps = state => ({
@@ -12,8 +12,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  handleLanguageChange: language =>
-    dispatch(createActionHandleLanguageChange(language)),
+  toggleLanguage: language => dispatch(createActionToggleLanguage(language)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ChangeLanguage);

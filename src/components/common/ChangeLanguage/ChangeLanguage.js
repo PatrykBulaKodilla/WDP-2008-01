@@ -7,12 +7,16 @@ import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import styles from './ChangeLanguage.module.scss';
 
 class ChangeLanguage extends React.Component {
-  state = {
-    activeLanguage: 'english',
-  };
+  constructor(props) {
+    super(props);
+    this.toggleLanguage = this.toggleLanguage.bind(this);
+    this.state = {
+      activeLanguage: 0,
+    };
+  }
 
-  handleLanguageChange(newLanguage) {
-    this.setState({ activeLanguage: newLanguage });
+  toggleLanguage(language, e) {
+    this.setState({ activeLanguage: language });
   }
 
   render() {
@@ -23,15 +27,17 @@ class ChangeLanguage extends React.Component {
             <li>
               Language
               <ul>
-                <li>
-                  <a href='/#' onClick={event => this.handleLanguageChange(event)}>
-                    English
-                  </a>
+                <li
+                  className={this.state.activeLanguage === 0 ? 'active' : null}
+                  onClick={this.toggleLanguage.bind(this, 0)}
+                >
+                  <a>English</a>
                 </li>
-                <li>
-                  <a href='/#' onClick={event => this.handleLanguageChange(event)}>
-                    Polish
-                  </a>
+                <li
+                  className={this.state.activeLanguage === 1 ? 'active' : null}
+                  onClick={this.toggleLanguage.bind(this, 1)}
+                >
+                  <a>Polish</a>
                 </li>
               </ul>
             </li>
@@ -45,11 +51,13 @@ class ChangeLanguage extends React.Component {
 
 ChangeLanguage.propTypes = {
   language: PropTypes.array,
-  handleLanguageChange: PropTypes.func,
+  toggleLanguage: PropTypes.func,
 };
 
 ChangeLanguage.defaultProps = {
   language: [],
 };
+
+window.localStorage.getItem('activeLanguage');
 
 export default ChangeLanguage;
