@@ -8,15 +8,6 @@ import Button from '../../common/Button/Button';
 import PropTypes from 'prop-types';
 
 class CartPopup extends React.Component {
-  state = {
-    visibleOverlay: true,
-  };
-
-  handleClose = () => {
-    this.setState({
-      visibleOverlay: false,
-    });
-  };
   render() {
     const { products } = this.props;
     return (
@@ -27,7 +18,7 @@ class CartPopup extends React.Component {
               <Button variant='small' className={styles.close}>
                 <FontAwesomeIcon
                   icon={faTimesCircle}
-                  onClick={this.handleClose}
+                  onClick={() => this.props.closePopup()}
                 ></FontAwesomeIcon>
               </Button>
               <div className={styles.panelBar}>
