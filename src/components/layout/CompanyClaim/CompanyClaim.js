@@ -2,7 +2,7 @@ import React from 'react';
 // import PropTypes from 'prop-types';
 
 import styles from './CompanyClaim.module.scss';
-import CartPopup from '../../features/CartPopup/CartPopup';
+import CartPopup from '../../features/CartPopup/CartPopupContainer';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMobileAlt, faShoppingBasket } from '@fortawesome/free-solid-svg-icons';

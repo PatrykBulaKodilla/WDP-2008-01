@@ -9,6 +9,7 @@ import PropTypes from 'prop-types';
 
 class CartPopup extends React.Component {
   render() {
+    const { products } = this.props;
     return (
       <div className={styles.root}>
         <div className='container'>
@@ -35,11 +36,11 @@ class CartPopup extends React.Component {
                     </Button>
                     <img
                       className={styles.image}
-                      src='https://www.ikea.com/images/dining-sets-03d1940e32032e44c82af0c827a2494a.jpg?f=s'
+                      src={products[1].image}
                       alt='productFurniture'
                     />
-                    <span className={styles.productName}>Aean Ru Brisique 14</span>
-                    <span className={styles.price}>$30.00</span>
+                    <span className={styles.productName}>{products[1].name}</span>
+                    <span className={styles.price}>${products[1].price}</span>
                     <div className={styles.quantity}>
                       <Button variant='outline'>
                         <span>-</span>
@@ -60,11 +61,11 @@ class CartPopup extends React.Component {
                     </Button>
                     <img
                       className={styles.image}
-                      src='https://www.ikea.com/images/dining-sets-03d1940e32032e44c82af0c827a2494a.jpg?f=s'
+                      src={products[0].image}
                       alt='productFurniture'
                     />
-                    <span className={styles.productName}>Aean Ru Brisique 14</span>
-                    <span className={styles.price}>$30.00</span>
+                    <span className={styles.productName}>{products[0].name}</span>
+                    <span className={styles.price}>${products[0].price}</span>
                     <div className={styles.quantity}>
                       <Button variant='outline'>-</Button>
                       <input
@@ -78,7 +79,7 @@ class CartPopup extends React.Component {
                 </div>
                 <div className={styles.cartSummary}>
                   <span>Total:</span>
-                  <span>$60.00</span>
+                  <span>$120.00</span>
                 </div>
                 <div className={styles.buttons}>
                   <Button variant='small' className={styles.button}>
@@ -105,6 +106,15 @@ class CartPopup extends React.Component {
 }
 CartPopup.propTypes = {
   closePopup: PropTypes.func,
+
+  products: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      name: PropTypes.string,
+      image: PropTypes.string,
+      price: PropTypes.number,
+    })
+  ),
 };
 
 export default CartPopup;
