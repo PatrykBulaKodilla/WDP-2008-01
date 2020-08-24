@@ -673,7 +673,6 @@ const initialState = {
         'https://images.pexels.com/photos/736716/pexels-photo-736716.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260',
     },
   ],
-<<<<<<< HEAD
   brands: [
     {
       id: 'brand-1',
@@ -731,7 +730,6 @@ const initialState = {
     },
   ],
   compare: [],
-=======
   hotDeals: [
     {
       id: 'aenean-ru-bristique-1',
@@ -816,7 +814,6 @@ const initialState = {
       comparison: true,
     },
   ],
->>>>>>> Add SuggestedProductContainer.js, hotDealsRedux.js, suggestedSliderRedux.js - getting props from state & Add ChangePage function in Slider.js
 };
 
 export default initialState;

@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './SuggestedProducts.module.scss';
+import PropTypes from 'prop-types';
 
 import HotDeals from '../../common/HotDeals/HotDeals';
 import Slider from '../Slider/Slider';
@@ -63,7 +64,6 @@ class SuggestedProducts extends React.Component {
 
   render() {
     const dots = [];
-    const { activeDeal } = this.state;
     const { activeDeal, pauseAutoPlay } = this.state;
     const { hotDeals, suggestedSlider } = this.props;
     const pagesCount = hotDeals.length;
