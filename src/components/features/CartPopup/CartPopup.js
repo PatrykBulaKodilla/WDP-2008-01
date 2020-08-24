@@ -6,8 +6,6 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { faTimesCircle } from '@fortawesome/free-regular-svg-icons';
 import Button from '../../common/Button/Button';
 import PropTypes from 'prop-types';
-//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-//import { faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 
 class CartPopup extends React.Component {
   render() {
@@ -68,17 +66,13 @@ class CartPopup extends React.Component {
                     <span className={styles.productName}>Aean Ru Brisique 14</span>
                     <span className={styles.price}>$30.00</span>
                     <div className={styles.quantity}>
-                      <Button variant='outline'>
-                        <span>-</span>
-                      </Button>
+                      <Button variant='outline'>-</Button>
                       <input
                         type='text'
                         defaultValue='2'
                         className={styles.quantityNumber}
                       ></input>
-                      <Button variant='outline'>
-                        <span>+</span>
-                      </Button>
+                      <Button variant='outline'>+</Button>
                     </div>
                   </div>
                 </div>
@@ -96,7 +90,7 @@ class CartPopup extends React.Component {
                   <Button
                     variant='small'
                     className={styles.button}
-                    onClick={this.handleClose}
+                    onClick={() => this.props.closePopup()}
                   >
                     Continue shopping
                   </Button>
