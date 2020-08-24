@@ -10,6 +10,7 @@ import favoriteReducer from './favoriteRedux';
 import compareReducer from './comprasionRedux';
 import rwdReducer from './rwdRedux';
 import feedbackReducer from './feedbackRedux';
+import currencyRedux from './currencyRedux';
 
 // define reducers
 const reducers = {
@@ -22,6 +23,7 @@ const reducers = {
   rwd: rwdReducer,
   feedback: feedbackReducer,
   compare: compareReducer,
+  currency: currencyRedux,
 };
 
 // add blank reducers for initial state properties without reducers
