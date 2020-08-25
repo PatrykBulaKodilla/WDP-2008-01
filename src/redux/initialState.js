@@ -730,19 +730,6 @@ const initialState = {
       alt: 'pbrand-10',
     },
   ],
-
-  Language: [
-    {
-      id: 'english',
-      name: 'English',
-      active: true,
-    },
-    {
-      id: 'polish',
-      name: 'Polish',
-      active: false,
-    },
-  ],
   compare: [],
 };
 

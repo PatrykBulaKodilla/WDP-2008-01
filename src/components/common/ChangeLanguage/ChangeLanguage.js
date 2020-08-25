@@ -30,13 +30,13 @@ class ChangeLanguage extends React.Component {
                   className={this.state.activeLanguage === 'english' ? 'active' : ''}
                   onClick={() => this.props.changeLanguage('English')}
                 >
-                  <a>English</a>
+                  <a href='/#'>English</a>
                 </li>
                 <li
                   className={this.state.activeLanguage === 'polish' ? 'active' : ''}
                   onClick={() => this.props.changeLanguage('Polish')}
                 >
-                  <a>Polish</a>
+                  <a href='/#'>Polish</a>
                 </li>
               </ul>
             </li>
