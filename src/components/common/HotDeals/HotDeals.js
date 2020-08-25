@@ -11,8 +11,9 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
+import { currencyChange } from '../../../utils/CurrencyChange';
 
-const HotDeals = ({ name, price, promo, stars }) => (
+const HotDeals = ({ name, price, promo, stars, currency }) => (
   <div className={styles.root}>
     <div className={styles.photo}>
       <div className={styles.button}>
@@ -68,7 +69,8 @@ const HotDeals = ({ name, price, promo, stars }) => (
       </div>
       <div className={styles.price}>
         <Button noHover variant='small' className={styles.priceButton}>
-          $ 300.00{/*price*/}
+          {/*price*/}
+          {currencyChange(currency, 300.0)}
         </Button>
       </div>
     </div>
@@ -81,6 +83,7 @@ HotDeals.propTypes = {
   price: PropTypes.number,
   promo: PropTypes.string,
   stars: PropTypes.number,
+  currency: PropTypes.string,
 };
 
 export default HotDeals;

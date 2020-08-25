@@ -7,6 +7,7 @@ import { faExchangeAlt, faShoppingBasket } from '@fortawesome/free-solid-svg-ico
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
 import StarRating from '../StarRating/StarRating';
+import { currencyChange } from '../../../utils/CurrencyChange';
 
 const productInFavorites = (productId, favoriteArray) =>
   favoriteArray !== undefined
@@ -25,6 +26,7 @@ const ProductBox = ({
   setFavoriteProduct,
   addToCompare,
   comparison,
+  currency,
 }) => (
   <div className={styles.root}>
     <div className={styles.photo}>
@@ -82,7 +84,7 @@ const ProductBox = ({
           {oldPrice}
         </Button>
         <Button noHover variant='small' className={styles.priceButton}>
-          $ {price}
+          {currencyChange(currency, price)}
         </Button>
       </div>
     </div>
@@ -102,6 +104,7 @@ ProductBox.propTypes = {
   setFavoriteProduct: PropTypes.func,
   addToCompare: PropTypes.func,
   comparison: PropTypes.bool,
+  currency: PropTypes.string,
 };
 
 export default ProductBox;

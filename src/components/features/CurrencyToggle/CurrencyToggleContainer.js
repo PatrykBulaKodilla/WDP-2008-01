@@ -9,7 +9,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  setCurrency: (name, value) => dispatch(setCurrency(name, value)),
+  setCurrency: value => dispatch(setCurrency(value)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(CurrencyToggle);

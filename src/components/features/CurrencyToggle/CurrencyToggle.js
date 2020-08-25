@@ -1,26 +1,19 @@
 import React from 'react';
 import styles from './CurrencyToggle.module.scss';
 import PropTypes from 'prop-types';
-import Promotions from '../Promotions/Promotions';
 
 class CurrencyToggle extends React.Component {
   state = {
     defaultValue: 'USD',
   };
 
-  handleCurrency(option, value) {
-    this.props.setCurrency(option, value);
-  }
-
   render() {
-    const { currencyOptions } = this.props;
+    const { currencyOptions, setCurrency } = this.props;
 
     return (
       <select
         className={styles.dropdown}
-        onChange={event =>
-          this.handleCurrency(event.currentTarget.name, event.currentTarget.value)
-        }
+        onChange={event => setCurrency(event.currentTarget.value)}
       >
         {this.state.defaultValue ? (
           ''
@@ -34,7 +27,7 @@ class CurrencyToggle extends React.Component {
             className={styles.position}
             name={currency.name}
             key={currency.key}
-            value={currency.value}
+            value={currency.name}
           >
             {currency.name}
           </option>

@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './SuggestedProducts.module.scss';
 
-import HotDeals from '../../common/HotDeals/HotDeals';
+import HotDeals from '../../common/HotDeals/HotDealsContainter';
 import Slider from '../Slider/Slider';
 
 class SuggestedProducts extends React.Component {

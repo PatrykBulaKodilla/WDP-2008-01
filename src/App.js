@@ -9,7 +9,7 @@ import './styles/global.scss';
 import MainLayout from './components/layout/MainLayout/MainLayoutContainer';
 import Homepage from './components/views/Homepage/Homepage';
 import ProductList from './components/views/ProductList/ProductListContainer';
-import ProductPage from './components/views/ProductPage/ProductPage';
+import ProductPage from './components/views/ProductPage/ProductPageContainer';
 
 import Register from './components/features/Register/Register';
 import Login from './components/features/Login/Login';

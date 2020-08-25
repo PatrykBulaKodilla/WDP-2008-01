@@ -1,5 +1,6 @@
 /* selectors */
 export const getCurrencyDropdown = ({ currencyType }) => currencyType.currency;
+export const getCurrency = ({ currency }) => currency.selectedCurrency;
 
 /* action name creator */
 const reducerName = 'currency';
@@ -9,7 +10,7 @@ const createActionName = name => `app/${reducerName}/${name}`;
 
 const SET_CURRENCY = createActionName('SET_CURRENCY');
 
-export const setCurrency = (payload, value) => ({ payload, value, type: SET_CURRENCY });
+export const setCurrency = payload => ({ payload, type: SET_CURRENCY });
 
 /* reducer */
 
@@ -18,10 +19,7 @@ export default function reducer(statePart = [], action = []) {
     case SET_CURRENCY: {
       return {
         ...statePart,
-        option: {
-          name: action.payload,
-          value: action.value,
-        },
+        selectedCurrency: action.payload,
       };
     }
     default:
