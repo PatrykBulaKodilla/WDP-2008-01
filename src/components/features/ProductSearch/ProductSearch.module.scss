@@ -6,6 +6,7 @@
   display: inline-flex;
   height: 45px;
   color: $productsearch-text;
+  width: 395px;
 
   .category {
     border-right: 1px solid $productsearch-border;
@@ -39,6 +40,7 @@
       position: relative;
       z-index: 1;
       list-style: none;
+
       li {
         cursor: pointer;
         padding: 5px 30px 5px 35px;
@@ -66,6 +68,7 @@
           position: absolute;
           background: $productsearch-select-dropdown-bg;
           overflow: hidden;
+
           li {
             @extend .ft-animation;
             cursor: pointer;
@@ -75,7 +78,7 @@
             display: block;
             width: 100%;
             background: $productsearch-select-option-bg;
-            
+
             a {
               text-decoration: none;
               color: $productsearch-text;
@@ -83,7 +86,7 @@
 
             &:hover {
               background: $productsearch-select-option-bg-hover;
-              
+
               a {
                 color: $productsearch-select-text-hover;
               }
@@ -93,31 +96,18 @@
       }
 
       &:hover {
+
         li {
+
           ul {
-            transition: max-height .3s ease-out;
+            transition: max-height 3s ease-out;
             max-height: 1000px;
           }
         }
       }
     }
-    /*
-    select {
-      -webkit-appearance: none;
-      border: 0;
-      background-color: $productsearch-select-bg;
-      padding: 5px 30px 5px 35px;
-      font-size: 12px;
-      position: relative;
-      z-index: 0;
-    }
-
-    select:focus {
-      outline: none;
-    }
-    */
   }
-  
+
   .category:hover .icon:last-child {
     color: $productsearch-hover-icon;
   }
@@ -129,7 +119,8 @@
 
     input {
       border: 0;
-      padding-left: 10px;
+      margin-left: 10px;
+      margin-right: 25px;
       font-size: 12px;
       outline: none;
 
@@ -159,6 +150,7 @@
 /*MEDIA QUERIES*/
 
 @media (min-width: 320px) and (max-width: 490px){
+
   .root {
 
     .category{
@@ -183,5 +175,4 @@
       visibility: hidden;
     }
   }
-
 }

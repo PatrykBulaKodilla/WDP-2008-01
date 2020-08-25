@@ -2,4 +2,272 @@
 
 .root {
   padding: $base-padding 0;
+
+  .frame {
+    height: 600px;
+    width: 100%;
+    border: 1px solid black;
+
+    .bigPic {
+      position: relative;
+      background-color: #2a2a2a;
+      margin: 15px 0 15px 15px;
+      height: 450px;
+
+      img {
+        background-color: lightgray;
+        height: 100%;
+        width: 100%;
+      }
+
+      .biggerImg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        border: 1px solid black;
+        right: 2%;
+        bottom: 2%;
+        background-color: transparent;
+        transition: $transition-color;
+        &:hover{
+          background-color: #d58e32;
+          color: white;
+          transition: $transition-color;
+        }
+
+      }
+    }
+
+    .slide {
+      height: 100px;
+      margin: 5px 10px 5px 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      button {
+        background-color: transparent;
+        border: 1px solid black;
+        position: absolute;
+        transition: $transition-background;
+        &:hover {
+          background-color: #d58e32;
+          color: white;
+          transition: $transition-background;
+        }
+      }
+
+      .buttonLeft {
+        float: left;
+        transform: translateY(-50%);
+        top: 50%;
+        left: -3%;
+
+      }
+
+      .buttonRight {
+        float: right;
+        transform: translateY(-50%);
+        top: 50%;
+        right: -3%;
+      }
+
+      .slideGallery {
+        position: relative;
+        img{
+          height: 100px;
+          background-color: lightgray;
+          width: 70px;
+          margin: 0 6px 0 6px;
+        }
+      }
+    }
+
+    .lvl {
+      width: 95%;
+      height: 100px;
+      border-bottom: 1px solid black;
+
+      .lvlOne {
+        display: flex;
+        justify-content: space-between;
+        height: 50px;
+
+        .title {
+          font-weight: bold;
+          font-size: 20px;
+          margin-top: 15px;
+        }
+
+        .rightButtons {
+          margin-top: 15px;
+          button {
+            margin: 0 3px 0 3px;
+            background-color: transparent;
+            border: 1px solid black;
+            transition: $transition-color;
+            &:hover {
+              background-color: #d58e32;
+              color: white;
+              transition: $transition-color;
+            }
+          }
+        }
+      }
+
+      .lvlOne2 {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 50px;
+
+        .rating {
+          .views {
+            font-size: 13px;
+            font-weight: 400;
+            margin-left: 15px;
+          }
+          .add {
+            border-left: 1px solid black;
+            padding-left: 15px;
+          }
+        }
+      }
+
+      .lvlTwo {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 90px;
+        font-size: 20px;
+        .oldPrice {
+          color: lightslategray;
+          text-decoration: line-through;
+          margin-right: 15px;
+        }
+        .newPrice {
+          background-color: black;
+          color: white;
+          font-weight: 600;
+          padding: 3px 6px 3px 6px;
+        }
+      }
+
+      .lvlThree {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 50px;
+        button {
+          font-size: 15px;
+          background-color: transparent;
+          margin-right: 10px;
+          border: 1px solid black;
+          transition: $transition-color;
+          &:hover {
+            background-color: #d58e32;
+            color: white;
+            transition: $transition-color;
+          }
+          strong {
+            margin-left: 5px;
+          }
+        }
+
+        .quant {
+          font-size: 15px;
+          font-weight: 600;
+          margin-right: 30px;
+        }
+
+        .number {
+          padding: 0 25px 0 25px;
+        }
+      }
+
+      .lvlFour {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 40px;
+        .overview {
+          font-size: 15px;
+          font-weight: 700;
+        }
+      }
+
+      .lvlFour2 {
+        display: flex;
+        font-size: 15px;
+        justify-content: flex-start;
+        align-items: center;
+        height: 60px;
+      }
+
+      .lvlFive {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 40px;
+        div {
+          margin: 20px 20px 0 0;
+          font-size: 15px;
+          font-weight: 600;
+        }
+        span {
+          font-size: 15px;
+          margin-top: 20px;
+        }
+      }
+
+      .lvlSix {
+        display: flex;
+        font-size: 15px;
+        justify-content: flex-start;
+        align-items: center;
+        height: 80px;
+        button {
+          background-color: transparent;
+          margin: 0 3px 0 3px;
+          padding: 5px 10px 5px 10px;
+          border: 1px solid black;
+          span {
+            margin-left: 10px;
+            font-weight: 300;
+            font-size: 12px;
+            color: black;
+          }
+        }
+        .facebook {
+          background-color: #3b5998;
+          color: white;
+          span {
+            color: white;
+          }
+        }
+        .google {
+          color: #DB4437;
+        }
+        .twitter {
+          color: 	#1DA1F2;
+        }
+        .pinterest {
+          color: #E60023;
+        }
+        .linkedin {
+          color: #0072b1;
+        }
+      }
+    }
+
+    .shorterLvl {
+      height: 90px;
+    }
+    .lastLvl {
+      border: none;
+    }
+  }
 }

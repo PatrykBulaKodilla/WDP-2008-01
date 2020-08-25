@@ -1,0 +1,178 @@
+@import "../../../styles/settings.scss";
+
+.root {
+
+  .filterColorTitle {
+    display: flex;
+    flex-direction: row;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: solid 1px black;
+
+    p{
+      margin: 10px 0 10px 5px;
+      color: $filter-color-title-text-color;
+    }
+  }
+
+  .filterColor {
+
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+
+    .foored {
+      float: left;
+      width: 20px;
+      height: 20px;
+      margin: 8px 5px 8px 5px;
+      border: 1px solid rgba(0, 0, 0, .2);
+      background: $filter-color-red;
+      cursor: pointer;
+      transition: linear 0.2s;
+
+      a {
+        margin-left: 25px;
+        text-decoration: none;
+        color: $filter-color-title-text-color;
+      }
+    }
+
+    .foored[class~="active"]  {
+      margin-left: 25px;
+
+      a{
+        color: $filter-color-text-active;
+      }
+    }
+
+    .fooblack {
+      float: left;
+      width: 20px;
+      height: 20px;
+      margin: 8px 5px 8px 5px;
+      border: 1px solid rgba(0, 0, 0, .2);
+      background: $filter-color-black;
+      cursor: pointer;
+      transition: linear 0.2s;
+
+      a {
+        margin-left: 25px;
+        text-decoration: none;
+        color: $filter-color-title-text-color;
+      }
+    }
+
+    .fooblack[class~="active"]  {
+      margin-left: 25px;
+
+      a{
+        color: $filter-color-text-active;
+      }
+    }
+
+    .fooyellow {
+      float: left;
+      width: 20px;
+      height: 20px;
+      margin: 8px 5px 8px 5px;
+      border: 1px solid rgba(0, 0, 0, .2);
+      background: $filter-color-yellow;
+      cursor: pointer;
+      transition: linear 0.2s;
+
+      a {
+        margin-left: 25px;
+        text-decoration: none;
+        color: $filter-color-title-text-color;
+      }
+    }
+
+    .fooyellow[class~="active"]  {
+      margin-left: 25px;
+
+      a{
+        color: $filter-color-text-active;
+      }
+    }
+
+    .fooblue {
+      float: left;
+      width: 20px;
+      height: 20px;
+      margin: 8px 5px 8px 5px;
+      border: 1px solid rgba(0, 0, 0, .2);
+      background: $filter-color-blue;
+      cursor: pointer;
+      transition: linear 0.2s;
+
+      a {
+        margin-left: 25px;
+        text-decoration: none;
+        color: $filter-color-title-text-color;
+      }
+    }
+
+    .fooblue[class~="active"]  {
+      margin-left: 25px;
+
+      a{
+        color: $filter-color-text-active;
+      }
+    }
+
+    .foopink {
+      float: left;
+      width: 20px;
+      height: 20px;
+      margin: 8px 5px 8px 5px;
+      border: 1px solid rgba(0, 0, 0, .2);
+      background: $filter-color-pink;
+      cursor: pointer;
+      transition: linear 0.2s;
+
+      a {
+        margin-left: 25px;
+        text-decoration: none;
+        color: $filter-color-title-text-color;
+      }
+    }
+
+    .foopink[class~="active"]  {
+      margin-left: 25px;
+
+      a{
+        color: $filter-color-text-active;
+      }
+    }
+
+    .foogreen {
+      float: left;
+      width: 20px;
+      height: 20px;
+      margin: 8px 5px 8px 5px;
+      border: 1px solid rgba(0, 0, 0, .2);
+      background: $filter-color-green;
+      cursor: pointer;
+      transition: linear 0.2s;
+
+      a {
+        margin-left: 25px;
+        text-decoration: none;
+        color: $filter-color-title-text-color;
+      }
+    }
+
+    .foogreen[class~="active"]  {
+      margin-left: 25px;
+
+      a{
+        color: $filter-color-text-active;
+      }
+    }
+  }
+}
+
+
+
+

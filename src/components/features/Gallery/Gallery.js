@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import styles from './Gallery.module.scss';
 import Button from '../../common/Button/Button';
+import Tooltip from '@material-ui/core/Tooltip';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -35,7 +36,7 @@ class Gallery extends React.Component {
       <div className={styles.root}>
         <div className='container'>
           <div className='row'>
-            <div className='col-6'>
+            <div className='col-6 col-sm-12 col-lg-6'>
               <div className={styles.left}>
                 <div className={styles.panelBar}>
                   <div className='row no-gutters align-items-end'>
@@ -81,11 +82,13 @@ class Gallery extends React.Component {
                               Add to compare
                             </FontAwesomeIcon>
                           </Button>
-                          <Button variant='outline'>
-                            <FontAwesomeIcon icon={faShoppingBasket}>
-                              Add to cart
-                            </FontAwesomeIcon>
-                          </Button>
+                          <Tooltip title='Add to cart' placement='right' arrow>
+                            <Button variant='outline'>
+                              <FontAwesomeIcon
+                                icon={faShoppingBasket}
+                              ></FontAwesomeIcon>
+                            </Button>
+                          </Tooltip>
                         </div>
                       </div>
                       <div
@@ -99,6 +102,9 @@ class Gallery extends React.Component {
                                 <li key={products.id}>
                                   <div className={styles.priceBox}>
                                     <p>${products.price}</p>
+                                    <p className={styles.oldPrice}>
+                                      <small>{products.oldPrice}</small>
+                                    </p>
                                   </div>
                                   <div className={styles.nameBox}>
                                     <p>{products.name}</p>
@@ -154,7 +160,7 @@ class Gallery extends React.Component {
                 </div>
               </div>
             </div>
-            <div className='col-6'>
+            <div className='col-6 col-sm-12 col-lg-6'>
               <div className={styles.right}>
                 <img
                   className={styles.image}
@@ -204,6 +210,7 @@ Gallery.propTypes = {
       name: PropTypes.string,
       category: PropTypes.string,
       price: PropTypes.number,
+      oldprice: PropTypes.number,
       stars: PropTypes.number,
       promo: PropTypes.string,
       gallery: PropTypes.bool,

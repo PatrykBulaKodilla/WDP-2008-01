@@ -31,6 +31,7 @@ const initialState = {
       name: 'Aenean Ru Bristique 2',
       category: 'bed',
       price: 30,
+      oldPrice: '$45',
       stars: 4,
       promo: 'sale',
       image:
@@ -639,7 +640,7 @@ const initialState = {
       brandsOnPage: {
         mobile: 1,
         tablet: 3,
-        desktop: 4,
+        desktop: 5,
       },
       modeMaxWidth: {
         mobile: 768,

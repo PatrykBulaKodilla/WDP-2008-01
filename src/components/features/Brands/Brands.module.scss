@@ -24,7 +24,7 @@
 
   li {
     display: inline-block;
-    margin: 0 13px 0 13px;
+    margin: 0 20px 0 20px;
 
     img {
       object-fit: cover;
@@ -41,10 +41,13 @@
   width: 50px;
   background-color: $brands-button-bg;
   color: $brands-button-text;
+  margin-right: 20px;
 }
 
 .button2 {
   float: right;
+  margin-left: 20px;
+  margin-right: 0;
 }
 
 .sliderContainer {
@@ -69,5 +72,18 @@
 
   .slideLeft {
     animation: fadeout 1s, slideRight 1s;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .button {
+    margin-right: 0;
+  }
+  .button2 {
+    margin-left: 0;
+  }
+
+  .brands li {
+    margin: 0 8px 0 8px;
   }
 }

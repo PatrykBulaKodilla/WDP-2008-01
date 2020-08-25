@@ -8,8 +8,11 @@ import './styles/global.scss';
 
 import MainLayout from './components/layout/MainLayout/MainLayoutContainer';
 import Homepage from './components/views/Homepage/Homepage';
-import ProductList from './components/views/ProductList/ProductList';
+import ProductList from './components/views/ProductList/ProductListContainer';
 import ProductPage from './components/views/ProductPage/ProductPage';
+
+import Register from './components/features/Register/Register';
+import Login from './components/features/Login/Login';
 
 const App = () => (
   <Provider store={store}>
@@ -19,6 +22,8 @@ const App = () => (
           <Route exact path={'/'} component={Homepage} />
           <Route exact path={'/shop/:categoryId'} component={ProductList} />
           <Route exact path={'/product/:productId'} component={ProductPage} />
+          <Route exact path={'/register'} component={Register} />
+          <Route exact path={'/login'} component={Login} />
         </Switch>
       </MainLayout>
     </BrowserRouter>
