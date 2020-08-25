@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './SuggestedProducts.module.scss';
 import PropTypes from 'prop-types';
 
-import HotDeals from '../../common/HotDeals/HotDeals';
+import HotDeals from '../../common/HotDeals/HotDealsContainter';
 import Slider from '../Slider/Slider';
 import Swipeable from '../Swipeable/Swipeable';
 

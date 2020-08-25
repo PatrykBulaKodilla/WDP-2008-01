@@ -10,6 +10,7 @@ import favoriteReducer from './favoriteRedux';
 import compareReducer from './comprasionRedux';
 import rwdReducer from './rwdRedux';
 import feedbackReducer from './feedbackRedux';
+import currencyRedux from './currencyRedux';
 import hotDealsReducer from './hotDealsRedux';
 
 // define reducers
@@ -23,6 +24,7 @@ const reducers = {
   rwd: rwdReducer,
   feedback: feedbackReducer,
   compare: compareReducer,
+  currency: currencyRedux,
   hotDeals: hotDealsReducer,
 };
 
