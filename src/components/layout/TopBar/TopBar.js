@@ -1,5 +1,4 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown, faUser, faLock, faBars } from '@fortawesome/free-solid-svg-icons';
@@ -54,7 +53,5 @@ const TopBar = () => (
     </div>
   </div>
 );
-
-// TopBar.propTypes = {};
 
 export default TopBar;

@@ -2,12 +2,10 @@
 @import "../../../styles/animations.scss";
 
 .root {
-  // border: 1px solid $productsearch-border;
   display: inline-flex;
   height: 45px;
   color: $productsearch-text;
   width: 95px;
-  // border: solid 1px red;
   background-color: $topbar-bg;
 
   .category {
@@ -17,14 +15,6 @@
     position: relative;
     background-color: $topbar-bg;
     left: -10px;
-    // border: solid 1px red;
-
-    // .icon {
-    //   color: $productsearch-icon;
-    //   position: absolute;
-    //   left: 10px;
-    //   z-index: 0;
-    // }
 
     .icon {
       position: absolute;
@@ -113,44 +103,6 @@
       }
     }
   }
-
-  // .category:hover .icon:last-child {
-  //   color: $productsearch-hover-icon;
-  // }
-
-  // .searchField {
-  //   display: flex;
-  //   align-items: center;
-  //   position: relative;
-
-  //   input {
-  //     border: 0;
-  //     margin-left: 10px;
-  //     margin-right: 25px;
-  //     font-size: 12px;
-  //     outline: none;
-
-  //     &::placeholder {
-  //       color: $productsearch-input-placeholder;
-  //     }
-
-  //   // }
-
-  //   button {
-  //     border: 0;
-  //     background-color: $productsearch-button-bg;
-  //     outline: none;
-  //   }
-  // }
-
-  // .searchField:hover button {
-  //   color: $productsearch-hover-button;
-  // }
-
-  // .outlines a[class~="true"] {
-  //   background-color: $productbox-content-text;
-  //   color: $productbox-sale-text ;
-  // }
 }
 
 /*MEDIA QUERIES*/
@@ -161,7 +113,6 @@
 
     .category{
       max-width: 70px;
-      //overflow-wrap: break-word;
     }
 
     .categorySelect {
