@@ -9,14 +9,13 @@ import styles from './ChangeLanguage.module.scss';
 class ChangeLanguage extends React.Component {
   constructor(props) {
     super(props);
-    this.toggleLanguage = this.toggleLanguage.bind(this);
     this.state = {
-      activeLanguage: 0,
+      activeLanguage: 'English',
     };
   }
 
-  toggleLanguage(language, e) {
-    this.setState({ activeLanguage: language });
+  setActiveLanguage(newLanguage) {
+    this.setState({ activeLanguage: newLanguage });
   }
 
   render() {
@@ -28,14 +27,14 @@ class ChangeLanguage extends React.Component {
               Language
               <ul>
                 <li
-                  className={this.state.activeLanguage === 0 ? 'active' : null}
-                  onClick={this.toggleLanguage.bind(this, 0)}
+                  className={this.state.activeLanguage === 'english' ? 'active' : ''}
+                  onClick={() => this.props.changeLanguage('English')}
                 >
                   <a>English</a>
                 </li>
                 <li
-                  className={this.state.activeLanguage === 1 ? 'active' : null}
-                  onClick={this.toggleLanguage.bind(this, 1)}
+                  className={this.state.activeLanguage === 'polish' ? 'active' : ''}
+                  onClick={() => this.props.changeLanguage('Polish')}
                 >
                   <a>Polish</a>
                 </li>
@@ -50,12 +49,7 @@ class ChangeLanguage extends React.Component {
 }
 
 ChangeLanguage.propTypes = {
-  language: PropTypes.array,
-  toggleLanguage: PropTypes.func,
-};
-
-ChangeLanguage.defaultProps = {
-  language: [],
+  changeLanguage: PropTypes.func,
 };
 
 window.localStorage.getItem('activeLanguage');

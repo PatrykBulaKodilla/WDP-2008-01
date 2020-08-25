@@ -6,21 +6,20 @@ const reducerName = 'language';
 const createActionName = name => `app/${reducerName}/${name}`;
 
 /* action types */
-export const SET_LANGUAGE = createActionName('SET_LANGUAGE');
+export const CHANGE_LANGUAGE = createActionName('CHANGE_LANGUAGE');
 
 /* action creators */
-export const setLanguage = payload => ({ payload, type: SET_LANGUAGE });
+export const changeLanguage = payload => ({
+  payload,
+  type: CHANGE_LANGUAGE,
+});
 
 /* reducer */
-export default function reducer(statePart = [], action = []) {
+export default function reducer(language = 'English', action = {}) {
   switch (action.type) {
-    case SET_LANGUAGE: {
-      return {
-        ...statePart,
-        language: [...statePart.language, action.payload],
-      };
-    }
+    case CHANGE_LANGUAGE:
+      return action.payload;
     default:
-      return statePart;
+      return language;
   }
 }

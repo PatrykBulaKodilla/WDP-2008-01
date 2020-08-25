@@ -6,7 +6,7 @@ import { faCaretDown, faUser, faLock, faBars } from '@fortawesome/free-solid-svg
 
 import styles from './TopBar.module.scss';
 
-import ChangeLanguage from '../../common/ChangeLanguage/ChangeLanguage';
+import ChangeLanguage from '../../common/ChangeLanguage/ChangeLanguageContainer';
 
 const TopBar = () => (
   <div className={styles.root}>
