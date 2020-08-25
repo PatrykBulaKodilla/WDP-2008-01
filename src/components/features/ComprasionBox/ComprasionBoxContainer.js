@@ -2,6 +2,8 @@ import { connect } from 'react-redux';
 
 import ComprasionBox from './ComprasionBox';
 
+import { getAll } from '../../../redux/productsRedux';
+
 import {
   getCompare,
   createActionRemoveFromCompare,
@@ -10,6 +12,7 @@ import {
 
 const mapStateToProps = state => ({
   compare: getCompare(state),
+  products: getAll(state),
 });
 
 const mapDispatchToProps = (dispatch, props) => ({

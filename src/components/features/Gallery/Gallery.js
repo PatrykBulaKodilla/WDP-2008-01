@@ -16,6 +16,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import { faStar as farStar } from '@fortawesome/free-regular-svg-icons';
+import { currencyChange } from '../../../utils/CurrencyChange';
 
 class Gallery extends React.Component {
   state = {
@@ -29,7 +30,7 @@ class Gallery extends React.Component {
   }
 
   render() {
-    const { categoriesGallery, galleryPhotos, products, stars } = this.props;
+    const { categoriesGallery, galleryPhotos, products, stars, currency } = this.props;
     const { activeCategory, activeProduct } = this.state;
 
     return (
@@ -174,7 +175,7 @@ class Gallery extends React.Component {
                         <small>FROM</small>
                       </small>
                     </small>{' '}
-                    $50.80
+                    {currencyChange(currency, 50.8)}
                   </p>
                   <span>Bedroom Bed</span>
                   <Button variant='outline' className={styles.buttonDescription}>
@@ -216,6 +217,7 @@ Gallery.propTypes = {
       gallery: PropTypes.bool,
     })
   ),
+  currency: PropTypes.string,
 };
 
 Gallery.defaultProps = {

@@ -11,6 +11,8 @@ import compareReducer from './comprasionRedux';
 import rwdReducer from './rwdRedux';
 import feedbackReducer from './feedbackRedux';
 import languageReducer from './changeLanguageRedux';
+import currencyRedux from './currencyRedux';
+import hotDealsReducer from './hotDealsRedux';
 
 // define reducers
 const reducers = {
@@ -24,6 +26,8 @@ const reducers = {
   feedback: feedbackReducer,
   compare: compareReducer,
   language: languageReducer,
+  currency: currencyRedux,
+  hotDeals: hotDealsReducer,
 };
 
 // add blank reducers for initial state properties without reducers

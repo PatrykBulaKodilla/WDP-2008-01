@@ -1,5 +1,5 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import styles from './ProductPage.module.scss';
 import {
   faArrowLeft,
@@ -27,9 +27,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Banner from '../../features/Banner/Banner';
 
 import NewFurniture from '../../features/NewFurniture/NewFurnitureContainer';
+import { currencyChange } from '../../../utils/CurrencyChange';
 
 class ProductPage extends React.Component {
   render() {
+    const { currency } = this.props;
     return (
       <div className={styles.root}>
         <Banner />
@@ -103,8 +105,12 @@ class ProductPage extends React.Component {
                   <div className='col-12'>
                     <div className={styles.lvl + ' ' + styles.shorterLvl}>
                       <div className={styles.lvlTwo}>
-                        <div className={styles.oldPrice}>$350.00</div>
-                        <div className={styles.newPrice}>$250.00</div>
+                        <div className={styles.oldPrice}>
+                          {currencyChange(currency, 350.0)}
+                        </div>
+                        <div className={styles.newPrice}>
+                          {currencyChange(currency, 250.0)}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -212,7 +218,7 @@ class ProductPage extends React.Component {
             </div>
           </div>
         </div>
-        <div className="container">
+        <div className='container'>
           <NewFurniture />
         </div>
       </div>
@@ -220,6 +226,8 @@ class ProductPage extends React.Component {
   }
 }
 
-// ProductPage.propTypes = {};
+ProductPage.propTypes = {
+  currency: PropTypes.string,
+};
 
 export default ProductPage;

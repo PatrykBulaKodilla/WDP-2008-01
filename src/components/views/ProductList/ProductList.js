@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './ProductList.module.scss';
 import Filter from '../../common/Filter/Filter';
 
-// import FilterByCategories from '../../common/FilterByCategories/FilterByCategories';
+import FilterByColor from '../../common/FilterByColor/FilterByColor';
 import ProductBox from '../../common/ProductBox/ProductBoxContainer';
 import SmallFurniture from '../../features/SmallFurniture/SmallFurniture';
 
@@ -29,6 +29,11 @@ const ProductList = ({ shopList }) => {
           <div className={`col col-sm-12 col-lg-3 order-1 order-md-3`}>
             <Filter />
             <SmallFurniture />
+            <div className="filterColor">
+              <div className={styles.filterColorTitle}>
+                <FilterByColor />
+              </div>
+            </div>
           </div>
         </div>
       </div>
