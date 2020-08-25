@@ -12,9 +12,10 @@ import {
 import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
 
-const HotDeals = ({ name, price, promo, stars }) => (
+const HotDeals = ({ name, price, image, promo, stars }) => (
   <div className={styles.root}>
     <div className={styles.photo}>
+      <img src={image} alt='' />
       <div className={styles.button}>
         <Button variant='small'>
           <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
@@ -40,7 +41,7 @@ const HotDeals = ({ name, price, promo, stars }) => (
       </div>
     </div>
     <div className={styles.content}>
-      <h5>{/*name*/}Aenean Ru Bristique</h5>
+      <h5>{name}</h5>
       <div className={styles.stars}>
         {[1, 2, 3, 4, 5].map(i => (
           <a key={i} href='/#'>
@@ -68,7 +69,7 @@ const HotDeals = ({ name, price, promo, stars }) => (
       </div>
       <div className={styles.price}>
         <Button noHover variant='small' className={styles.priceButton}>
-          $ 300.00{/*price*/}
+          $ {price}
         </Button>
       </div>
     </div>
@@ -79,6 +80,7 @@ HotDeals.propTypes = {
   children: PropTypes.node,
   name: PropTypes.string,
   price: PropTypes.number,
+  image: PropTypes.string,
   promo: PropTypes.string,
   stars: PropTypes.number,
 };

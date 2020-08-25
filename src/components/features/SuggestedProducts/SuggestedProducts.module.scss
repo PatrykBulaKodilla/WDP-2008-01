@@ -55,8 +55,19 @@
         }
       }
     }
+
+    &.active {
+      background-color: $suggestedproducts-dots-link-active-hover-bg;
+    }
   }
 
+  .fadeOut {
+    animation: fadeout 1s;
+  }
+
+  .fadeIn {
+    animation: fadein 1s;
+  }
 }
 
 @media (max-width: 768px) {
