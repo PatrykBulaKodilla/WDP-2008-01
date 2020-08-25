@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import styles from './Gallery.module.scss';
 import Button from '../../common/Button/Button';
+import Tooltip from '@material-ui/core/Tooltip';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -82,11 +83,13 @@ class Gallery extends React.Component {
                               Add to compare
                             </FontAwesomeIcon>
                           </Button>
-                          <Button variant='outline'>
-                            <FontAwesomeIcon icon={faShoppingBasket}>
-                              Add to cart
-                            </FontAwesomeIcon>
-                          </Button>
+                          <Tooltip title='Add to cart' placement='right' arrow>
+                            <Button variant='outline'>
+                              <FontAwesomeIcon
+                                icon={faShoppingBasket}
+                              ></FontAwesomeIcon>
+                            </Button>
+                          </Tooltip>
                         </div>
                       </div>
                       <div
@@ -100,6 +103,9 @@ class Gallery extends React.Component {
                                 <li key={products.id}>
                                   <div className={styles.priceBox}>
                                     <p>${products.price}</p>
+                                    <p className={styles.oldPrice}>
+                                      <small>{products.oldPrice}</small>
+                                    </p>
                                   </div>
                                   <div className={styles.nameBox}>
                                     <p>{products.name}</p>
@@ -205,6 +211,7 @@ Gallery.propTypes = {
       name: PropTypes.string,
       category: PropTypes.string,
       price: PropTypes.number,
+      oldprice: PropTypes.number,
       stars: PropTypes.number,
       promo: PropTypes.string,
       gallery: PropTypes.bool,

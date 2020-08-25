@@ -31,6 +31,7 @@ const initialState = {
       name: 'Aenean Ru Bristique 2',
       category: 'bed',
       price: 30,
+      oldPrice: '$45',
       stars: 4,
       promo: 'sale',
       image:
@@ -739,6 +740,90 @@ const initialState = {
     option: 'USD',
   },
   compare: [],
+  hotDeals: [
+    {
+      id: 'aenean-ru-bristique-1',
+      name: 'Aenean Ru Bristique 1',
+      category: 'bed',
+      price: 30,
+      stars: 3,
+      promo: 'sale',
+      image:
+        'https://scandinavianliving.pl/userdata/public/gfx/9ff052bf0a47985baa8e54ccbc6e832d.jpg',
+      newFurniture: true,
+      favorite: true,
+      comparison: true,
+    },
+    {
+      id: 'aenean-ru-bristique-2',
+      name: 'Aenean Ru Bristique 2',
+      category: 'bed',
+      price: 30,
+      stars: 4,
+      promo: 'sale',
+      image:
+        'https://cdn.habitat.fr/thumbnails/product/866/866233/box/1200/1200/80/eskyss-aparador-vitrina-alto-de-nogal_866233.jpg',
+      newFurniture: true,
+      favorite: true,
+      comparison: false,
+    },
+    {
+      id: 'aenean-ru-bristique-3',
+      name: 'Aenean Ru Bristique 3',
+      category: 'bed',
+      price: 30,
+      oldPrice: '$35',
+      stars: 5,
+      promo: 'sale',
+      image:
+        'https://furniture123.co.uk/files/images/f123/shop-furniture-by-bedroom.jpg',
+      newFurniture: true,
+      favorite: false,
+      comparison: true,
+    },
+  ],
+  suggestedSlider: [
+    {
+      id: 'aenean-ru-bristique-1',
+      name: 'Aenean Ru Bristique 1',
+      category: 'bed',
+      price: 30,
+      stars: 3,
+      promo: 'sale',
+      image:
+        'https://scandinavianliving.pl/userdata/public/gfx/9ff052bf0a47985baa8e54ccbc6e832d.jpg',
+      newFurniture: true,
+      favorite: true,
+      comparison: true,
+    },
+    {
+      id: 'aenean-ru-bristique-2',
+      name: 'Aenean Ru Bristique 2',
+      category: 'bed',
+      price: 30,
+      stars: 4,
+      promo: 'sale',
+      image:
+        'https://cdn.habitat.fr/thumbnails/product/866/866233/box/1200/1200/80/eskyss-aparador-vitrina-alto-de-nogal_866233.jpg',
+      newFurniture: true,
+      favorite: true,
+      comparison: false,
+    },
+    {
+      id: 'aenean-ru-bristique-3',
+      name: 'Aenean Ru Bristique 3',
+      category: 'bed',
+      price: 30,
+      oldPrice: '$35',
+      stars: 5,
+      promo: 'sale',
+      image:
+        'https://furniture123.co.uk/files/images/f123/shop-furniture-by-bedroom.jpg',
+      newFurniture: true,
+      favorite: false,
+      comparison: true,
+    },
+  ],
 };
 
 export default initialState;
