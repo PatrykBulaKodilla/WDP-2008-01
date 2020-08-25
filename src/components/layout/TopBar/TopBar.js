@@ -1,11 +1,12 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown, faUser, faLock, faBars } from '@fortawesome/free-solid-svg-icons';
 
 import styles from './TopBar.module.scss';
 import CurrencyToggle from '../../features/CurrencyToggle/CurrencyToggleContainer';
+
+import ChangeLanguage from '../../common/ChangeLanguage/ChangeLanguageContainer';
 
 const TopBar = () => (
   <div className={styles.root}>
@@ -17,9 +18,7 @@ const TopBar = () => (
               <CurrencyToggle />
             </li>
             <li>
-              <a href='/#'>
-                English <FontAwesomeIcon className={styles.icon} icon={faCaretDown} />
-              </a>
+              <ChangeLanguage />
             </li>
             <li>
               <a href='/#'>
@@ -53,7 +52,5 @@ const TopBar = () => (
     </div>
   </div>
 );
-
-// TopBar.propTypes = {};
 
 export default TopBar;
